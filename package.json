@@ -22,6 +22,7 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
+    "minimist": "^1.1.2",
     "postcss": "^4.1.16"
   },
   "devDependencies": {}

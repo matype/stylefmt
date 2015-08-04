@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-var pkg = require('../package.json')
-var cssfmt = require('..')
+var pkg = require('./package.json')
+var cssfmt = require('./')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
@@ -21,10 +21,21 @@ if (argv.V) {
 }
 
 if (argv.h) {
-    console.log('Usage: atcss input-name output-name [options]');
+    console.log('Usage: cssfmt input-name output-name [options]');
     console.log('');
     console.log('Options:');
     console.log('');
     console.log('  -V, --versions    output the version number');
     console.log('  -h, --help        output usage information');
+}
+
+if (argv._[0]) {
+  var input  = argv._[0]
+  var output  = argv._[1] || argv._[0]
+
+  var formatted = cssfmt(input)
+  fs.writeFile(output, formatted.toString(), function (err) {
+    if (err) throw err
+    console.log('success')
+  })
 }
