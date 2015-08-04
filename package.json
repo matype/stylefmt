@@ -1,6 +1,6 @@
 {
   "name": "cssfmt",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "CSSfmt formats CSS code.",
   "main": "index.js",
   "scripts": {
