@@ -1,0 +1,22 @@
+{
+  "name": "cssfmt",
+  "version": "0.0.1",
+  "description": "CSSfmt formats CSS code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "bin": {
+    "cssfmt": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/cssfmt/git"
+  },
+  "keywords": ["css","format","code style","beautifier"],
+  "author": "Masaaki Morishita",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
