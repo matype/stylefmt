@@ -1,3 +1,7 @@
+## v0.2.0
+
+- Sort values of `border` shorthand property.
+
 ## v0.1.3
 
 - Format media queries into detail.
