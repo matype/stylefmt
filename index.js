@@ -9,6 +9,17 @@ module.exports = function (cssFile) {
   var re2 = /\s*\+\s*/g
   var re3 = /\s*\~\s*/g
 
+  root.eachAtRule(function (atrule, index) {
+    if (index === 0) {
+      atrule.before=''
+    } else {
+      atrule.before = '\n\n'
+    }
+    atrule.after = '\n'
+    atrule.between = ' '
+    atrule.semicolon = true
+  })
+
   root.eachRule(function (rule, index) {
     if (index === 0) {
       if (rule.parent.type === 'atrule') {
