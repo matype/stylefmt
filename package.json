@@ -13,10 +13,16 @@
     "type": "git",
     "url": "git://github.com/morishitter/cssfmt/git"
   },
-  "keywords": ["css","format","code style","beautifier"],
+  "keywords": [
+    "css",
+    "format",
+    "code style",
+    "beautifier"
+  ],
   "author": "Masaaki Morishita",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-  }
+  "dependencies": {
+    "postcss": "^4.1.16"
+  },
+  "devDependencies": {}
 }
