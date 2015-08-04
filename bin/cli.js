@@ -6,27 +6,27 @@ var cssfmt = require('./')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
-    boolean: [
-        'help',
-        'versions'
-    ],
-    alias: {
-        h: 'help',
-        V: 'versions'
-    }
+  boolean: [
+    'help',
+    'versions'
+  ],
+  alias: {
+    h: 'help',
+    V: 'versions'
+  }
 })
 
 if (argv.V) {
-    console.log(pkg.version)
+  console.log(pkg.version)
 }
 
 if (argv.h) {
-    console.log('Usage: cssfmt input-name output-name [options]');
-    console.log('');
-    console.log('Options:');
-    console.log('');
-    console.log('  -V, --versions    output the version number');
-    console.log('  -h, --help        output usage information');
+  console.log('Usage: cssfmt input-name [output-name]');
+  console.log('');
+  console.log('Options:');
+  console.log('');
+  console.log('  -V, --versions    output the version number');
+  console.log('  -h, --help        output usage information');
 }
 
 if (argv._[0]) {
@@ -36,6 +36,5 @@ if (argv._[0]) {
   var formatted = cssfmt(input)
   fs.writeFile(output, formatted.toString(), function (err) {
     if (err) throw err
-    console.log('success')
   })
 }
