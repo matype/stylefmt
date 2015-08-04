@@ -8,7 +8,36 @@ CSSfmt formats CSS code.
 $ npm install cssfmt
 ```
 
-## Usage
+## Example
+
+Input (input.css):
+```css
+@media screen and (min-width: 699px) {
+    .foo + .bar,
+.hoge ~ .fuga + p {
+                           color:red;
+ padding       : 10px;
+}
+   }
+```
+
+Run following command:
+
+```
+$ cssfmt input.css
+```
+
+Yield:
+```css
+@media screen and (min-width: 699px) {
+  .foo + .bar,
+  .hoge ~ .fuga + p {
+    color: red;
+    padding: 10px;
+  }
+}
+```
+
 
 ## License
 
