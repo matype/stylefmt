@@ -25,5 +25,7 @@
     "minimist": "^1.1.2",
     "postcss": "^4.1.16"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tape": "^4.0.2"
+  }
 }
