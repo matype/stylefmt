@@ -54,11 +54,12 @@ Yield:
 
 - 2 spaces indentation
 - require 1 space between simple selector and combinator
-- require 1 space between selector and start block
-- require new line after start block
-- require semicolon in last declaration
-- require 1 space between colon and values
-- disallow space between property and colon
+- require 1 space between selector and `{`
+- require new line after `{`
+- disallow any spaces between property and `:`
+- require 1 space between `:` and values
+- require new line after declarations
+- require `;` in last declaration
 - require new line after rules
 
 
