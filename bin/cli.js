@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-var pkg = require('./package.json')
-var cssfmt = require('./')
+var pkg = require('../package.json')
+var cssfmt = require('../')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
