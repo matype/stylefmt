@@ -1,7 +1,7 @@
 # CSSfmt [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
 
 CSSfmt formats CSS code.
-CSSfmt is inspired by [Gofmt](http://golang.org/pkg/fmt/) and [postcss-fmt](https://github.com/hail2u/postcss-fmt).
+CSSfmt is inspired by [Gofmt](http://golang.org/pkg/fmt/).
 
 ## Installation
 
@@ -13,7 +13,7 @@ $ npm install cssfmt
 
 Input (input.css):
 ```css
-@media screen and (min-width    :699px)
+  @media screen and(     min-width    :699px  )
     {
     .foo+              .bar,
 .hoge   ~        .fuga>p
@@ -27,7 +27,7 @@ Input (input.css):
       }
 ```
 
-Run following command:
+Run the following command:
 
 ```
 $ cssfmt input.css
