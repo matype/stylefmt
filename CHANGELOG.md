@@ -1,3 +1,8 @@
+## v0.1.3
+
+- Format media queries into detail.
+- Update example in README.
+
 ## v0.1.2
 
 - Format declaration in media queries.
