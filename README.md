@@ -19,10 +19,10 @@ Input (input.css):
 .hoge   ~        .fuga>p
                          {
                            color:red;
- padding       : 10px        }}    .class
+ padding       : 10px        }}    .class    ,#id
 
 {
-        color   :blue
+        color   :blue;font-size:        12px;
 
       }
 ```
@@ -43,8 +43,10 @@ Yield:
   }
 }
 
-.class {
+.class,
+#id {
   color: blue;
+  font-size: 12px;
 }
 ```
 

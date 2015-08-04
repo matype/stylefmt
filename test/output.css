@@ -6,6 +6,8 @@
   }
 }
 
-.class {
+.class,
+#id {
   color: blue;
+  font-size: 12px;
 }
