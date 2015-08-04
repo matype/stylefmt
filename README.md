@@ -1,6 +1,7 @@
 # cssfmt [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
 
 CSSfmt formats CSS code.
+CSSfmt is inspired by [Gofmt](http://golang.org/pkg/fmt/) and [postcss-fmt](https://github.com/hail2u/postcss-fmt).
 
 ## Installation
 
@@ -37,6 +38,17 @@ Yield:
   }
 }
 ```
+
+## Rules
+
+- 2 spaces indentation
+- require 1 space between simple selector and combinator
+- require 1 space between selector and start block
+- require new line after start block
+- require semicolon in last declaration
+- require 1 space between colon and values
+- disallow space between property and colon
+- require new line after rules
 
 
 ## License
