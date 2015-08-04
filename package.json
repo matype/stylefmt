@@ -7,7 +7,7 @@
     "test": "tape test"
   },
   "bin": {
-    "cssfmt": "cli.js"
+    "cssfmt": "bin/cli.js"
   },
   "repository": {
     "type": "git",
