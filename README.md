@@ -1,4 +1,4 @@
-# cssfmt [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
+# CSSfmt [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
 
 CSSfmt formats CSS code.
 CSSfmt is inspired by [Gofmt](http://golang.org/pkg/fmt/) and [postcss-fmt](https://github.com/hail2u/postcss-fmt).
