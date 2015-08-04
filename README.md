@@ -24,6 +24,8 @@ Input (input.css):
 {
         color   :blue;font-size:        12px;
 
+border     :#ddd        solid      1px
+
       }
 ```
 
@@ -47,6 +49,7 @@ Yield:
 #id {
   color: blue;
   font-size: 12px;
+  border: 1px solid #ddd;
 }
 ```
 
