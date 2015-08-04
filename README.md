@@ -32,7 +32,7 @@ Yield:
 ```css
 @media screen and (min-width: 699px) {
   .foo + .bar,
-  .hoge ~ .fuga + p {
+  .hoge ~ .fuga > p {
     color: red;
     padding: 10px;
   }
