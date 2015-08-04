@@ -13,8 +13,8 @@ $ npm install cssfmt
 Input (input.css):
 ```css
 @media screen and (min-width: 699px) {
-    .foo + .bar,
-.hoge ~ .fuga + p {
+    .foo+              .bar,
+.hoge   ~        .fuga>p {
                            color:red;
  padding       : 10px;
 }
