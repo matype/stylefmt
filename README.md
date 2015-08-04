@@ -19,7 +19,12 @@ Input (input.css):
 .hoge   ~        .fuga>p
                          {
                            color:red;
- padding       : 10px        }}
+ padding       : 10px        }}    .class
+
+{
+        color   :blue
+
+      }
 ```
 
 Run following command:
@@ -36,6 +41,10 @@ Yield:
     color: red;
     padding: 10px;
   }
+}
+
+.class {
+  color: blue;
 }
 ```
 
