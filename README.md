@@ -1,4 +1,13 @@
-# CSSfmt [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
+# CSSfmt
+
+[![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
+[![npm package][npm-ver-link]][releases]
+[![][dl-badge]][npm-pkg-link]
+
+[releases]:     https://github.com/morishitter/cssfmt/releases
+[npm-pkg-link]: https://www.npmjs.org/package/cssfmt
+[npm-ver-link]: https://img.shields.io/npm/v/cssfmt.svg?style=flat-square
+[dl-badge]:     http://img.shields.io/npm/dm/cssfmt.svg?style=flat-square
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/).
 
