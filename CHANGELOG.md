@@ -1,3 +1,8 @@
+## v0.3.0
+
+- Changed `cssfmt()` a parameter. (filepath -> file)
+- Updated package description.
+
 ## v0.2.0
 
 - Sort values of `border` shorthand property.
