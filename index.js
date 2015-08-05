@@ -1,10 +1,8 @@
-var fs = require('fs')
 var postcss = require('postcss')
 var formatAtRules = require('./lib/formatAtRules')
 var formatRules = require('./lib/formatRules')
 
-module.exports = function (cssFile) {
-  var css = fs.readFileSync(cssFile, 'utf-8')
+module.exports = function (css) {
   var root = postcss.parse(css)
 
   formatAtRules(root)
