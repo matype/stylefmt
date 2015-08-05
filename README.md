@@ -1,15 +1,19 @@
 # CSSfmt
 
-[![Join the chat at https://gitter.im/morishitter/cssfmt](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/morishitter/cssfmt?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://travis-ci.org/morishitter/cssfmt.svg)](https://travis-ci.org/morishitter/cssfmt)
 [![npm package][npm-ver-link]][releases]
 [![][dl-badge]][npm-pkg-link]
+[![Dependency Status](https://david-dm.org/morishitter/cssfmt.svg)](https://david-dm.org/morishitter/cssfmt)
+[![][mit-badge]][mit]
+
+[![Join the chat at https://gitter.im/morishitter/cssfmt](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/morishitter/cssfmt?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [releases]:     https://github.com/morishitter/cssfmt/releases
 [npm-pkg-link]: https://www.npmjs.org/package/cssfmt
 [npm-ver-link]: https://img.shields.io/npm/v/cssfmt.svg?style=flat-square
 [dl-badge]:     http://img.shields.io/npm/dm/cssfmt.svg?style=flat-square
+[mit]:          http://opensource.org/licenses/MIT
+[mit-badge]:    https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
