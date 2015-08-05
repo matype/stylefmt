@@ -1,3 +1,7 @@
+## v0.4.0
+
+- Can use as a PostCSS plugin.
+
 ## v0.3.0
 
 - Changed `cssfmt()` a parameter. (filepath -> file)
