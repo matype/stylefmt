@@ -2,11 +2,18 @@ var postcss = require('postcss')
 var formatAtRules = require('./lib/formatAtRules')
 var formatRules = require('./lib/formatRules')
 
-module.exports = function (css) {
-  var root = postcss.parse(css)
+var cssfmt = postcss.plugin('cssfmt', function () {
+  return function (root) {
 
-  formatAtRules(root)
-  formatRules(root)
+    formatAtRules(root)
+    formatRules(root)
 
-  return root
+    return root
+  }
+})
+
+module.exports = cssfmt
+
+module.exports.process = function (css) {
+  return postcss([ cssfmt() ]).process(css).css
 }

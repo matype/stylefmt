@@ -34,8 +34,7 @@ if (argv._[0]) {
   var output  = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
-  var formatted = cssfmt(css)
-  fs.writeFile(output, formatted.toString(), function (err) {
+  fs.writeFile(output, cssfmt.process(css), function (err) {
     if (err) throw err
   })
 }
