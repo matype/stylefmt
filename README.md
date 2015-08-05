@@ -11,6 +11,8 @@
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/).
 
+CSSfmt is built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
+
 CSSfmt'd code is:
 
 - easier to **write** : never worry about minor formatting concerns while hacking away.
@@ -18,11 +20,6 @@ CSSfmt'd code is:
 - easier to **maintain** : mechanical changes to the source don't cause unrelated changes to the file's formatting; diffs show only the real changes.
 - **uncontroversial** : never have a debate about spacing or brace position ever again!
 
-## Installation
-
-```shell
-$ npm install cssfmt
-```
 
 ## Example
 
@@ -68,6 +65,46 @@ Yield:
 }
 ```
 
+## Installation
+
+```shell
+$ npm install cssfmt
+```
+
+## Usage
+
+### in Command Line
+
+CLI Help:
+```
+Usage: cssfmt input-file [output-file]
+
+Options:
+
+  -V, --versions    output the version number
+  -h, --help        output usage information
+```
+
+### in Node.js
+
+```js
+var fs = require('fs');
+var postcss = require('postcss');
+var fmt = require('cssfmt');
+
+var css = fs.readFileSync('input.css', 'utf-8');
+
+var output = postcss()
+  .use(fmt())
+  .process(css)
+  .css;
+```
+
+### in Task Runners
+
+We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
+
+
 ## Rules
 
 - 2 spaces indentation
@@ -81,6 +118,8 @@ Yield:
 - require new line after rules
 
 ## Option projects
+
+### for Task Runners
 
 - [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
 - [gulp-cssfmt](https://github.com/morishitter/gulp-cssfmt)
