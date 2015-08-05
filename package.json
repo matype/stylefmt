@@ -17,7 +17,8 @@
     "css",
     "format",
     "code style",
-    "beautifier"
+    "beautifier",
+    "postcss-plugin"
   ],
   "author": "Masaaki Morishita",
   "license": "MIT",
