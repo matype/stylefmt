@@ -11,9 +11,7 @@
 [npm-ver-link]: https://img.shields.io/npm/v/cssfmt.svg?style=flat-square
 [dl-badge]:     http://img.shields.io/npm/dm/cssfmt.svg?style=flat-square
 
-CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/).
-
-CSSfmt is built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
+CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
 CSSfmt'd code is:
 
