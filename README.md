@@ -123,6 +123,10 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 
 ## Option projects
 
+### Editor plugins
+
+- [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
+
 ### for Task Runners
 
 - [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
