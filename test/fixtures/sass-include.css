@@ -1,4 +1,3 @@
-.class {
-  padding: 10px;
-  @include .clearfix;
-}
+.class
+{
+       padding:10px;@include        clearfix();}

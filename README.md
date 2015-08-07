@@ -147,7 +147,10 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 
 - require 1 space between `@mixin` and mixin name
 - require 1 space between mixin name and `(`
-- require 1 space between `@extend` and base rules.
+- require 1 space between `@extend` and base rules
+- require 1 space between `@include` and mixin name
+- disallow any spaces between `$variable` and `:`
+- require 1 space between `:` and name of variable
 
 ## Option projects
 
