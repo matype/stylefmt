@@ -17,7 +17,11 @@
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
-We can format nested selector syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+CSS can format following code:
+
+- Vanilla CSS
+- Nested selector syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+- Most of all SCSS syntax.
 
 CSSfmt'd code is:
 
@@ -28,6 +32,8 @@ CSSfmt'd code is:
 
 
 ## Example
+
+### Nested selectors
 
 Input (input.css):
 ```css
@@ -79,6 +85,79 @@ Yield:
 #id {
   color: blue;
   border: 1px solid #ddd;
+}
+```
+
+### SCSS syntax
+
+Input (input.scss):
+
+```scss
+@mixin      clearfix    ()      { &:before,
+  &:after {
+                content:" ";
+    display              : table;  }
+
+  &:after        {clear: both;}
+   }.class
+{
+       padding:10px;@include        clearfix();}
+     .base {  color: red;  }
+
+%base
+{
+
+
+padding: 12px
+}
+
+.foo{ 
+@extend      .base;}
+
+.bar     
+      {     @extend            %base;
+
+}
+```
+
+Yield:
+
+```scss
+@mixin clearfix () {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+.class {
+  padding: 10px;
+  @include clearfix();
+}
+
+
+.base {
+  color: red;
+}
+
+
+%base {
+  padding: 12px;
+}
+
+
+.foo {
+  @extend .base;
+}
+
+
+.bar {
+  @extend %base;
 }
 ```
 
