@@ -17,7 +17,7 @@
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
-We can format nested selector syntax like SCSS, Less, Stylus and Processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+We can format nested selector syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
 
 CSSfmt'd code is:
 
@@ -124,6 +124,8 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 
 ## Rules
 
+### Basic
+
 - 2 spaces indentation
 - require 1 space between simple selector and combinator
 - require 1 space between selector and `{`
@@ -133,6 +135,11 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 - require new line after declarations
 - require `;` in last declaration
 - require new line after rules
+- open 2 lines between rules
+
+### for nested selector syntax
+
+-  open 1 line between declarations and nested rules
 
 ## Option projects
 
