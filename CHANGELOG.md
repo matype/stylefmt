@@ -1,3 +1,7 @@
+## v0.5.3
+
+- Support formatting Sass Mixin.
+
 ## v0.5.2
 
 - Support formatting `!important`.
