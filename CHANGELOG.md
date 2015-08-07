@@ -1,3 +1,7 @@
+## v0.5.1
+
+- Remove spaces between values and semicolon.
+
 ## v0.5.0
 
 - Support nested selector syntax like SCSS, Less, Stylus, and processor using postcss-nested.
