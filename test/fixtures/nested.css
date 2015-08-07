@@ -1,11 +1,11 @@
-     .foo {font-size   :12px;
+     .foo {font-size   :12px      ;
 
 
   >.nested-1
  
   {
 padding: 10px;   .nested-2-1{
-      color       :      red;
+      color       :      red     ;
     }
            +      .nested-2-2      {
   color:blue;  }}
