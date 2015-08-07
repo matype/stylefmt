@@ -1,3 +1,12 @@
+## v0.6.0
+
+Support formatting some Sass functions.
+
+- Variables
+- `@mixin`
+- `@include`
+- `@extend` (include `%` selector)
+
 ## v0.5.3
 
 - Support formatting Sass Mixin.
