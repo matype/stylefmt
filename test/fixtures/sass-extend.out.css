@@ -1,0 +1,7 @@
+.base {
+  color: red;
+}
+
+.class {
+  @extend .base;
+}

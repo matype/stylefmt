@@ -1,0 +1,12 @@
+     .base {  color: red;  }
+
+%base
+{
+
+
+padding: 12px
+}
+
+.class { @extend            .base;}
+
+.class { @extend            %base;}
