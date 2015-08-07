@@ -18,8 +18,9 @@ function test (name, description) {
   })
 }
 
-//test('readme')
-//test('nested')
-//test('important')
-//test('mixin')
+test('readme')
+test('nested')
+test('important')
+test('mixin')
 test('sass-extend')
+test('sass-variables')
