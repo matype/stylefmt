@@ -1,10 +1,22 @@
 var fs = require('fs')
-var test = require('tape')
-var cssfmt = require('..')
+var tape = require('tape')
+var fmt = require('..')
 
-test('fmt', function (t) {
-  var input = fs.readFileSync('test/input.css', 'utf-8')
-  var expected = fs.readFileSync('test/output.css', 'utf-8')
-  t.equal(cssfmt.process(input), expected)
-  t.end()
-})
+function input (name) {
+  return fs.readFileSync('test/fixtures/' + name + '.css', 'utf-8')
+}
+
+function output (name) {
+  return fs.readFileSync('test/fixtures/' + name + '.out.css', 'utf-8')
+}
+
+function test (name, description) {
+  description = description || name
+  return tape(description, function (t) {
+    t.equal(fmt.process(input(name)), output(name))
+    t.end()
+  })
+}
+
+test('readme')
+test('nested')
