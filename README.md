@@ -17,6 +17,8 @@
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
+We can format nested selector syntax like SCSS, Less, Stylus and Processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+
 CSSfmt'd code is:
 
 - easier to **write** : never worry about minor formatting concerns while hacking away.
@@ -29,20 +31,23 @@ CSSfmt'd code is:
 
 Input (input.css):
 ```css
-  @media screen and(     min-width    :699px  )
-    {
-    .foo+              .bar,
-.hoge   ~        .fuga>p
-                         {
-                           color:red;
- padding       : 10px        }}    .class    ,#id
+      @media screen and (    min-width :699px)
+ {.foo    +       .bar,.hoge{
+    font-size   :12px;  ~       .fuga     {
+      padding      : 10px       5px;
+   color:green;
+ >p
 
-{
-        color   :blue;font-size:        12px;
+ {
+        line-height             : 1.5;
+      }}}
+     }
 
-border     :#ddd        solid      1px
 
-      }
+.class,           #id
+ {     color       : blue;
+
+  border        :solid  #ddd                1px;}
 ```
 
 Run the following command:
@@ -55,16 +60,24 @@ Yield:
 ```css
 @media screen and (min-width: 699px) {
   .foo + .bar,
-  .hoge ~ .fuga > p {
-    color: red;
-    padding: 10px;
+  .hoge {
+    font-size: 12px;
+
+    ~ .fuga {
+      padding: 10px 5px;
+      color: green;
+
+      > p {
+        line-height: 1.5;
+      }
+    }
   }
 }
+
 
 .class,
 #id {
   color: blue;
-  font-size: 12px;
   border: 1px solid #ddd;
 }
 ```
