@@ -33,13 +33,13 @@ Input (input.css):
 ```css
       @media screen and (    min-width :699px)
  {.foo    +       .bar,.hoge{
-    font-size   :12px;  ~       .fuga     {
+    font-size   :12px      !   important   ;  ~       .fuga     {
       padding      : 10px       5px;
    color:green;
  >p
 
  {
-        line-height             : 1.5;
+        line-height             : 1.5          ;
       }}}
      }
 
@@ -47,7 +47,7 @@ Input (input.css):
 .class,           #id
  {     color       : blue;
 
-  border        :solid  #ddd                1px;}
+  border        :solid  #ddd                1px}
 ```
 
 Run the following command:
@@ -61,7 +61,7 @@ Yield:
 @media screen and (min-width: 699px) {
   .foo + .bar,
   .hoge {
-    font-size: 12px;
+    font-size: 12px !important;
 
     ~ .fuga {
       padding: 10px 5px;
@@ -134,6 +134,8 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 - require 1 space between `:` and values
 - require new line after declarations
 - require `;` in last declaration
+- require 1 space between values and `!important`
+- disallow any spaces between `!` and `important`
 - require new line after rules
 - open 2 lines between rules
 

@@ -1,12 +1,12 @@
       @media screen and (    min-width :699px)
  {.foo    +       .bar,.hoge{
-    font-size   :12px;  ~       .fuga     {
+    font-size   :12px      !   important   ;  ~       .fuga     {
       padding      : 10px       5px;
    color:green;
  >p
 
  {
-        line-height             : 1.5;
+        line-height             : 1.5          ;
       }}}
      }
 
