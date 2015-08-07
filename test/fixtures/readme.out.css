@@ -1,8 +1,16 @@
 @media screen and (min-width: 699px) {
   .foo + .bar,
-  .hoge ~ .fuga > p {
-    color: red;
-    padding: 10px;
+  .hoge {
+    font-size: 12px;
+
+    ~ .fuga {
+      padding: 10px 5px;
+      color: green;
+
+      > p {
+        line-height: 1.5;
+      }
+    }
   }
 }
 
@@ -10,6 +18,5 @@
 .class,
 #id {
   color: blue;
-  font-size: 12px;
   border: 1px solid #ddd;
 }
