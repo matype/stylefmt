@@ -1,3 +1,7 @@
+## v0.5.0
+
+- Support nested selector syntax like SCSS, Less, Stylus, and processor using postcss-nested.
+
 ## v0.4.0
 
 - Can use as a PostCSS plugin.
