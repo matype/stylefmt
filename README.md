@@ -143,6 +143,11 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 
 -  open 1 line between declarations and nested rules
 
+### Sass
+
+- require 1 space between `@mixin` and mixin name
+- require 1 space between mixin name and `(`
+
 ## Option projects
 
 ### Editor plugins
