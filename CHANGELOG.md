@@ -1,3 +1,7 @@
+## v0.5.2
+
+- Support formatting `!important`.
+
 ## v0.5.1
 
 - Remove spaces between values and semicolon.
