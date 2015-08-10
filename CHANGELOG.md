@@ -1,3 +1,7 @@
+## v0.6.1
+
+Open 1 line between rules in atrules.
+
 ## v0.6.0
 
 Support formatting some Sass functions.
