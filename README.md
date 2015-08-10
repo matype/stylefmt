@@ -17,7 +17,7 @@
 
 CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](http://golang.org/pkg/fmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
 
-CSS can format following code:
+CSSfmt can format following code:
 
 - Vanilla CSS
 - Nested selector syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
