@@ -218,6 +218,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp
 - disallow any spaces between `!` and `important`
 - require new line after rules
 - open 2 lines between rules
+- open 1 line between rules in atrules
 
 ### for nested selector syntax
 
