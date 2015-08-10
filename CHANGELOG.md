@@ -1,6 +1,10 @@
+## v0.6.2
+
+- Open 1 space after `,` in values.
+
 ## v0.6.1
 
-Open 1 line between rules in atrules.
+- Open 1 line between rules in atrules.
 
 ## v0.6.0
 
