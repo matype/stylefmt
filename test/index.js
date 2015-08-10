@@ -21,6 +21,7 @@ function test (name, description) {
 test('readme')
 test('nested')
 test('important')
+test('values')
 
 test('sass-mixin')
 test('sass-extend')
