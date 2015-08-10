@@ -129,6 +129,7 @@ Yield:
     content: " ";
     display: table;
   }
+
   &:after {
     clear: both;
   }
