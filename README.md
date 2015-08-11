@@ -174,10 +174,11 @@ $ npm install cssfmt
 
 CLI Help:
 ```
-Usage: cssfmt input-file [output-file]
+Usage: cssfmt input-file [output-file] [options]
 
 Options:
 
+  -d, --diff        output diff against original file
   -V, --versions    output the version number
   -h, --help        output usage information
 ```
