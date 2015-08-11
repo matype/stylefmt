@@ -16,10 +16,10 @@
 padding: 12px
 }
 
-.foo{ 
+.foo{
 @extend      .base;}
 
-.bar     
+.bar
       {     @extend            %base;
 
 }
