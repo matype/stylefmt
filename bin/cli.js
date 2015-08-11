@@ -66,11 +66,9 @@ function handleDiff (fullPath, original, formatted) {
       console.error(err)
       return
     }
+
     fs.writeSync(fd, formatted)
 
-    console.log(tmpPath)
-    console.log(fd)
-    console.log(fullPath)
     diff(fullPath, tmpPath, function (err, stdout, stderr) {
       if (stdout) {
         console.log(stdout);
