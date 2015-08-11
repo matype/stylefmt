@@ -26,7 +26,7 @@ if (argv.V) {
 }
 
 if (argv.h) {
-  console.log('Usage: cssfmt input-name [output-name]')
+  console.log('Usage: cssfmt input-name [output-name] [options]')
   console.log('')
   console.log('Options:')
   console.log('')
