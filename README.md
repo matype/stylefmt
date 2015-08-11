@@ -173,6 +173,11 @@ $ npm install cssfmt
 ### in Command Line
 
 CLI Help:
+
+```
+$ cssfmt --help
+```
+
 ```
 Usage: cssfmt input-file [output-file] [options]
 
