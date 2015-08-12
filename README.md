@@ -20,7 +20,7 @@ CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt]
 CSSfmt can format following code:
 
 - Vanilla CSS
-- Nested selector syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+- Nested selectors syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
 - Most of all SCSS syntax.
 
 CSSfmt'd code is:
@@ -205,7 +205,7 @@ var output = postcss()
 
 ### in Task Runners
 
-We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [Gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
+We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
 
 
 ## Rules
