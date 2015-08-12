@@ -1,3 +1,7 @@
+## v0.6.3
+
+- Implement `--diff` option.
+
 ## v0.6.2
 
 - Open 1 space after `,` in values.
