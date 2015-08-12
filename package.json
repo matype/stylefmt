@@ -25,10 +25,10 @@
   "dependencies": {
     "minimist": "^1.1.2",
     "postcss": "^4.1.16",
-    "sort-border-values": "^0.1.1"
+    "sort-border-values": "^0.1.1",
+    "tmp": "0.0.26"
   },
   "devDependencies": {
-    "tape": "^4.0.2",
-    "tmp": "0.0.26"
+    "tape": "^4.0.2"
   }
 }
