@@ -1,3 +1,7 @@
+## v0.6.4
+
+- Fix a bug. [#6](https://github.com/morishitter/cssfmt/pull/6)
+
 ## v0.6.3
 
 - Implement `--diff` option.
