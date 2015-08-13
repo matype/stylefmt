@@ -1,3 +1,7 @@
+## v0.6.5
+
+- Fix a bug. [#9](https://github.com/morishitter/cssfmt/pull/9)
+
 ## v0.6.4
 
 - Fix a bug. [#6](https://github.com/morishitter/cssfmt/pull/6)
