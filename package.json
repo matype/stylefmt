@@ -16,6 +16,7 @@
   "keywords": [
     "css",
     "format",
+    "formatter",
     "code style",
     "beautifier",
     "postcss-plugin"
