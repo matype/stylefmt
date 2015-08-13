@@ -24,6 +24,7 @@ var tmp = require('tmp')
 
 if (argv.V) {
   console.log(pkg.version)
+  process.exit()
 }
 
 if (argv.h) {
@@ -34,6 +35,7 @@ if (argv.h) {
   console.log('  -d, --diff        output diff against original file')
   console.log('  -V, --versions    output the version number')
   console.log('  -h, --help        output usage information')
+  process.exit()
 }
 
 if (argv._[0]) {
