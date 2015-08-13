@@ -3,6 +3,7 @@
 var fs = require('fs')
 var path = require('path')
 var child_process = require('child_process')
+var stdin = require('stdin')
 var pkg = require('../package.json')
 var cssfmt = require('../')
 
@@ -36,8 +37,8 @@ if (argv.h) {
 }
 
 if (argv._[0]) {
-  var input  = argv._[0]
-  var output  = argv._[1] || argv._[0]
+  var input = argv._[0]
+  var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
   var formatted = cssfmt.process(css)
@@ -50,7 +51,11 @@ if (argv._[0]) {
       if (err) throw err
     })
   }
-
+} else {
+  stdin(function (css) {
+    var formatted = cssfmt.process(css)
+    process.stdout.write(formatted)
+  })
 }
 
 
