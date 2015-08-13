@@ -1,3 +1,7 @@
+## v0.7.0
+
+- Read file from stdin.
+
 ## v0.6.5
 
 - Fix a bug. [#9](https://github.com/morishitter/cssfmt/pull/9)
