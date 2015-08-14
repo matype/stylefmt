@@ -190,8 +190,6 @@ Options:
 
 CSSfmt can also read a file from stdin if there are no input-fle as argument in CLI.
 
-So, we can use CSSfmt in Vim, if we run `:%!cssfmt`.
-
 ### in Node.js
 
 ```js
@@ -249,6 +247,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 
 - [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
 - [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
+- [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
 
 ### for Task Runners
 
