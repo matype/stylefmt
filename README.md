@@ -190,6 +190,10 @@ Options:
 
 CSSfmt can also read a file from stdin if there are no input-fle as argument in CLI.
 
+```
+$ cat input.css | cssfmt
+```
+
 ### in Node.js
 
 ```js
