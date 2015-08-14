@@ -188,6 +188,10 @@ Options:
   -h, --help        output usage information
 ```
 
+CSSfmt can also read a file from stdin if there are no input-fle as argument in CLI.
+
+So, we can use CSSfmt in Vim, if we run `:%!cssfmt`.
+
 ### in Node.js
 
 ```js

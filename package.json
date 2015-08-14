@@ -1,10 +1,10 @@
 {
   "name": "cssfmt",
-  "version": "0.6.5",
+  "version": "0.7.0",
   "description": "CSSfmt is a tool that automatically formats CSS source code, inspired by Gofmt.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test"
+    "test": "tape test/*.js"
   },
   "bin": {
     "cssfmt": "bin/cli.js"
@@ -16,6 +16,7 @@
   "keywords": [
     "css",
     "format",
+    "formatter",
     "code style",
     "beautifier",
     "postcss-plugin"
@@ -26,6 +27,7 @@
     "minimist": "^1.1.2",
     "postcss": "^4.1.16",
     "sort-border-values": "^0.1.1",
+    "stdin": "0.0.1",
     "tmp": "0.0.26"
   },
   "devDependencies": {
