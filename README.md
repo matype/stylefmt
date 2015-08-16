@@ -252,6 +252,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
 - [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 - [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [sublime-cssfmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
 
 ### for Task Runners
 
