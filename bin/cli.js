@@ -62,6 +62,8 @@ if (argv._[0]) {
   recursive(argv.R, function (err, files) {
     files.forEach(function (file) {
       var fullPath = path.resolve(process.cwd(), file)
+      if (!isCss(fullPath)) return
+
       var css = fs.readFileSync(fullPath, 'utf-8')
       var formatted = cssfmt.process(css)
       fs.writeFile(fullPath, formatted, function (err) {
@@ -74,6 +76,11 @@ if (argv._[0]) {
     var formatted = cssfmt.process(css)
     process.stdout.write(formatted)
   })
+}
+
+
+function isCss (filePath) {
+  return /^\.css|\.scss$/i.test(path.extname(filePath))
 }
 
 
