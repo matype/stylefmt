@@ -29,11 +29,12 @@ if (argv.V) {
 }
 
 if (argv.h) {
-  console.log('Usage: cssfmt input-name [output-name] [options]')
+  console.log('Usage: cssfmt [options] input-name [output-name]')
   console.log('')
   console.log('Options:')
   console.log('')
   console.log('  -d, --diff        output diff against original file')
+  console.log('  -R, --recursive   format files recursively')
   console.log('  -V, --versions    output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
