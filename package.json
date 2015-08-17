@@ -24,9 +24,9 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
-    "glob": "^5.0.14",
     "minimist": "^1.1.2",
     "postcss": "^4.1.16",
+    "recursive-readdir": "^1.2.1",
     "sort-border-values": "^0.1.1",
     "stdin": "0.0.1",
     "tmp": "0.0.26"

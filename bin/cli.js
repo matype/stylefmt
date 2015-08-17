@@ -57,9 +57,9 @@ if (argv._[0]) {
     })
   }
 } else if (argv.R) {
-  var glob = require('glob')
+  var recursive = require('recursive-readdir')
 
-  glob(argv.R + '/**/*', function (err, files) {
+  recursive(argv.R, function (err, files) {
     files.forEach(function (file) {
       var fullPath = path.resolve(process.cwd(), file)
       var css = fs.readFileSync(fullPath, 'utf-8')
