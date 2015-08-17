@@ -1,3 +1,7 @@
+## v0.8.0
+
+- Add `--recursive` option in CLI.
+
 ## v0.7.0
 
 - Read file from stdin.
