@@ -179,11 +179,12 @@ $ cssfmt --help
 ```
 
 ```
-Usage: cssfmt input-file [output-file] [options]
+Usage: cssfmt [options] input-file [output-file]
 
 Options:
 
   -d, --diff        output diff against original file
+  -R, --recursive   format files recursively
   -V, --versions    output the version number
   -h, --help        output usage information
 ```
