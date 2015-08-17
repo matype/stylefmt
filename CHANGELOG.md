@@ -1,3 +1,7 @@
+## v0.8.2
+
+- Fix a bug using `--recursive` option.
+
 ## v0.8.1
 
 - Fix a bug using `--recursive` option.
