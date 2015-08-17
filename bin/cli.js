@@ -16,7 +16,8 @@ var argv = minimist(process.argv.slice(2), {
   alias: {
     h: 'help',
     V: 'versions',
-    d: 'diff'
+    d: 'diff',
+    R: 'recursive'
   }
 })
 
@@ -38,6 +39,7 @@ if (argv.h) {
   process.exit()
 }
 
+
 if (argv._[0]) {
   var input = argv._[0]
   var output = argv._[1] || argv._[0]
@@ -53,6 +55,19 @@ if (argv._[0]) {
       if (err) throw err
     })
   }
+} else if (argv.R) {
+  var glob = require('glob')
+
+  glob(argv.R + '/**/*', function (err, files) {
+    files.forEach(function (file) {
+      var fullPath = path.resolve(process.cwd(), file)
+      var css = fs.readFileSync(fullPath, 'utf-8')
+      var formatted = cssfmt.process(css)
+      fs.writeFile(fullPath, formatted, function (err) {
+        if (err) throw err
+      })
+    })
+  })
 } else {
   stdin(function (css) {
     var formatted = cssfmt.process(css)
