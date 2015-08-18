@@ -47,7 +47,7 @@ Input (input.css):
  {
         line-height             : 1.5          ;
       }}}
-     }
+     }                /* comment for .class, #id */
 
 
 .class,           #id
@@ -81,6 +81,7 @@ Yield:
 }
 
 
+/* comment for .class, #id */
 .class,
 #id {
   color: blue;
@@ -232,6 +233,8 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - require new line after rules
 - open 2 lines between rules
 - open 1 line between rules in atrules
+- open 2 lines before comments
+- require new line between a comment and rules
 
 ### for nested selector syntax
 
