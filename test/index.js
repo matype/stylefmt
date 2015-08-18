@@ -24,6 +24,7 @@ test('important')
 test('values')
 test('comment')
 test('vendor-prefix')
+test('nested-atrule')
 
 test('sass-mixin')
 test('sass-extend')
