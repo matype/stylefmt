@@ -8,7 +8,7 @@
  {
         line-height             : 1.5          ;
       }}}
-     }
+     }                /* comment for .class, #id */
 
 
 .class,           #id

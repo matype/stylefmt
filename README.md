@@ -47,7 +47,7 @@ Input (input.css):
  {
         line-height             : 1.5          ;
       }}}
-     }
+     }                /* comment for .class, #id */
 
 
 .class,           #id
@@ -81,6 +81,7 @@ Yield:
 }
 
 
+/* comment for .class, #id */
 .class,
 #id {
   color: blue;
@@ -179,11 +180,12 @@ $ cssfmt --help
 ```
 
 ```
-Usage: cssfmt input-file [output-file] [options]
+Usage: cssfmt [options] input-file [output-file]
 
 Options:
 
   -d, --diff        output diff against original file
+  -R, --recursive   format files recursively
   -V, --versions    output the version number
   -h, --help        output usage information
 ```
@@ -230,6 +232,8 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - disallow any spaces between `!` and `important`
 - open 2 lines between rules
 - open 1 line between rules in atrules
+- open 2 lines before comments
+- require new line between a comment and rules
 
 ### for nested selector syntax
 
@@ -251,6 +255,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
 - [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 - [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [sublime-cssfmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
 
 ### for Task Runners
 

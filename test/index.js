@@ -22,6 +22,8 @@ test('readme')
 test('nested')
 test('important')
 test('values')
+test('comment')
+test('vendor-prefix')
 
 test('sass-mixin')
 test('sass-extend')

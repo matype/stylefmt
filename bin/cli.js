@@ -16,7 +16,8 @@ var argv = minimist(process.argv.slice(2), {
   alias: {
     h: 'help',
     V: 'versions',
-    d: 'diff'
+    d: 'diff',
+    R: 'recursive'
   }
 })
 
@@ -28,15 +29,17 @@ if (argv.V) {
 }
 
 if (argv.h) {
-  console.log('Usage: cssfmt input-name [output-name] [options]')
+  console.log('Usage: cssfmt [options] input-name [output-name]')
   console.log('')
   console.log('Options:')
   console.log('')
   console.log('  -d, --diff        output diff against original file')
+  console.log('  -R, --recursive   format files recursively')
   console.log('  -V, --versions    output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
 }
+
 
 if (argv._[0]) {
   var input = argv._[0]
@@ -53,11 +56,31 @@ if (argv._[0]) {
       if (err) throw err
     })
   }
+} else if (argv.R) {
+  var recursive = require('recursive-readdir')
+
+  recursive(argv.R, function (err, files) {
+    files.forEach(function (file) {
+      var fullPath = path.resolve(process.cwd(), file)
+      if (!isCss(fullPath)) return
+
+      var css = fs.readFileSync(fullPath, 'utf-8')
+      var formatted = cssfmt.process(css)
+      fs.writeFile(fullPath, formatted, function (err) {
+        if (err) throw err
+      })
+    })
+  })
 } else {
   stdin(function (css) {
     var formatted = cssfmt.process(css)
     process.stdout.write(formatted)
   })
+}
+
+
+function isCss (filePath) {
+  return /^\.css|\.scss$/i.test(path.extname(filePath))
 }
 
 
