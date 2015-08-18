@@ -1,3 +1,7 @@
+## v0.8.4
+
+- Fix a bug [#15](https://github.com/morishitter/cssfmt/issues/15)
+
 ## v0.8.3
 
 - Support formatting comments
