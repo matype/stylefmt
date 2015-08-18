@@ -219,8 +219,8 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 ### Basic
 
 - 2 spaces indentation
-- require 1 space between simple selector and combinator
-- require 1 space between selector and `{`
+- require 1 space between a simple selector and combinator
+- require 1 space between selectors and `{`
 - require new line after `{`
 - disallow any spaces between property and `:`
 - require 1 space between `:` and values
@@ -228,7 +228,6 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - require `;` in last declaration
 - require 1 space between values and `!important`
 - disallow any spaces between `!` and `important`
-- require new line after rules
 - open 2 lines between rules
 - open 1 line between rules in atrules
 
@@ -236,7 +235,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 
 -  open 1 line between declarations and nested rules
 
-### Sass
+### SCSS
 
 - require 1 space between `@mixin` and mixin name
 - require 1 space between mixin name and `(`
