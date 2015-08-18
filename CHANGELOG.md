@@ -1,3 +1,7 @@
+## v0.8.3
+
+- Support formatting comments
+
 ## v0.8.2
 
 - Fix a bug using `--recursive` option.
