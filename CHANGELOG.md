@@ -1,3 +1,7 @@
+## v0.8.5
+
+- Fix a bug [#17](https://github.com/morishitter/cssfmt/issues/17)
+
 ## v0.8.4
 
 - Fix a bug [#15](https://github.com/morishitter/cssfmt/issues/15)
