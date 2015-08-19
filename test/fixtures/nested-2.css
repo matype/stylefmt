@@ -1,0 +1,5 @@
+.btn {&:hover {
+    color: red;
+  }&:active {
+color:blue;}
+  }

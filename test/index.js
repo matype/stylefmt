@@ -20,6 +20,7 @@ function test (name, description) {
 
 test('readme')
 test('nested')
+test('nested-2')
 test('important')
 test('values')
 test('comment')
