@@ -1,3 +1,14 @@
+## v1.0.0
+
+Major release.
+
+- Update PostCSS to v5.0.
+- Support all SCSS syntax.
+ - inline comments
+ - `@function`
+
+- Fix some bugs.
+
 ## v0.8.5
 
 - Fix a bug [#17](https://github.com/morishitter/cssfmt/issues/17)
