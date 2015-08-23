@@ -1,4 +1,8 @@
-@mixin      clearfix    ()      { &:before,
+//mixin for clearfix
+
+
+
+        @mixin      clearfix    ()      { &:before,
   &:after {
                 content:" ";
     display              : table;  }
@@ -7,7 +11,7 @@
    }.class
 {
        padding:10px;@include        clearfix();}
-     .base {  color: red;  }
+     .base {  color: red;  } //placeholder
 
 %base
 {

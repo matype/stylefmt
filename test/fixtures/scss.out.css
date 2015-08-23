@@ -1,3 +1,4 @@
+// mixin for clearfix
 @mixin clearfix () {
   &:before,
   &:after {
@@ -22,6 +23,7 @@
 }
 
 
+// placeholder
 %base {
   padding: 12px;
 }

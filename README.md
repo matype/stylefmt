@@ -20,8 +20,8 @@ CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt]
 CSSfmt can format following code:
 
 - Vanilla CSS
+- SCSS syntax.
 - Nested selectors syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
-- Most of all SCSS syntax.
 
 CSSfmt'd code is:
 
@@ -32,6 +32,87 @@ CSSfmt'd code is:
 
 
 ## Example
+
+### SCSS syntax
+
+Input (input.scss):
+
+```scss
+//mixin for clearfix
+
+
+
+        @mixin      clearfix    ()      { &:before,
+  &:after {
+                content:" ";
+    display              : table;  }
+
+  &:after        {clear: both;}
+   }.class
+{
+       padding:10px;@include        clearfix();}
+     .base {  color: red;  } //placeholder
+
+%base
+{
+
+
+padding: 12px
+}
+
+.foo{ 
+@extend      .base;}
+
+.bar     
+      {     @extend            %base;
+
+}
+```
+
+Yield:
+
+```scss
+// mixin for clearfix
+@mixin clearfix () {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+.class {
+  padding: 10px;
+  @include clearfix();
+}
+
+
+.base {
+  color: red;
+}
+
+
+// placeholder
+%base {
+  padding: 12px;
+}
+
+
+.foo {
+  @extend .base;
+}
+
+
+.bar {
+  @extend %base;
+}
+```
+
 
 ### Nested selectors
 
@@ -86,80 +167,6 @@ Yield:
 #id {
   color: blue;
   border: 1px solid #ddd;
-}
-```
-
-### SCSS syntax
-
-Input (input.scss):
-
-```scss
-@mixin      clearfix    ()      { &:before,
-  &:after {
-                content:" ";
-    display              : table;  }
-
-  &:after        {clear: both;}
-   }.class
-{
-       padding:10px;@include        clearfix();}
-     .base {  color: red;  }
-
-%base
-{
-
-
-padding: 12px
-}
-
-.foo{ 
-@extend      .base;}
-
-.bar     
-      {     @extend            %base;
-
-}
-```
-
-Yield:
-
-```scss
-@mixin clearfix () {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-
-.class {
-  padding: 10px;
-  @include clearfix();
-}
-
-
-.base {
-  color: red;
-}
-
-
-%base {
-  padding: 12px;
-}
-
-
-.foo {
-  @extend .base;
-}
-
-
-.bar {
-  @extend %base;
 }
 ```
 
