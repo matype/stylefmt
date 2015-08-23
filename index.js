@@ -1,4 +1,6 @@
 var postcss = require('postcss')
+var scss = require('postcss-scss')
+
 var formatAtRules = require('./lib/formatAtRules')
 var formatRules = require('./lib/formatRules')
 var formatComments = require('./lib/formatComments')
@@ -20,5 +22,5 @@ var cssfmt = postcss.plugin('cssfmt', function () {
 module.exports = cssfmt
 
 module.exports.process = function (css) {
-  return postcss([ cssfmt() ]).process(css).css
+  return postcss([ cssfmt() ]).process(css, { syntax: scss }).css
 }

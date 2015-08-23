@@ -26,6 +26,7 @@
   "dependencies": {
     "minimist": "^1.1.2",
     "postcss": "^5.0.2",
+    "postcss-scss": "^0.1.0",
     "recursive-readdir": "^1.2.1",
     "sort-border-values": "^0.1.1",
     "stdin": "0.0.1",

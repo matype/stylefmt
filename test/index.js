@@ -25,6 +25,7 @@ test('important')
 test('values')
 test('comment')
 test('comment-in-rules')
+test('inline-comment')
 test('vendor-prefix')
 test('nested-atrule')
 
