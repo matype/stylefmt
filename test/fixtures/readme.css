@@ -1,17 +1,29 @@
-      @media screen and (    min-width :699px)
- {.foo    +       .bar,.hoge{
-    font-size   :12px      !   important   ;  ~       .fuga     {
-      padding      : 10px       5px;
-   color:green;
- >p
-
- {
-        line-height             : 1.5          ;
-      }}}
-     }                /* comment for .class, #id */
+//mixin for clearfix
 
 
-.class,           #id
- {     color       : blue;
 
-  border        :solid  #ddd                1px}
+        @mixin      clearfix    ()      { &:before,
+  &:after {
+                content:" ";
+    display              : table;  }
+
+  &:after        {clear: both;}
+   }.class
+{
+       padding:10px;@include        clearfix();}
+     .base {  color: red;  } //placeholder
+
+%base
+{
+
+
+padding: 12px
+}
+
+.foo{ 
+@extend      .base;}
+
+.bar     
+      {     @extend            %base;
+
+}
