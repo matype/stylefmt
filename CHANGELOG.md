@@ -1,3 +1,7 @@
+## v1.0.1
+
+- Fix [#20](https://github.com/morishitter/cssfmt/issues/20)
+
 ## v1.0.0
 
 Major release.
