@@ -237,9 +237,9 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - require `;` in last declaration
 - require 1 space between values and `!important`
 - disallow any spaces between `!` and `important`
-- open 2 lines between rules
-- open 1 line between rules in atrules
-- open 2 lines before comments
+- open 1 brank line between rules
+- open 1 brank line between rules in atrules
+- open 1 brank lines before comments
 - require new line between a comment and rules
 
 ### for nested selector syntax
