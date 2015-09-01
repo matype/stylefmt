@@ -1,3 +1,7 @@
+## v1.1.0
+
+- Change to open 1 brank line between rules. [#16](https://github.com/morishitter/cssfmt/issues/16)
+
 ## v1.0.2
 
 - Support formatting `@font-face`
