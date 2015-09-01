@@ -27,6 +27,7 @@ test('comment')
 test('comment-in-rules')
 test('vendor-prefix')
 test('nested-atrule')
+test('font-face')
 
 test('sass-mixin')
 test('sass-extend')
