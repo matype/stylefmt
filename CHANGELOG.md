@@ -1,3 +1,8 @@
+## v1.0.2
+
+- Support formatting `@font-face`
+ - Fix [#22](https://github.com/morishitter/cssfmt/issues/22)
+
 ## v1.0.1
 
 - Fix [#20](https://github.com/morishitter/cssfmt/issues/20)
