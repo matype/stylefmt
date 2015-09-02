@@ -1,3 +1,7 @@
+# v1.1.1
+
+- Fix atrule for comments format
+
 ## v1.1.0
 
 - Change to open 1 brank line between rules. [#16](https://github.com/morishitter/cssfmt/issues/16)
