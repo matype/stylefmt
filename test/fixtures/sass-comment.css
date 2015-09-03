@@ -1,0 +1,15 @@
+//           foo rule
+.foo { color: red; }
+
+/* comment */
+//multi line
+
+
+
+//comment
+
+
+
+.bar {
+  display: none;
+}
