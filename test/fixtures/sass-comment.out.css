@@ -1,0 +1,18 @@
+// foo rule
+.foo {
+  // red!
+  color: red;
+}
+
+/* comment */
+
+// multi line
+// comment
+.bar {
+  // Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  // Donec a diam lectus. Sed sit amet ipsum mauris
+  display: none;
+
+  // bar
+  margin: auto;
+}
