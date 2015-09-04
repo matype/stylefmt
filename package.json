@@ -28,6 +28,7 @@
     "postcss": "^5.0.2",
     "postcss-scss": "^0.1.0",
     "recursive-readdir": "^1.2.1",
+    "repeat-string": "^1.5.2",
     "sort-border-values": "^0.1.1",
     "stdin": "0.0.1",
     "tmp": "0.0.26"
