@@ -235,6 +235,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - open 1 brank line between rules in atrules
 - open 1 brank lines before comments
 - require new line between a comment and rules
+- disallow any brank lines between `@import`
 
 ### for nested selector syntax
 
