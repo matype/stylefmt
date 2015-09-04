@@ -11,11 +11,11 @@ var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
   boolean: [
     'help',
-    'versions'
+    'version'
   ],
   alias: {
     h: 'help',
-    V: 'versions',
+    v: 'version',
     d: 'diff',
     R: 'recursive'
   }
@@ -23,7 +23,7 @@ var argv = minimist(process.argv.slice(2), {
 
 var tmp = require('tmp')
 
-if (argv.V) {
+if (argv.v) {
   console.log(pkg.version)
   process.exit()
 }
@@ -35,7 +35,7 @@ if (argv.h) {
   console.log('')
   console.log('  -d, --diff        output diff against original file')
   console.log('  -R, --recursive   format files recursively')
-  console.log('  -V, --versions    output the version number')
+  console.log('  -v, --version     output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
 }
