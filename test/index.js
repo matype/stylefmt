@@ -28,6 +28,7 @@ test('comment-in-rules')
 test('vendor-prefix')
 test('nested-atrule')
 test('font-face')
+test('import')
 
 test('sass-mixin')
 test('sass-extend')
