@@ -2,6 +2,7 @@
 
 - Support formatting `@import`
 - Fix sass function format
+- Introduce repeat-string package
 - Fix some bugs
 
 ## v1.1.2
