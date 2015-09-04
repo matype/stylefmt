@@ -1,10 +1,16 @@
-# v1.1.2
+## v1.2.0
+
+- Support formatting `@import`
+- Fix sass function format
+- Fix some bugs
+
+## v1.1.2
 
 - Hanele multiline comments. [#24](https://github.com/morishitter/cssfmt/pull/24)
 
 Thanks @kewah .
 
-# v1.1.1
+## v1.1.1
 
 - Fix atrule for comments format
 
