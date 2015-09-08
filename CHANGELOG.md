@@ -1,3 +1,7 @@
+## v1.2.1
+
+- Support formatting pseudo-element(`::before`, `::after`)
+
 ## v1.2.0
 
 - Support formatting `@import`
