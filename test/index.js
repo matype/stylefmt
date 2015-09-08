@@ -29,6 +29,7 @@ test('vendor-prefix')
 test('nested-atrule')
 test('font-face')
 test('import')
+test('pseudo-element')
 
 test('sass-mixin')
 test('sass-extend')
