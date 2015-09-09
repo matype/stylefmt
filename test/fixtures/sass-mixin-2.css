@@ -1,0 +1,3 @@
+@mixin       headline     ($size,     $color:red    )       {
+        color:      $color;font-size: $size;
+      }

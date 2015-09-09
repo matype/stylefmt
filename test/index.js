@@ -33,6 +33,7 @@ test('pseudo-element')
 test('at-media')
 
 test('sass-mixin')
+test('sass-mixin-2')
 test('sass-extend')
 test('sass-variables')
 test('sass-include')
