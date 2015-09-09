@@ -1,1 +1,10 @@
+h2 {
+  display: inline-block;
+}
 $font-small: 10px;
+$foo: 'fooooo';
+
+.bar {
+  font-size: $font-small;
+  content: $foo;
+}

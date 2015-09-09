@@ -2,3 +2,14 @@
   padding: 10px;
   @include clearfix();
 }
+
+.class {
+  @include rounded(top, left, 5px);
+  padding: 10px;
+  @include clearfix();
+}
+
+.class {
+  padding: 10px;
+  @include horizontal-line---foo__bar(1px solid #ccc);
+}
