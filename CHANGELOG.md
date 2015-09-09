@@ -1,3 +1,7 @@
+## v1.2.2
+
+- Fix some bugs. Thanks @yisible :)
+
 ## v1.2.1
 
 - Support formatting pseudo-element(`::before`, `::after`)
