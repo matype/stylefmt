@@ -1,0 +1,23 @@
+.foo {
+  position: absolute;
+  @debug 10px + 20px;
+  display: inline-block;
+  @error "Sorry, but `#{$variable}` is not a valid value for $variable.";
+}
+@debug 10px + 20px;
+$wrn: 20px;
+@warn "The `border-radius()` mixin will be deprecated in version 2.0.";
+
+.bar {
+  position: absolute;
+  $wrn: 20px;
+  @warn "#{$wrn}";
+  display: inline-block;
+}
+
+/* http://www.sitepoint.com/using-sasss-error-warn-and-debug-directives/ */
+@if unit($input) == 'px' {
+  @warn "Please remember to use rem values in the `do-math()` function.";
+
+  // do px math and @return a value;
+}

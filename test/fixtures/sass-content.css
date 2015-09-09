@@ -1,0 +1,19 @@
+/* https://robots.thoughtbot.com/sasss-content-directive */
+
+@mixin     apply-to-ie6-only     {
+  * html {     @content     ;}
+}
+
+   @include    apply-to-ie6-only   {
+  #logo {  background-image: url(/logo.gif);   }
+}
+
+
+@mixin      media($width) {
+         @media   only   screen   and   (max-width: $width)   {   @content;  }
+}
+
+
+@include       media(320px)  {
+  background: red;
+}
