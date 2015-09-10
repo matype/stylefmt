@@ -1,3 +1,7 @@
+## v1.2.3
+
+- Fixed some bugs.
+
 ## v1.2.2
 
 - Fix some bugs. Thanks @yisible :)
