@@ -4,7 +4,8 @@
     @content;
   }
 }
-@include apply-to-ie6-only{
+
+@include apply-to-ie6-only {
   #logo {
     background-image: url(/logo.gif);
   }
@@ -15,6 +16,7 @@
     @content;
   }
 }
-@include media(320px){
+
+@include media(320px) {
   background: red;
 }
