@@ -1,6 +1,10 @@
+## v1.3.0
+
+- Set indentation size from `.editorconfig`
+
 ## v1.2.3
 
-- Fixed some bugs.
+- Fixed some bugs
 
 ## v1.2.2
 
