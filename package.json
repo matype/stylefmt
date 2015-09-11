@@ -24,6 +24,7 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
+    "editorconfig-indent": "^0.1.0",
     "minimist": "^1.1.2",
     "postcss": "^5.0.2",
     "postcss-scss": "^0.1.0",
