@@ -1,3 +1,7 @@
+## v1.3.1
+
+- Fixed [#31](https://github.com/morishitter/cssfmt/issues/31)
+
 ## v1.3.0
 
 - Set indentation size from `.editorconfig`
