@@ -1,3 +1,7 @@
+## v1.3.2
+
+- Fixed [#32](https://github.com/morishitter/cssfmt/issues/32)
+
 ## v1.3.1
 
 - Fixed [#31](https://github.com/morishitter/cssfmt/issues/31)
