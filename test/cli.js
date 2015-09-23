@@ -4,20 +4,20 @@ var fs = require('fs')
 var tape = require('tape')
 
 tape('cli stdin', function (t) {
-  spawnCssfmt([], readFixture('values.css'), function (err, output) {
+  spawnCssfmt([], readFixture('at-media.css'), function (err, output) {
     if (err) {
       throw err
     }
 
-    var expected = readFixture('values.out.css')
+    var expected = readFixture('at-media.out.css')
     t.equal(output, expected)
     t.end()
   })
 })
 
 tape('cli input file option', function (t) {
-  var tempFile = fixturesPath('values.copy.css')
-  fs.writeFileSync(tempFile, readFixture('values.css'), 'utf-8')
+  var tempFile = fixturesPath('at-media.copy.css')
+  fs.writeFileSync(tempFile, readFixture('at-media.css'), 'utf-8')
 
   spawnCssfmt([tempFile], null, function (err) {
     if (err) {
@@ -27,7 +27,7 @@ tape('cli input file option', function (t) {
     var output = fs.readFileSync(tempFile, 'utf-8')
     fs.unlinkSync(tempFile)
 
-    var expected = readFixture('values.out.css')
+    var expected = readFixture('at-media.out.css')
     t.equal(output, expected)
 
     t.end()
@@ -35,9 +35,9 @@ tape('cli input file option', function (t) {
 })
 
 tape('cli output file option', function (t) {
-  var tempFile = fixturesPath('values.copy.css')
+  var tempFile = fixturesPath('at-media.copy.css')
 
-  spawnCssfmt([fixturesPath('values.css'), tempFile], null, function(err) {
+  spawnCssfmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
     if (err) {
       throw err
     }
@@ -47,7 +47,7 @@ tape('cli output file option', function (t) {
     var output = fs.readFileSync(tempFile, 'utf-8')
     fs.unlinkSync(tempFile)
 
-    var expected = readFixture('values.out.css')
+    var expected = readFixture('at-media.out.css')
     t.equal(output, expected)
 
     t.end()
