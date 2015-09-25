@@ -26,7 +26,7 @@
   "dependencies": {
     "editorconfig-indent": "^0.1.0",
     "minimist": "^1.1.2",
-    "postcss": "5.0.5",
+    "postcss": "^5.0.6",
     "postcss-scss": "^0.1.0",
     "recursive-readdir": "^1.2.1",
     "repeat-string": "^1.5.2",
