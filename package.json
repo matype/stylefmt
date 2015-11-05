@@ -25,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "editorconfig-indent": "^0.1.0",
+    "find-config": "0.3.0",
     "minimist": "^1.1.2",
     "postcss": "^5.0.6",
     "postcss-scss": "^0.1.0",
