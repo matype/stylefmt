@@ -1,3 +1,10 @@
+## v1.3.8
+
+Fixed some bugs, thanks @kewah .
+
+- [#39](https://github.com/morishitter/cssfmt/pull/39)
+- [#40](https://github.com/morishitter/cssfmt/pull/40)
+
 ## v1.3.7
 
 - Fixed [#37](https://github.com/morishitter/cssfmt/issues/37)
