@@ -65,10 +65,13 @@ if (argv._[0]) {
       if (!isCss(fullPath)) return
 
       var css = fs.readFileSync(fullPath, 'utf-8')
-      var formatted = cssfmt.process(css)
-      fs.writeFile(fullPath, formatted, function (err) {
-        if (err) throw err
-      })
+      try {
+        var formatted = cssfmt.process(css)
+      } catch (e) {
+        throw e
+        return
+      }
+      fs.writeFileSync(fullPath, formatted)
     })
   })
 } else {
