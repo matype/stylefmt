@@ -1,3 +1,7 @@
+## v1.3.9
+
+- Fixed a bug
+
 ## v1.3.8
 
 Fixed some bugs, thanks @kewah .
