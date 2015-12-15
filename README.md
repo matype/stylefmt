@@ -264,7 +264,7 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 - [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
 - [gulp-cssfmt](https://github.com/morishitter/gulp-cssfmt)
 - [fly-cssfmt](https://github.com/morishitter/fly-cssfmt)
-
+- [laravel-elixir-cssfmt](https://github.com/appleboy/laravel-elixir-cssfmt)
 
 ## License
 
