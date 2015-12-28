@@ -30,6 +30,8 @@ test('vendor-prefix')
 test('nested-atrule')
 test('font-face')
 test('import')
+test('charset')
+test('charset-2')
 test('pseudo-element')
 test('at-media')
 
