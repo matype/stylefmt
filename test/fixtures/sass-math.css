@@ -1,0 +1,5 @@
+$numPerRow:4;
+$margin:2%;
+div {
+  width:((100%-($numPerRow*$margin))/$numPerRow);
+}
