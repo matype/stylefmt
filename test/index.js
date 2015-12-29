@@ -36,6 +36,7 @@ test('charset')
 test('charset-2')
 test('pseudo-element')
 test('at-media')
+test('data-url')
 
 test('sass-mixin')
 test('sass-mixin-2')
