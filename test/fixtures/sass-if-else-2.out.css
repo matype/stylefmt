@@ -1,7 +1,7 @@
 div {
   &:nth-child(1) {
     // comment
-    @if true or ceil(1.2) < 2 {
+    @if true or ceil(1.2) < 2 or 2 > 1 or 1 <= 1 or 2 >= 2 {
       color: blue;
     } @else if $i < 0 {
       color: red;
