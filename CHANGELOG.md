@@ -1,3 +1,7 @@
+## v1.4.0
+
+- Format hex color code to lowercase.
+
 ## v1.3.9
 
 - Fixed a bug
