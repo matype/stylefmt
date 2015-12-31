@@ -1,0 +1,26 @@
+div {
+  &:nth-child(1) {
+    // comment
+    @if true or ceil(1.2) < 2 or 2 > 1 or 1 <= 1 or 2 >= 2 {
+      color: blue;
+    } @else if $i < 0 {
+      color: red;
+    } @else if $type == matador {
+      color: blue;
+    } @else if $type != matador {
+      color: red;
+    } @else if 2 * 2 + (1 - 1) {
+      color: green;
+    } @else if round(0.2) < 0 {
+      color: black;
+    } @else if $var-1 + $var-2 {
+      color: black;
+    } @else {
+      color: green;
+    }
+
+    .nested {
+      color: black;
+    }
+  }
+}
