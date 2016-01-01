@@ -1,0 +1,11 @@
+//  comment
+div {
+  //=========
+  //  comment
+  //=========
+  $var-1: blue; //  comment
+  color: blue; // comment
+  /// comment
+}
+
+// comment

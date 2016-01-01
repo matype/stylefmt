@@ -38,7 +38,7 @@ CSSfmt'd code is:
 Input (input.scss):
 
 ```scss
-//mixin for clearfix
+// mixin for clearfix
 
 
 
@@ -51,7 +51,7 @@ Input (input.scss):
    }.class
 {
        padding:10px;@include        clearfix();}
-     .base {  color: red;  } //placeholder
+     .base {  color: red;  } // placeholder
 
 %base
 {
