@@ -1,3 +1,7 @@
+## v1.4.1
+
+- Fixed [#55](https://github.com/morishitter/cssfmt/pull/55) and [#57](https://github.com/morishitter/cssfmt/pull/57)
+
 ## v1.4.0
 
 - Format hex color code to lowercase.
