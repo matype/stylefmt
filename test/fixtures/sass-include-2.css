@@ -1,3 +1,28 @@
 @include font-face("Pictos", "../fonts/pictos-web");
 
 @include transform(translateZ(0) translateY(20px));
+@include transform(translateZ(0) /* translateY(20px) */ translateX(0));
+@include transform(translateZ(0)/* translateY(20px) */translateX(0));
+
+
+
+@include transform(translateZ(0), /* translateY(20px) */translateX(0));
+@include transform(  translateZ(0),   /** translateY(20px) **/   translateX(0)  );
+div {
+  color: blue;
+  @extend %class;
+
+  @include mixin();
+  @include mixin-2();
+
+
+  @include mixin-3();
+}
+@include mixin();
+@function func(  $value   ) {@return $value;}
+@include mixin();
+@mixin mix( ) { color:blue}
+@include mixin();
+@if true { color: red} @else {color:blue}
+@include mixin();
+@include apply-to-ie6-only {#logo {background-image: url(/logo.gif);}}
