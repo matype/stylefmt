@@ -167,7 +167,7 @@ Yield:
 ## Installation
 
 ```shell
-$ npm install -g cssfmt 
+$ npm install cssfmt 
 ```
 
 ## Usage
