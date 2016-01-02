@@ -1,5 +1,9 @@
 $numPerRow:4;
 $margin:2%;
+$var : -((1*5%2)-(2+2-1));
+$my-var:$var-1+$var-2;
 div {
   width:((100%-($numPerRow*$margin))/$numPerRow);
+}@function myFn() {
+@return -((1*5%2)-(2+2-1));
 }
