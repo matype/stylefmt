@@ -38,6 +38,7 @@ test('pseudo-element')
 test('at-media')
 test('data-url')
 test('color-hex-lowercase')
+test('lowercase')
 
 // for future syntaxes
 test('cssnext-example')
