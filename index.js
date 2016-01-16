@@ -19,8 +19,11 @@ var cssfmt = postcss.plugin('cssfmt', function () {
   }
 })
 
-module.exports = cssfmt
-
-module.exports.process = function (css) {
+var process = function (css) {
   return postcss([ cssfmt() ]).process(css, { syntax: scss }).css
+}
+
+module.exports = {
+  cssfmt: cssfmt,
+  process: process
 }
