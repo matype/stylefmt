@@ -1,3 +1,7 @@
+## v2.0.0
+
+Support formatting future CSS Syntax using [cssnext](http://cssnext.io)
+
 ## v1.4.1
 
 - Fixed [#55](https://github.com/morishitter/cssfmt/pull/55) and [#57](https://github.com/morishitter/cssfmt/pull/57)
