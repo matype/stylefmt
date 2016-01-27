@@ -37,7 +37,16 @@ test('charset-2')
 test('pseudo-element')
 test('at-media')
 test('data-url')
+test('color-hex-lowercase')
 
+// for future syntaxes
+test('custom-properties')
+test('custom-media-queries')
+test('media-queries-ranges')
+test('custom-selectors')
+// test('at-apply')
+
+// for Sass
 test('sass-mixin')
 test('sass-mixin-2')
 test('sass-extend')
@@ -58,4 +67,3 @@ test('sass-if-else')
 test('sass-if-else-2')
 test('media-indent')
 test('media-indent-with-import')
-test('color-hex-lowercase')

@@ -1,0 +1,15 @@
+:root {
+  --toolbar-theme:{
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid green;
+  };
+  --toolbar-title-theme:{
+    color: green;
+  };
+}
+
+.toolbar{
+  @apply   --toolbar-theme   ;
+}
+.toolbar__title {@apply  --toolbar-title-theme ;}
