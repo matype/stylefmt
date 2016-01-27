@@ -50,7 +50,8 @@ CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt]
 CSSfmt can format following code:
 
 - Vanilla CSS
-- SCSS syntax.
+- Future CSS syntax using [cssnext](https://github.com/MoOx/postcss-cssnext/)
+- SCSS syntax of Sass
 - Nested selectors syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
 
 CSSfmt'd code is:
