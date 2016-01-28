@@ -1,3 +1,7 @@
+## v2.0.2
+
+Fixed `var()` format
+
 ## v2.0.1
 
 Fixed @apply rule format, @custom-selector-params
