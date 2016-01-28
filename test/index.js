@@ -42,6 +42,7 @@ test('color-hex-lowercase')
 // for future syntaxes
 test('cssnext-example')
 test('custom-properties')
+test('var-notation')
 test('custom-media-queries')
 test('media-queries-ranges')
 test('custom-selectors')
