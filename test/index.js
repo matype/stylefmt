@@ -40,6 +40,7 @@ test('data-url')
 test('color-hex-lowercase')
 
 // for future syntaxes
+test('cssnext-example')
 test('custom-properties')
 test('custom-media-queries')
 test('media-queries-ranges')
