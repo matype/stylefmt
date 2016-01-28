@@ -1,3 +1,7 @@
+## v2.0.1
+
+Fixed @apply rule format
+
 ## v2.0.0
 
 Support formatting future CSS Syntax using [cssnext](http://cssnext.io)
