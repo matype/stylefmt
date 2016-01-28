@@ -1,6 +1,6 @@
 ## v2.0.1
 
-Fixed @apply rule format
+Fixed @apply rule format, @custom-selector-params
 
 ## v2.0.0
 
