@@ -44,7 +44,7 @@ test('custom-properties')
 test('custom-media-queries')
 test('media-queries-ranges')
 test('custom-selectors')
-// test('at-apply')
+test('at-apply')
 
 // for Sass
 test('sass-mixin')
