@@ -1,7 +1,7 @@
 {
   "name": "cssfmt",
   "version": "2.0.2",
-  "description": "CSSfmt is a tool that automatically formats CSS and SCSS source code, inspired by Gofmt.",
+  "description": "CSSfmt is a tool that automatically formats stylesheets code, inspired by Gofmt.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
