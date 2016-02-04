@@ -1,3 +1,8 @@
+## v2.1.0
+
+- Format properties and values to lowercase [#59](https://github.com/morishitter/cssfmt/pull/59)
+- Fixe a bug [#56](https://github.com/morishitter/cssfmt/issues/56)
+
 ## v2.0.2
 
 Fixed `var()` format
