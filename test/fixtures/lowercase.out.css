@@ -1,0 +1,39 @@
+@charset "utf-8";
+$myVar: translateX(0);
+$myVar2: rgb(255, 255, 255);
+$myVar3: maroon;
+$myVar4: hsla(120, 100%, 50%, 0.3);
+$myVar5: rgba(0, 0, 0, 0.5);
+$myVar6: hsl(120, 100%, 50%);
+$myVar7: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgb(255, 255, 255));
+
+.class-1 {
+  background: hsl(120, 100%, 50%);
+  background: linear-gradient(to right, $myVar2, rgb(255, 255, 255));
+  color: rgb(0, 0, 0);
+  transform: translate(0, 0) translateX(0) translateY(0) translateZ(0) translate3d(0, 0, 0) matrix(1, 1, 1, 1);
+  transform: translate(0, 0);
+  transform: translateX(0);
+  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
+  transform: matrix(1, 1, 1, 1);
+  transform: translateY(0) $myVar;
+}
+
+.class-2 {
+  background-color: indigo;
+  background: hsla(120, 100%, 50%, 0.3);
+  color: rgba(0, 0, 0, 0.5);
+  transform: rotate(1deg) rotateX(1deg) rotateY(1deg) rotateZ(1deg) rotate3d(0, 0, 1, 1deg) skew(1deg) skewX(1deg) skewY(1deg) scale(1, 1) scaleX(1) scaleY(1);
+  transform: rotate(1deg);
+  transform: rotateX(1deg);
+  transform: rotateY(1deg);
+  transform: rotateZ(1deg);
+  transform: rotate3d(0, 0, 1, 1deg);
+  transform: skew(1deg);
+  transform: skewX(1deg);
+  transform: skewY(1deg);
+  transform: scale(1, 1);
+  transform: scaleX(1);
+  transform: scaleY(1);
+}
