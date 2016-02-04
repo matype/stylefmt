@@ -18,6 +18,8 @@ $myVar7: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgb(255, 255, 255));
   transform: translate3d(0, 0, 0);
   transform: matrix(1, 1, 1, 1);
   transform: translateY(0) $myVar;
+  animation: textAnimation 0.1s;
+  animation: tAnimation 0.1s;
 }
 
 .class-2 {

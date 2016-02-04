@@ -19,6 +19,8 @@ $myVar7: linear-gradient(to right, RGBA(0,0,0,0.5), RGB(255,255,255));
   TRANSFORM: TRANSLATE3D(0,0,0);
   TRANSFORM: MATRIX(1,1,1,1);
   transform: translateY(0) $myVar;
+  animation: textAnimation 0.1s;
+  animation: tAnimation 0.1s;
 }
 
 .class-2 {
