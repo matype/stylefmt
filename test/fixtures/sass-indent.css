@@ -1,0 +1,15 @@
+.class-1 {
+@for $i from 1 through 10 {color: green;
+    div { color: blue;
+    }
+  }
+color: white;
+}
+.class-2 {
+    div {
+      color: green;
+  div {
+    color: blue;
+  }
+  }color: white;
+}
