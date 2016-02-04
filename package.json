@@ -1,6 +1,6 @@
 {
   "name": "cssfmt",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "CSSfmt is a tool that automatically formats stylesheets code, inspired by Gofmt.",
   "main": "index.js",
   "scripts": {
