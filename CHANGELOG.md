@@ -1,3 +1,10 @@
+## v2.1.1
+
+Fixed some bugs.
+
+- [#63](https://github.com/morishitter/cssfmt/pull/63)
+- [#64](https://github.com/morishitter/cssfmt/pull/64)
+
 ## v2.1.0
 
 - Format properties and values to lowercase [#59](https://github.com/morishitter/cssfmt/pull/59)
