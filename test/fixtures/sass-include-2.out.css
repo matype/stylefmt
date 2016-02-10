@@ -15,6 +15,12 @@ div {
   @include mixin-2();
 
   @include mixin-3();
+
+  &:after {
+    @include retina {
+      transform: rotate(135deg) scaleY(0.75);
+    }
+  }
 }
 
 @include mixin();
