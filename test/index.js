@@ -40,6 +40,7 @@ test('data-url')
 test('color-hex-lowercase')
 test('lowercase')
 test('content')
+test('ie-hacks')
 
 // for future syntaxes
 test('cssnext-example')
