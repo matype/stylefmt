@@ -1,5 +1,8 @@
 .btn {&:hover {
     color: red;
   }&:active {
-color:blue;}
+color:blue;}  &:nth-child(5n+1) {
+    color:blue;
+  }
+  &:nth-child(-n+3) { color: green;}
   }
