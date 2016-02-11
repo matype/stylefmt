@@ -17,6 +17,9 @@ div {
 
 
   @include mixin-3();
+  &:after {
+  @include retina { transform: rotate(135deg) scaleY(0.75) }
+}
 }
 @include mixin();
 @function func(  $value   ) {@return $value;}
