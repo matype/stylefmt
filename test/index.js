@@ -39,6 +39,7 @@ test('at-media')
 test('data-url')
 test('color-hex-lowercase')
 test('lowercase')
+test('content')
 
 // for future syntaxes
 test('cssnext-example')
