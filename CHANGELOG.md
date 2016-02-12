@@ -1,3 +1,14 @@
+## v2.1.2
+
+Fixed some bugs.
+
+- [#65](https://github.com/morishitter/cssfmt/pull/65)
+- [#66](https://github.com/morishitter/cssfmt/pull/66)
+- [#67](https://github.com/morishitter/cssfmt/pull/67)
+- [#68](https://github.com/morishitter/cssfmt/pull/68)
+- [#69](https://github.com/morishitter/cssfmt/pull/69)
+
+
 ## v2.1.1
 
 Fixed some bugs.
