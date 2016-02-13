@@ -1,3 +1,12 @@
 @mixin   horizontal-line    (   $border:   1px dashed #ccc,  $padding:10px   )  {
     border-bottom:$border;
 }
+@mixin clearfix {
+  *zoom: 1;
+  &:before,&:after {
+    display: table;
+    content: "";
+  }  &:after {
+    clear: both;
+  }
+}
