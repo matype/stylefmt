@@ -16,3 +16,6 @@
   //bar
   margin: auto;
 }
+
+@include something; // comment
+@extend .something; // comment
