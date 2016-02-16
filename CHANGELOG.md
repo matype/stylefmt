@@ -1,3 +1,11 @@
+## v2.1.3
+
+Fixed some bugs.
+
+- [#70](https://github.com/morishitter/cssfmt/pull/70)
+- [#71](https://github.com/morishitter/cssfmt/pull/71)
+- Do not format the value when the property is `content`
+
 ## v2.1.2
 
 Fixed some bugs.
