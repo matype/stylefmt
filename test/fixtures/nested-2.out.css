@@ -14,4 +14,16 @@
   &:nth-child(-n+3) {
     color: green;
   }
+
+  > li > a {
+    color: red;
+  }
+
+  > li > li {
+    color: blue;
+  }
+
+  > p + p {
+    color: green;
+  }
 }
