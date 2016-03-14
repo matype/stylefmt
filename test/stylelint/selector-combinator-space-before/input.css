@@ -1,0 +1,7 @@
+div> div {
+  color: red;
+}
+
+div       > div {
+  color: blue;
+}

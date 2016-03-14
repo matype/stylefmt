@@ -1,0 +1,5 @@
+{
+  "rule": {
+    "block-opening-brace-newline-before": "always-single-line"
+  }
+}
