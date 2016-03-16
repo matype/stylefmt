@@ -1,3 +1,7 @@
+## v2.1.5
+
+Fixed [#78](https://github.com/morishitter/cssfmt/issues/78)
+
 ## v2.1.4
 
 Fixed some bugs.
