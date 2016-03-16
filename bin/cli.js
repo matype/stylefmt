@@ -52,9 +52,11 @@ if (argv._[0]) {
     var fullPath = path.resolve(process.cwd(), input)
     handleDiff(fullPath, input, formatted)
   } else {
-    fs.writeFile(output, formatted, function (err) {
-      if (err) throw err
-    })
+    if (css !== formatted) {
+      fs.writeFile(output, formatted, function (err) {
+        if (err) throw err
+      })
+    }
   }
 } else if (argv.R) {
   var recursive = require('recursive-readdir')
@@ -71,7 +73,10 @@ if (argv._[0]) {
         throw e
         return
       }
-      fs.writeFileSync(fullPath, formatted)
+
+      if (css !== formatted) {
+        fs.writeFileSync(fullPath, formatted)
+      }
     })
   })
 } else {
