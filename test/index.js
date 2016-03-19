@@ -1,19 +1,34 @@
 var fs = require('fs')
+var path = require('path')
 var tape = require('tape')
 var fmt = require('..')
 
-function input (name) {
-  return fs.readFileSync('test/fixtures/' + name + '.css', 'utf-8')
+function input (testType, testName) {
+  var filepath = path.resolve('test', testType, testName + '.css')
+  return fs.readFileSync(filepath, 'utf-8')
 }
 
-function output (name) {
-  return fs.readFileSync('test/fixtures/' + name + '.out.css', 'utf-8')
+function output (dir, testName) {
+  var filepath = path.resolve(dir, testName + '.out.css')
+  return fs.readFileSync(filepath, 'utf-8')
 }
 
-function test (name, description) {
-  description = description || name
-  return tape(description, function (t) {
-    t.equal(fmt.process(input(name)), output(name))
+function test (testName) {
+  tape(testName, function (t) {
+    var dir = path.join(process.cwd(), 'test/fixtures')
+    t.equal(fmt.process(input(dir, testName)), output(dir, testName))
+    t.end()
+  })
+}
+
+function testWithStylelint (testName) {
+  var dir = path.join(process.cwd(), 'test/stylelint', testName)
+  var stylelintrcPath = path.resolve(dir, '.stylelintrc');
+  var opts = {
+    stylelintrcPath: stylelintrcPath
+  }
+  tape(testName, function (t) {
+    t.equal(fmt.process(input(dir, testName), opts), output(dir, testName))
     t.end()
   })
 }
@@ -75,3 +90,7 @@ test('sass-if-else-2')
 test('sass-indent')
 test('media-indent')
 test('media-indent-with-import')
+
+// for stylelint
+testWithStylelint('selector-list-comma-space-before')
+testWithStylelint('selector-list-comma-space-after')
