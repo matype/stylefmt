@@ -94,3 +94,5 @@ test('media-indent-with-import')
 // for stylelint
 testWithStylelint('selector-list-comma-space-before')
 testWithStylelint('selector-list-comma-space-after')
+testWithStylelint('selector-list-comma-newline-before')
+testWithStylelint('selector-list-comma-newline-after')
