@@ -1,5 +1,5 @@
 {
-  "rule": {
+  "rules": {
     "selector-combinator-space-before": "always"
   }
 }
