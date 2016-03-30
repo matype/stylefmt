@@ -17,8 +17,7 @@ var argv = minimist(process.argv.slice(2), {
     h: 'help',
     v: 'version',
     d: 'diff',
-    R: 'recursive',
-    f: 'stylelint-file'
+    R: 'recursive'
   }
 })
 
@@ -36,7 +35,6 @@ if (argv.h) {
   console.log('')
   console.log('  -d, --diff        output diff against original file')
   console.log('  -R, --recursive   format files recursively')
-  console.log('  -f, --stylelint-file specifies a stylelint file')
   console.log('  -v, --version     output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
@@ -48,9 +46,7 @@ if (argv._[0]) {
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
-  var opts = {}
-  opts.stylelintrcPath = argv.f || ''
-  var formatted = cssfmt.process(css, opts)
+  var formatted = cssfmt.process(css)
 
   if (argv.d) {
     var fullPath = path.resolve(process.cwd(), input)
@@ -71,10 +67,8 @@ if (argv._[0]) {
       if (!isCss(fullPath)) return
 
       var css = fs.readFileSync(fullPath, 'utf-8')
-      var opts = {}
-      opts.stylelintrcPath = argv.f || ''
       try {
-        var formatted = cssfmt.process(css, opts)
+        var formatted = cssfmt.process(css)
       } catch (e) {
         throw e
         return
@@ -87,7 +81,7 @@ if (argv._[0]) {
   })
 } else {
   stdin(function (css) {
-    var formatted = cssfmt.process(css, {})
+    var formatted = cssfmt.process(css)
     process.stdout.write(formatted)
   })
 }
