@@ -29,6 +29,7 @@
     "minimist": "^1.1.2",
     "postcss": "^5.0.6",
     "postcss-scss": "^0.1.0",
+    "rc-loader": "^1.0.0",
     "recursive-readdir": "^1.2.1",
     "repeat-string": "^1.5.2",
     "stdin": "0.0.1",
