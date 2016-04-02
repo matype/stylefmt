@@ -1,4 +1,4 @@
-var fs = require('fs')
+var fs = require('fs-extra')
 var path = require('path')
 var tape = require('tape')
 var fmt = require('..')
@@ -15,23 +15,31 @@ function output (dir, testName) {
 
 function test (testName) {
   tape(testName, function (t) {
-    var dir = path.join(process.cwd(), 'test/fixtures')
-    t.equal(fmt.process(input(dir, testName)), output(dir, testName))
+    var testDir = path.join(process.cwd(), 'test/fixtures')
+    t.plan(1)
+    t.equal(fmt.process(input(testDir, testName)), output(testDir, testName))
     t.end()
   })
 }
 
 function testWithStylelint (testName) {
-  var dir = path.join(process.cwd(), 'test/stylelint', testName)
-  var stylelintrcPath = path.resolve(dir, '.stylelintrc');
-  var opts = {
-    stylelintrcPath: stylelintrcPath
-  }
   tape(testName, function (t) {
-    t.equal(fmt.process(input(dir, testName), opts), output(dir, testName))
+    var cwd = process.cwd()
+    var configSrc = path.resolve(path.join(cwd, 'test/stylelint', testName), '.stylelintrc')
+    var configDest = path.resolve(cwd, '.stylelintrc')
+    fs.copySync(configSrc, configDest, { clobber: true })
+
+    var testDir = path.join(cwd, 'test/stylelint', testName)
+    t.plan(1)
+    t.equal(fmt.process(input(testDir, testName)), output(testDir, testName))
     t.end()
   })
 }
+
+tape.onFinish(function () {
+  var config = path.resolve(process.cwd(), '.stylelintrc')
+  fs.removeSync(config)
+})
 
 test('readme')
 test('nested')
@@ -91,7 +99,7 @@ test('sass-indent')
 test('media-indent')
 test('media-indent-with-import')
 
-// for stylelint
+// for stylelint configuration
 testWithStylelint('selector-list-comma-space-before')
 testWithStylelint('selector-list-comma-space-after')
 testWithStylelint('selector-list-comma-newline-before')
