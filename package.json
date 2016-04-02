@@ -36,6 +36,7 @@
     "tmp": "0.0.26"
   },
   "devDependencies": {
+    "fs-extra": "^0.26.7",
     "tape": "^4.0.2"
   }
 }
