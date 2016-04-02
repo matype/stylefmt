@@ -68,7 +68,7 @@ if (argv._[0]) {
 
       var css = fs.readFileSync(fullPath, 'utf-8')
       try {
-        var formatted = cssfmt.process(css)
+        var formatted = cssfmt.process(css, fullPath)
       } catch (e) {
         throw e
         return
