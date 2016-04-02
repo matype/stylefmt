@@ -9,16 +9,16 @@ var formatSassVariables = require('./lib/formatSassVariables')
 
 
 var cssfmt = postcss.plugin('cssfmt', function () {
+  var params = newParams()
+
   var func = function (root) {
-    var params = newParams()
-
-    formatComments(root)
-    formatAtRules(root)
-    formatRules(root, params.stylelint)
+    formatComments(root, params)
+    formatAtRules(root, params)
+    formatRules(root, params)
     formatSassVariables(root)
-
     return root
   }
+
   return func
 })
 
