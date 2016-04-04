@@ -4,7 +4,7 @@ var fs = require('fs')
 var tape = require('tape')
 
 // tape('cli stdin', function (t) {
-//   spawnCssfmt([], readFixture('at-media.css'), function (err, output) {
+//   spawnstylefmt([], readFixture('at-media.css'), function (err, output) {
 //     if (err) {
 //       throw err
 //     }
@@ -19,7 +19,7 @@ var tape = require('tape')
 //   var tempFile = fixturesPath('at-media.copy.css')
 //   fs.writeFileSync(tempFile, readFixture('at-media.css'), 'utf-8')
 
-//   spawnCssfmt([tempFile], null, function (err) {
+//   spawnstylefmt([tempFile], null, function (err) {
 //     if (err) {
 //       throw err
 //     }
@@ -37,7 +37,7 @@ var tape = require('tape')
 // tape('cli output file option', function (t) {
 //   var tempFile = fixturesPath('at-media.copy.css')
 
-//   spawnCssfmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
+//   spawnstylefmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
 //     if (err) {
 //       throw err
 //     }
@@ -63,7 +63,7 @@ function readFixture (filename) {
   return fs.readFileSync(fixturesPath(filename), 'utf-8')
 }
 
-function spawnCssfmt (options, input, callback) {
+function spawnstylefmt (options, input, callback) {
   var args = [path.join(__dirname, '../bin/cli.js')]
   args = args.concat(options)
 

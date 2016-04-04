@@ -1,17 +1,17 @@
 {
-  "name": "cssfmt",
+  "name": "stylefmt",
   "version": "2.1.5",
-  "description": "CSSfmt is a tool that automatically formats stylesheets code.",
+  "description": "stylefmt is a tool that automatically formats stylesheets code.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
   },
   "bin": {
-    "cssfmt": "bin/cli.js"
+    "stylefmt": "bin/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/morishitter/cssfmt/git"
+    "url": "git://github.com/morishitter/stylefmt/git"
   },
   "keywords": [
     "css",

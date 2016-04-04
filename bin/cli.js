@@ -5,7 +5,7 @@ var path = require('path')
 var child_process = require('child_process')
 var stdin = require('stdin')
 var pkg = require('../package.json')
-var cssfmt = require('../')
+var stylefmt = require('../')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
@@ -29,7 +29,7 @@ if (argv.v) {
 }
 
 if (argv.h) {
-  console.log('Usage: cssfmt [options] input-name [output-name]')
+  console.log('Usage: stylefmt [options] input-name [output-name]')
   console.log('')
   console.log('Options:')
   console.log('')
@@ -46,7 +46,7 @@ if (argv._[0]) {
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
-  var formatted = cssfmt.process(css)
+  var formatted = stylefmt.process(css)
 
   if (argv.d) {
     var fullPath = path.resolve(process.cwd(), input)
@@ -68,7 +68,7 @@ if (argv._[0]) {
 
       var css = fs.readFileSync(fullPath, 'utf-8')
       try {
-        var formatted = cssfmt.process(css, fullPath)
+        var formatted = stylefmt.process(css, fullPath)
       } catch (e) {
         throw e
         return
@@ -81,7 +81,7 @@ if (argv._[0]) {
   })
 } else {
   stdin(function (css) {
-    var formatted = cssfmt.process(css)
+    var formatted = stylefmt.process(css)
     process.stdout.write(formatted)
   })
 }

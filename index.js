@@ -8,7 +8,7 @@ var formatComments = require('./lib/formatComments')
 var formatSassVariables = require('./lib/formatSassVariables')
 
 
-var cssfmt = postcss.plugin('cssfmt', function (fullPath) {
+var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
   var params = newParams(fullPath)
 
   var func = function (root) {
@@ -23,10 +23,10 @@ var cssfmt = postcss.plugin('cssfmt', function (fullPath) {
 })
 
 var process = function (css, fullPath) {
-  return postcss([ cssfmt(fullPath) ]).process(css, { syntax: scss }).css
+  return postcss([ stylefmt(fullPath) ]).process(css, { syntax: scss }).css
 }
 
 module.exports = {
-  cssfmt: cssfmt,
+  stylefmt: stylefmt,
   process: process
 }
