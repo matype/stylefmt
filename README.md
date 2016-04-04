@@ -44,6 +44,7 @@
 </p>
 <br>
 
+:tada: CSSfmt was renamed to stylefmt
 
 stylefmt is a tool that automatically formats your stylesheets.
 
@@ -399,17 +400,17 @@ We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-stylefmt), [
 
 ### Editor plugins
 
-- [sublime-stylefmt](https://github.com/dmnsgn/sublime-stylefmt) by [@dmnsgn](https://github.com/dmnsgn)
-- [atom-stylefmt](https://github.com/1000ch/atom-stylefmt) by [@1000ch](https://github.com/1000ch)
-- [vim-stylefmt](https://github.com/kewah/vim-stylefmt) by [@kewah](https://github.com/kewah)
-- [stylefmt.el](https://github.com/KeenS/stylefmt.el) by [@KeenS](https://github.com/KeenS)
+- [sublime-stylefmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [atom-stylefmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
+- [vim-stylefmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [stylefmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 
 ### for Task Runners
 
-- [gulp-stylefmt](https://github.com/morishitter/gulp-stylefmt)
-- [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
-- [fly-stylefmt](https://github.com/morishitter/fly-stylefmt)
-- [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-stylefmt) by [@appleboy](https://github.com/appleboy)
+- [gulp-stylefmt](https://github.com/morishitter/gulp-cssfmt)
+- [grunt-stylefmt](https://github.com/morishitter/grunt-cssfmt)
+- [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
+- [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
 
 ## License
 
