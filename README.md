@@ -1,8 +1,8 @@
-> Style Sheets Formatter
+> Modern CSS Formatter
 
 <div align="center">
   <a href="http://github.com/morishitter/cssfmt">
-    <img width=360px src="./logo.png">
+    <img width=360px src="http://morishitter.github.io/cssfmt-logo.svg">
   </a>
 </div>
 <br>
@@ -45,14 +45,7 @@
 <br>
 
 
-CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](https://golang.org/cmd/gofmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
-
-CSSfmt can format following code:
-
-- Vanilla CSS
-- Future CSS syntax using [cssnext](https://github.com/MoOx/postcss-cssnext/)
-- SCSS syntax of Sass
-- Nested selectors syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
+CSSfmt is a tool that automatically formats your stylesheets.
 
 CSSfmt'd code is:
 
@@ -60,6 +53,12 @@ CSSfmt'd code is:
 - easier to **read** : when all code looks the same you need not mentally convert others' formatting style into something you can understand.
 - easier to **maintain** : mechanical changes to the source don't cause unrelated changes to the file's formatting; diffs show only the real changes.
 - **uncontroversial** : never have a debate about spacing or brace position ever again!
+
+## Features
+
+- **Support for the latest CSS syntax:** Including custom properties, range context for media features, `calc()` and nesting.
+- **Understands CSS-like syntaxes:** CSSfmt is powered by [PostCSS](https://github.com/postcss/postcss), so  it understands any syntax that PostCSS can parse, including SCSS.
+- **Work well with stylelint:** [stylelint](http://stylelint.io/) is a mighty, modern CSS linter. CSSfmt can understand your rules for code formatting in its configuration file (`.stylelintrc`).
 
 
 ## Example
@@ -363,7 +362,7 @@ var output = postcss()
 We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
 
 
-## Rules
+## Default formatting rules (without stylelint config file)
 
 ### Basic
 
@@ -400,15 +399,15 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 
 ### Editor plugins
 
-- [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
-- [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
-- [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
 - [sublime-cssfmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
+- [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 
 ### for Task Runners
 
-- [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
 - [gulp-cssfmt](https://github.com/morishitter/gulp-cssfmt)
+- [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
 - [fly-cssfmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-cssfmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
 
