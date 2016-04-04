@@ -1,17 +1,17 @@
 {
-  "name": "cssfmt",
+  "name": "stylefmt",
   "version": "2.1.5",
-  "description": "CSSfmt is a tool that automatically formats stylesheets code, inspired by Gofmt.",
+  "description": "stylefmt is a tool that automatically formats stylesheets code.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
   },
   "bin": {
-    "cssfmt": "bin/cli.js"
+    "stylefmt": "bin/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/morishitter/cssfmt/git"
+    "url": "git://github.com/morishitter/stylefmt/git"
   },
   "keywords": [
     "css",
@@ -29,12 +29,14 @@
     "minimist": "^1.1.2",
     "postcss": "^5.0.6",
     "postcss-scss": "^0.1.0",
+    "rc-loader": "^1.0.0",
     "recursive-readdir": "^1.2.1",
     "repeat-string": "^1.5.2",
     "stdin": "0.0.1",
     "tmp": "0.0.26"
   },
   "devDependencies": {
+    "fs-extra": "^0.26.7",
     "tape": "^4.0.2"
   }
 }

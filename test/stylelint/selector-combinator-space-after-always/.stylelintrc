@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "selector-combinator-space-after": "always"
+  }
+}

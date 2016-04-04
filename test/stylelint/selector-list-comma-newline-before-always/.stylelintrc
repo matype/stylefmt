@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "selector-list-comma-newline-before": "always"
+  }
+}

@@ -1,8 +1,8 @@
-> Style Sheets Formatter
+> Modern CSS Formatter
 
 <div align="center">
-  <a href="http://github.com/morishitter/cssfmt">
-    <img width=360px src="./logo.png">
+  <a href="http://github.com/morishitter/stylefmt">
+    <img width=360px src="http://morishitter.github.io/stylefmt-logo.svg">
   </a>
 </div>
 <br>
@@ -12,23 +12,23 @@
 </big></p>
 
 <p align="center">
-  <a href="https://travis-ci.org/morishitter/cssfmt">
-    <img src="https://travis-ci.org/morishitter/cssfmt.svg"
+  <a href="https://travis-ci.org/morishitter/stylefmt">
+    <img src="https://travis-ci.org/morishitter/stylefmt.svg"
          alt="Build Status">
   </a>
 
-  <a href="https://www.npmjs.org/package/cssfmt">
-    <img src="https://img.shields.io/npm/v/cssfmt.svg?style=flat-square"
+  <a href="https://www.npmjs.org/package/stylefmt">
+    <img src="https://img.shields.io/npm/v/stylefmt.svg?style=flat-square"
          alt="NPM Version">
   </a>
 
-  <a href="https://www.npmjs.org/package/cssfmt">
-    <img src="http://img.shields.io/npm/dm/cssfmt.svg?style=flat-square"
+  <a href="https://www.npmjs.org/package/stylefmt">
+    <img src="http://img.shields.io/npm/dm/stylefmt.svg?style=flat-square"
          alt="Downloads">
   </a>
 
-  <a href="https://david-dm.org/morishitter/cssfmt">
-    <img src="https://david-dm.org/morishitter/cssfmt.svg"
+  <a href="https://david-dm.org/morishitter/stylefmt">
+    <img src="https://david-dm.org/morishitter/stylefmt.svg"
          alt="Dependency Status">
   </a>
 
@@ -37,7 +37,7 @@
          alt="License">
   </a>
 
-  <a href="https://gitter.im/morishitter/cssfmt">
+  <a href="https://gitter.im/morishitter/stylefmt">
     <img src="https://badges.gitter.im/Join%20Chat.svg"
          alt="Gitter">
   </a>
@@ -45,21 +45,20 @@
 <br>
 
 
-CSSfmt is a tool that automatically formats CSS source code, inspired by [Gofmt](https://golang.org/cmd/gofmt/), and built on top of the [PostCSS](https://github.com/postcss/postcss) ecosystem.
+stylefmt is a tool that automatically formats your stylesheets.
 
-CSSfmt can format following code:
-
-- Vanilla CSS
-- Future CSS syntax using [cssnext](https://github.com/MoOx/postcss-cssnext/)
-- SCSS syntax of Sass
-- Nested selectors syntax like SCSS, Less, Stylus and processor using [postcss-nested](https://github.com/postcss/postcss-nested).
-
-CSSfmt'd code is:
+stylefmt'd code is:
 
 - easier to **write** : never worry about minor formatting concerns while hacking away.
 - easier to **read** : when all code looks the same you need not mentally convert others' formatting style into something you can understand.
 - easier to **maintain** : mechanical changes to the source don't cause unrelated changes to the file's formatting; diffs show only the real changes.
 - **uncontroversial** : never have a debate about spacing or brace position ever again!
+
+## Features
+
+- **Support for the latest CSS syntax:** Including custom properties, range context for media features, `calc()` and nesting.
+- **Understands CSS-like syntaxes:** stylefmt is powered by [PostCSS](https://github.com/postcss/postcss), so  it understands any syntax that PostCSS can parse, including SCSS.
+- **Work well with stylelint:** [stylelint](http://stylelint.io/) is a mighty, modern CSS linter. stylefmt can understand your rules for code formatting in its configuration file (`.stylelintrc`).
 
 
 ## Example
@@ -212,10 +211,10 @@ Input (input.scss):
 padding: 12px
 }
 
-.foo{ 
+.foo{
 @extend      .base;}
 
-.bar     
+.bar
       {     @extend            %base;
 
 }
@@ -313,7 +312,7 @@ Yield:
 ## Installation
 
 ```shell
-$ npm install cssfmt 
+$ npm install stylefmt
 ```
 
 ## Usage
@@ -323,11 +322,11 @@ $ npm install cssfmt
 CLI Help:
 
 ```
-$ cssfmt --help
+$ stylefmt --help
 ```
 
 ```
-Usage: cssfmt [options] input-file [output-file]
+Usage: stylefmt [options] input-file [output-file]
 
 Options:
 
@@ -337,10 +336,10 @@ Options:
   -h, --help        output usage information
 ```
 
-CSSfmt can also read a file from stdin if there are no input-fle as argument in CLI.
+stylefmt can also read a file from stdin if there are no input-fle as argument in CLI.
 
 ```
-$ cat input.css | cssfmt
+$ cat input.css | stylefmt
 ```
 
 ### in Node.js
@@ -348,7 +347,7 @@ $ cat input.css | cssfmt
 ```js
 var fs = require('fs');
 var postcss = require('postcss');
-var fmt = require('cssfmt');
+var fmt = require('stylefmt');
 
 var css = fs.readFileSync('input.css', 'utf-8');
 
@@ -360,10 +359,10 @@ var output = postcss()
 
 ### in Task Runners
 
-We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
+We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-stylefmt), [gulp](https://github.com/morishitter/gulp-stylefmt), and [Fly](https://github.com/morishitter/fly-stylefmt).
 
 
-## Rules
+## Default formatting rules (without stylelint config file)
 
 ### Basic
 
@@ -400,17 +399,17 @@ We can use CSSfmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp
 
 ### Editor plugins
 
-- [atom-cssfmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
-- [cssfmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
-- [vim-cssfmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
-- [sublime-cssfmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [sublime-stylefmt](https://github.com/dmnsgn/sublime-stylefmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [atom-stylefmt](https://github.com/1000ch/atom-stylefmt) by [@1000ch](https://github.com/1000ch)
+- [vim-stylefmt](https://github.com/kewah/vim-stylefmt) by [@kewah](https://github.com/kewah)
+- [stylefmt.el](https://github.com/KeenS/stylefmt.el) by [@KeenS](https://github.com/KeenS)
 
 ### for Task Runners
 
-- [grunt-cssfmt](https://github.com/morishitter/grunt-cssfmt)
-- [gulp-cssfmt](https://github.com/morishitter/gulp-cssfmt)
-- [fly-cssfmt](https://github.com/morishitter/fly-cssfmt)
-- [laravel-elixir-cssfmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
+- [gulp-stylefmt](https://github.com/morishitter/gulp-stylefmt)
+- [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
+- [fly-stylefmt](https://github.com/morishitter/fly-stylefmt)
+- [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-stylefmt) by [@appleboy](https://github.com/appleboy)
 
 ## License
 

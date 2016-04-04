@@ -1,45 +1,53 @@
+## stylefmt v3.0.0
+
+:tada: Renamed to stylefmt, and support to understand [stylelint](http://stylelint.io) configuration file.
+
+- stylefmt works well with stylelint [#79](https://github.com/morishitter/stylefmt/pull/79)
+
+@seka implemented this feature. Thanks bro :D
+
 ## v2.1.5
 
-Fixed [#78](https://github.com/morishitter/cssfmt/issues/78)
+Fixed [#78](https://github.com/morishitter/stylefmt/issues/78)
 
 ## v2.1.4
 
 Fixed some bugs.
 
-- [#72](https://github.com/morishitter/cssfmt/pull/72)
-- [#73](https://github.com/morishitter/cssfmt/pull/73)
-- [#74](https://github.com/morishitter/cssfmt/pull/74)
+- [#72](https://github.com/morishitter/stylefmt/pull/72)
+- [#73](https://github.com/morishitter/stylefmt/pull/73)
+- [#74](https://github.com/morishitter/stylefmt/pull/74)
 
 ## v2.1.3
 
 Fixed some bugs.
 
-- [#70](https://github.com/morishitter/cssfmt/pull/70)
-- [#71](https://github.com/morishitter/cssfmt/pull/71)
+- [#70](https://github.com/morishitter/stylefmt/pull/70)
+- [#71](https://github.com/morishitter/stylefmt/pull/71)
 - Do not format the value when the property is `content`
 
 ## v2.1.2
 
 Fixed some bugs.
 
-- [#65](https://github.com/morishitter/cssfmt/pull/65)
-- [#66](https://github.com/morishitter/cssfmt/pull/66)
-- [#67](https://github.com/morishitter/cssfmt/pull/67)
-- [#68](https://github.com/morishitter/cssfmt/pull/68)
-- [#69](https://github.com/morishitter/cssfmt/pull/69)
+- [#65](https://github.com/morishitter/stylefmt/pull/65)
+- [#66](https://github.com/morishitter/stylefmt/pull/66)
+- [#67](https://github.com/morishitter/stylefmt/pull/67)
+- [#68](https://github.com/morishitter/stylefmt/pull/68)
+- [#69](https://github.com/morishitter/stylefmt/pull/69)
 
 
 ## v2.1.1
 
 Fixed some bugs.
 
-- [#63](https://github.com/morishitter/cssfmt/pull/63)
-- [#64](https://github.com/morishitter/cssfmt/pull/64)
+- [#63](https://github.com/morishitter/stylefmt/pull/63)
+- [#64](https://github.com/morishitter/stylefmt/pull/64)
 
 ## v2.1.0
 
-- Format properties and values to lowercase [#59](https://github.com/morishitter/cssfmt/pull/59)
-- Fixe a bug [#56](https://github.com/morishitter/cssfmt/issues/56)
+- Format properties and values to lowercase [#59](https://github.com/morishitter/stylefmt/pull/59)
+- Fixe a bug [#56](https://github.com/morishitter/stylefmt/issues/56)
 
 ## v2.0.2
 
@@ -55,7 +63,7 @@ Support formatting future CSS Syntax using [cssnext](http://cssnext.io)
 
 ## v1.4.1
 
-- Fixed [#55](https://github.com/morishitter/cssfmt/pull/55) and [#57](https://github.com/morishitter/cssfmt/pull/57)
+- Fixed [#55](https://github.com/morishitter/stylefmt/pull/55) and [#57](https://github.com/morishitter/stylefmt/pull/57)
 
 ## v1.4.0
 
@@ -69,36 +77,36 @@ Support formatting future CSS Syntax using [cssnext](http://cssnext.io)
 
 Fixed some bugs, thanks @kewah .
 
-- [#39](https://github.com/morishitter/cssfmt/pull/39)
-- [#40](https://github.com/morishitter/cssfmt/pull/40)
+- [#39](https://github.com/morishitter/stylefmt/pull/39)
+- [#40](https://github.com/morishitter/stylefmt/pull/40)
 
 ## v1.3.7
 
-- Fixed [#37](https://github.com/morishitter/cssfmt/issues/37)
+- Fixed [#37](https://github.com/morishitter/stylefmt/issues/37)
 
 ## v1.3.6
 
-- Fixed [#36](https://github.com/morishitter/cssfmt/issues/36)
+- Fixed [#36](https://github.com/morishitter/stylefmt/issues/36)
 
 ## v1.3.5
 
-- Fixed [#35](https://github.com/morishitter/cssfmt/issues/35)
+- Fixed [#35](https://github.com/morishitter/stylefmt/issues/35)
 
 ## v1.3.4
 
-- Fixed [#34](https://github.com/morishitter/cssfmt/issues/34)
+- Fixed [#34](https://github.com/morishitter/stylefmt/issues/34)
 
 ## v1.3.3
 
-- Fixed [#33](https://github.com/morishitter/cssfmt/issues/33)
+- Fixed [#33](https://github.com/morishitter/stylefmt/issues/33)
 
 ## v1.3.2
 
-- Fixed [#32](https://github.com/morishitter/cssfmt/issues/32)
+- Fixed [#32](https://github.com/morishitter/stylefmt/issues/32)
 
 ## v1.3.1
 
-- Fixed [#31](https://github.com/morishitter/cssfmt/issues/31)
+- Fixed [#31](https://github.com/morishitter/stylefmt/issues/31)
 
 ## v1.3.0
 
@@ -125,7 +133,7 @@ Fixed some bugs, thanks @kewah .
 
 ## v1.1.2
 
-- Hanele multiline comments. [#24](https://github.com/morishitter/cssfmt/pull/24)
+- Hanele multiline comments. [#24](https://github.com/morishitter/stylefmt/pull/24)
 
 Thanks @kewah .
 
@@ -135,16 +143,16 @@ Thanks @kewah .
 
 ## v1.1.0
 
-- Change to open 1 brank line between rules. [#16](https://github.com/morishitter/cssfmt/issues/16)
+- Change to open 1 brank line between rules. [#16](https://github.com/morishitter/stylefmt/issues/16)
 
 ## v1.0.2
 
 - Support formatting `@font-face`
- - Fix [#22](https://github.com/morishitter/cssfmt/issues/22)
+ - Fix [#22](https://github.com/morishitter/stylefmt/issues/22)
 
 ## v1.0.1
 
-- Fix [#20](https://github.com/morishitter/cssfmt/issues/20)
+- Fix [#20](https://github.com/morishitter/stylefmt/issues/20)
 
 ## v1.0.0
 
@@ -159,11 +167,11 @@ Major release.
 
 ## v0.8.5
 
-- Fix a bug [#17](https://github.com/morishitter/cssfmt/issues/17)
+- Fix a bug [#17](https://github.com/morishitter/stylefmt/issues/17)
 
 ## v0.8.4
 
-- Fix a bug [#15](https://github.com/morishitter/cssfmt/issues/15)
+- Fix a bug [#15](https://github.com/morishitter/stylefmt/issues/15)
 
 ## v0.8.3
 
@@ -187,11 +195,11 @@ Major release.
 
 ## v0.6.5
 
-- Fix a bug. [#9](https://github.com/morishitter/cssfmt/pull/9)
+- Fix a bug. [#9](https://github.com/morishitter/stylefmt/pull/9)
 
 ## v0.6.4
 
-- Fix a bug. [#6](https://github.com/morishitter/cssfmt/pull/6)
+- Fix a bug. [#6](https://github.com/morishitter/stylefmt/pull/6)
 
 ## v0.6.3
 
@@ -236,7 +244,7 @@ Support formatting some Sass functions.
 
 ## v0.3.0
 
-- Changed `cssfmt()` a parameter. (filepath -> file)
+- Changed `stylefmt()` a parameter. (filepath -> file)
 - Updated package description.
 
 ## v0.2.0
