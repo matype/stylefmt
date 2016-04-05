@@ -25,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "css-color-list": "0.0.1",
+    "deep-assign": "^2.0.0",
     "editorconfig": "^0.13.2",
     "minimist": "^1.1.2",
     "postcss": "^5.0.6",
