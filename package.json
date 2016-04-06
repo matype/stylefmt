@@ -24,6 +24,7 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
+    "cosmiconfig": "^1.1.0",
     "css-color-list": "0.0.1",
     "deep-assign": "^2.0.0",
     "editorconfig": "^0.13.2",

@@ -8,22 +8,29 @@ var formatComments = require('./lib/formatComments')
 var formatSassVariables = require('./lib/formatSassVariables')
 
 
-var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
-  var params = newParams(fullPath)
+var stylefmt = postcss.plugin('stylefmt', function () {
+  return function (root) {
+    return Promise
+      .resolve(newParams())
+      .then(function (stylelintConfig) {
+        console.log(stylelintConfig)
+        console.log('--------------')
+        formatComments(root, stylelintConfig)
+        formatAtRules(root, stylelintConfig)
+        formatRules(root, stylelintConfig)
+        formatSassVariables(root)
 
-  var func = function (root) {
-    formatComments(root, params)
-    formatAtRules(root, params)
-    formatRules(root, params)
-    formatSassVariables(root)
-    return root
+        return root
+      })
   }
-
-  return func
 })
 
-var process = function (css, fullPath) {
-  return postcss([ stylefmt(fullPath) ]).process(css, { syntax: scss }).css
+var process = function (css) {
+  return postcss([ stylefmt() ])
+    .process(css, { syntax: scss })
+    .then(function (result) {
+      console.log('result is ', result)
+    })
 }
 
 module.exports = {
