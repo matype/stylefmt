@@ -1,7 +1,7 @@
 > Modern CSS Formatter
 
 <div align="center">
-  <a href="http://github.com/morishitter/stylefmt">
+  <a href="https://github.com/morishitter/stylefmt">
     <img width=360px src="http://morishitter.github.io/stylefmt-logo.svg">
   </a>
 </div>
@@ -17,13 +17,13 @@
          alt="Build Status">
   </a>
 
-  <a href="https://www.npmjs.org/package/stylefmt">
+  <a href="https://www.npmjs.com/package/stylefmt">
     <img src="https://img.shields.io/npm/v/stylefmt.svg?style=flat-square"
          alt="NPM Version">
   </a>
 
   <a href="https://www.npmjs.org/package/stylefmt">
-    <img src="http://img.shields.io/npm/dm/stylefmt.svg?style=flat-square"
+    <img src="https://img.shields.io/npm/dm/stylefmt.svg?style=flat-square"
          alt="Downloads">
   </a>
 
@@ -32,7 +32,7 @@
          alt="Dependency Status">
   </a>
 
-  <a href="http://opensource.org/licenses/MIT">
+  <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square"
          alt="License">
   </a>
@@ -368,8 +368,8 @@ stylefmt supports following stylelint rules:
 
 ### Editor plugins
 
-- [sublime-stylefmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
-- [atom-stylefmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
+- [sublime-stylefmt](https://github.com/dmnsgn/sublime-stylefmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [atom-stylefmt](https://github.com/1000ch/atom-stylefmt) by [@1000ch](https://github.com/1000ch)
 - [vim-stylefmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
 - [stylefmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 
