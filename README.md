@@ -44,6 +44,7 @@
 </p>
 <br>
 
+:tada: CSSfmt was renamed to stylefmt
 
 stylefmt is a tool that automatically formats your stylesheets.
 
@@ -259,56 +260,6 @@ Yield:
 }
 ```
 
-
-### Nested selectors
-
-Input (input.css):
-```css
-      @media screen and (    min-width :699px)
- {.foo    +       .bar,.hoge{
-    font-size   :12px      !   important   ;  ~       .fuga     {
-      padding      : 10px       5px;
-   color:green;
- >p
-
- {
-        line-height             : 1.5          ;
-      }}}
-     }                /* comment for .class, #id */
-
-
-.class,           #id
- {     color       : blue;
-
-  border        :solid  #ddd                1px}
-```
-
-Yield:
-```css
-@media screen and (min-width: 699px) {
-  .foo + .bar,
-  .hoge {
-    font-size: 12px !important;
-
-    ~ .fuga {
-      padding: 10px 5px;
-      color: green;
-
-      > p {
-        line-height: 1.5;
-      }
-    }
-  }
-}
-
-/* comment for .class, #id */
-.class,
-#id {
-  color: blue;
-  border: 1px solid #ddd;
-}
-```
-
 ## Installation
 
 ```shell
@@ -359,8 +310,26 @@ var output = postcss()
 
 ### in Task Runners
 
-We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-stylefmt), [gulp](https://github.com/morishitter/gulp-stylefmt), and [Fly](https://github.com/morishitter/fly-stylefmt).
+We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
 
+
+## stylelint rules that stylefmt can handle
+
+stylefmt :heart: stylelint
+
+stylefmt supports following stylelint rules: 
+
+- [block-opening-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-after)
+- [block-opening-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-before)
+- [block-opening-brace-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-after)
+- [block-opening-brace-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-before)
+- [indentation](https://github.com/stylelint/stylelint/tree/master/src/rules/indentation)
+- [selector-combinator-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-after)
+- [selector-combinator-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-before)
+- [selector-list-comma-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-after)
+- [selector-list-comma-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-before)
+- [selector-list-comma-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-after)
+- [selector-list-comma-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-before)
 
 ## Default formatting rules (without stylelint config file)
 
@@ -399,17 +368,17 @@ We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-stylefmt), [
 
 ### Editor plugins
 
-- [sublime-stylefmt](https://github.com/dmnsgn/sublime-stylefmt) by [@dmnsgn](https://github.com/dmnsgn)
-- [atom-stylefmt](https://github.com/1000ch/atom-stylefmt) by [@1000ch](https://github.com/1000ch)
-- [vim-stylefmt](https://github.com/kewah/vim-stylefmt) by [@kewah](https://github.com/kewah)
-- [stylefmt.el](https://github.com/KeenS/stylefmt.el) by [@KeenS](https://github.com/KeenS)
+- [sublime-stylefmt](https://github.com/dmnsgn/sublime-cssfmt) by [@dmnsgn](https://github.com/dmnsgn)
+- [atom-stylefmt](https://github.com/1000ch/atom-cssfmt) by [@1000ch](https://github.com/1000ch)
+- [vim-stylefmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [stylefmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 
 ### for Task Runners
 
-- [gulp-stylefmt](https://github.com/morishitter/gulp-stylefmt)
-- [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
-- [fly-stylefmt](https://github.com/morishitter/fly-stylefmt)
-- [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-stylefmt) by [@appleboy](https://github.com/appleboy)
+- [gulp-stylefmt](https://github.com/morishitter/gulp-cssfmt)
+- [grunt-stylefmt](https://github.com/morishitter/grunt-cssfmt)
+- [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
+- [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
 
 ## License
 
