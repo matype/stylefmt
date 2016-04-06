@@ -57,12 +57,11 @@ stylefmt'd code is:
 
 ## Features
 
-- **Support for the latest CSS syntax:** Including custom properties, range context for media features, `calc()` and nesting.
-- **Understands CSS-like syntaxes:** stylefmt is powered by [PostCSS](https://github.com/postcss/postcss), so  it understands any syntax that PostCSS can parse, including SCSS.
-- **Work well with stylelint:** [stylelint](http://stylelint.io/) is a mighty, modern CSS linter. stylefmt can understand your rules for code formatting in its configuration file (`.stylelintrc`).
+- **Supports the latest CSS syntax:** Including custom properties, range context for media features, `calc()` and nesting.
+- **Understands CSS-like syntaxes:** stylefmt is powered by [PostCSS](https://github.com/postcss/postcss), so it understands any syntax that PostCSS can parse, including SCSS.
+- **Works well with stylelint:** [stylelint](http://stylelint.io/) is a mighty, modern CSS linter. stylefmt can understand the formatting rules specified in your stylelint configuration file (`.stylelintrc`).
 
-
-## Example
+## Examples
 
 ### Future CSS syntax (cssnext)
 
@@ -317,7 +316,7 @@ We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gu
 
 stylefmt :heart: stylelint
 
-stylefmt supports following stylelint rules: 
+stylefmt supports the following stylelint rules:
 
 - [block-opening-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-after)
 - [block-opening-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-before)
@@ -345,9 +344,9 @@ stylefmt supports following stylelint rules:
 - require `;` in last declaration
 - require 1 space between values and `!important`
 - disallow any spaces between `!` and `important`
-- open 1 brank line between rules
-- open 1 brank line between rules in atrules
-- open 1 brank lines before comments
+- open 1 blank line between rules
+- open 1 blank line between rules in atrules
+- open 1 blank lines before comments
 - require new line between a comment and rules
 - disallow any brank lines between `@import`
 
