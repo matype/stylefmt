@@ -372,7 +372,7 @@ stylefmt supports the following stylelint rules:
 
 - [sublime-stylefmt](https://github.com/dmnsgn/sublime-stylefmt) by [@dmnsgn](https://github.com/dmnsgn)
 - [atom-stylefmt](https://github.com/1000ch/atom-stylefmt) by [@1000ch](https://github.com/1000ch)
-- [vim-stylefmt](https://github.com/kewah/vim-cssfmt) by [@kewah](https://github.com/kewah)
+- [vim-stylefmt](https://github.com/kewah/vim-stylefmt) by [@kewah](https://github.com/kewah)
 - [stylefmt.el](https://github.com/KeenS/cssfmt.el) by [@KeenS](https://github.com/KeenS)
 
 ### for Task Runners
