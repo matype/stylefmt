@@ -297,14 +297,17 @@ $ cat input.css | stylefmt
 ```js
 var fs = require('fs');
 var postcss = require('postcss');
-var fmt = require('stylefmt');
+var scss = require('postcss-scss'); // when you use scss syntax
+var stylefmt = require('stylefmt');
 
 var css = fs.readFileSync('input.css', 'utf-8');
 
-var output = postcss()
-  .use(fmt())
-  .process(css)
-  .css;
+postcss([
+  stylefmt
+]).process(css, { syntax: scss })
+  .then(function (result) {
+    result.css; // formatted code
+  });
 ```
 
 ### in Task Runners
