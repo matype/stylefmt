@@ -1,39 +1,26 @@
 var postcss = require('postcss')
 var scss = require('postcss-scss')
 
-var newParams = require('./lib/params')
+var params = require('./lib/params')
 var formatAtRules = require('./lib/formatAtRules')
 var formatRules = require('./lib/formatRules')
 var formatComments = require('./lib/formatComments')
 var formatSassVariables = require('./lib/formatSassVariables')
 
 
-var stylefmt = postcss.plugin('stylefmt', function () {
+var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
   return function (root) {
-    return Promise
-      .resolve(newParams())
-      .then(function (stylelintConfig) {
-        console.log(stylelintConfig)
-        console.log('--------------')
-        formatComments(root, stylelintConfig)
-        formatAtRules(root, stylelintConfig)
-        formatRules(root, stylelintConfig)
-        formatSassVariables(root)
-
-        return root
-      })
+    return params(fullPath).then(function(params) {
+      formatComments(root, params)
+      formatAtRules(root, params)
+      formatRules(root, params)
+      formatSassVariables(root)
+    }).then(function (root) {
+      return root
+    }).catch(function (err) {
+      throw new Error(err)
+    })
   }
 })
 
-var process = function (css) {
-  return postcss([ stylefmt() ])
-    .process(css, { syntax: scss })
-    .then(function (result) {
-      console.log('result is ', result)
-    })
-}
-
-module.exports = {
-  stylefmt: stylefmt,
-  process: process
-}
+module.exports = stylefmt
