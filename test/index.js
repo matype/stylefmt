@@ -1,7 +1,10 @@
 var fs = require('fs-extra')
 var path = require('path')
+
 var tape = require('tape')
-var fmt = require('..')
+var postcss = require('postcss')
+var scss = require('postcss-scss')
+var stylefmt = require('..')
 
 function input (testType, testName) {
   var filepath = path.resolve('test', testType, testName + '.css')
@@ -15,30 +18,49 @@ function output (dir, testName) {
 
 function test (testName) {
   tape(testName, function (t) {
-    var testDir = path.join(process.cwd(), 'test/fixtures')
     t.plan(1)
-    t.equal(fmt.process(input(testDir, testName)), output(testDir, testName))
-    t.end()
+    var testDir = path.join(process.cwd(), 'test/fixtures')
+    postcss([stylefmt])
+      .process(input(testDir, testName), { syntax: scss })
+      .then(function (result) {
+        t.equal(result.css, output(testDir, testName))
+        t.end()
+      }).catch(function (err) {
+        t.error(err)
+        t.end()
+      })
   })
 }
 
-function testWithStylelint (testName) {
+function testWithStylelint (testName, configFileName) {
+  if (!configFileName) {
+    configFileName = '.stylelintrc'
+  }
   tape(testName, function (t) {
-    var cwd = process.cwd()
-    var configSrc = path.resolve(path.join(cwd, 'test/stylelint', testName), '.stylelintrc')
-    var configDest = path.resolve(cwd, '.stylelintrc')
-    fs.copySync(configSrc, configDest, { clobber: true })
-
-    var testDir = path.join(cwd, 'test/stylelint', testName)
     t.plan(1)
-    t.equal(fmt.process(input(testDir, testName)), output(testDir, testName))
-    t.end()
-  })
+    var cwd = process.cwd()
+    var configSrc = path.resolve(path.join(cwd, 'test/stylelint', testName), configFileName)
+    var configDest = path.resolve(cwd, configFileName)
+    fs.copySync(configSrc, configDest, { clobber: true })
+    var testDir = path.join(cwd, 'test/stylelint', testName)
+    postcss([stylefmt])
+      .process(input(testDir, testName), { syntax: scss })
+      .then(function (result) {
+        t.equal(result.css, output(testDir, testName))
+        var config = path.resolve(process.cwd(), configFileName)
+        fs.removeSync(config)
+        t.end()
+      }).catch(function (err) {
+        t.error(err)
+        t.end()
+      })
+    })
+
 }
 
 tape.onFinish(function () {
-  var config = path.resolve(process.cwd(), '.stylelintrc')
-  fs.removeSync(config)
+  var stylelintrc = path.resolve(process.cwd(), '.stylelintrc')
+  fs.removeSync(stylelintrc)
 })
 
 test('readme')
@@ -100,10 +122,10 @@ test('media-indent')
 test('media-indent-with-import')
 
 // for stylelint configuration
-testWithStylelint('selector-list-comma-space-before-always')
-testWithStylelint('selector-list-comma-space-before-never')
-testWithStylelint('selector-list-comma-space-before-always-single-line')
-testWithStylelint('selector-list-comma-space-before-never-single-line')
+testWithStylelint('selector-list-comma-space-before-always', '.stylelintrc.json')
+testWithStylelint('selector-list-comma-space-before-never', '.stylelintrc.config.js')
+testWithStylelint('selector-list-comma-space-before-always-single-line', '.stylelintrc.js')
+testWithStylelint('selector-list-comma-space-before-never-single-line', '.stylelintrc.yaml')
 testWithStylelint('selector-list-comma-newline-before-always')
 testWithStylelint('selector-list-comma-newline-before-always-multi-line')
 testWithStylelint('selector-list-comma-newline-before-never-multi-line')

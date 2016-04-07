@@ -22,6 +22,8 @@ var argv = minimist(process.argv.slice(2), {
 })
 
 var tmp = require('tmp')
+var postcss = require('postcss')
+var scss = require('postcss-scss')
 
 if (argv.v) {
   console.log(pkg.version)
@@ -46,43 +48,56 @@ if (argv._[0]) {
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
-  var formatted = stylefmt.process(css)
-
-  if (argv.d) {
-    var fullPath = path.resolve(process.cwd(), input)
-    handleDiff(fullPath, input, formatted)
-  } else {
-    if (css !== formatted) {
-      fs.writeFile(output, formatted, function (err) {
-        if (err) throw err
-      })
-    }
-  }
+  postcss([stylefmt])
+    .process(css, { syntax: scss })
+    .then(function (result) {
+      var formatted = result.css
+      if (argv.d) {
+        var fullPath = path.resolve(process.cwd(), input)
+        handleDiff(fullPath, input, formatted)
+      } else {
+        if (css !== formatted) {
+          fs.writeFile(output, formatted, function (err) {
+            if (err) {
+              throw err
+            }
+          })
+        }
+      }
+    })
 } else if (argv.R) {
   var recursive = require('recursive-readdir')
 
   recursive(argv.R, function (err, files) {
     files.forEach(function (file) {
       var fullPath = path.resolve(process.cwd(), file)
-      if (!isCss(fullPath)) return
-
-      var css = fs.readFileSync(fullPath, 'utf-8')
-      try {
-        var formatted = stylefmt.process(css, fullPath)
-      } catch (e) {
-        throw e
+      if (!isCss(fullPath)) {
         return
       }
 
-      if (css !== formatted) {
-        fs.writeFileSync(fullPath, formatted)
-      }
+      var css = fs.readFileSync(fullPath, 'utf-8')
+
+      postcss([stylefmt])
+        .process(css, { syntax: scss })
+        .then(function (result) {
+          var formatted = result.css
+          if (css !== formatted) {
+            fs.writeFile(output, formatted, function (err) {
+              if (err) {
+                throw err
+              }
+            })
+          }
+        })
+      })
     })
-  })
 } else {
   stdin(function (css) {
-    var formatted = stylefmt.process(css)
-    process.stdout.write(formatted)
+    postcss([stylefmt])
+      .process(css, { syntax: scss })
+      .then(function (result) {
+        process.stdout.write(result.css)
+      })
   })
 }
 
@@ -105,15 +120,19 @@ function handleDiff (fullPath, original, formatted) {
       return
     }
 
-    fs.writeSync(fd, formatted)
+    fs.writeSync(fd, formatted, function (err) {
+      if (err) {
+        throw err;
+      }
 
-    diff(fullPath, tmpPath, function (err, stdout, stderr) {
-      if (stdout) {
-        console.log(stdout);
-      }
-      if (stderr) {
-        console.error(stderr);
-      }
+      diff(fullPath, tmpPath, function (err, stdout, stderr) {
+        if (stdout) {
+          console.log(stdout);
+        }
+        if (stderr) {
+          console.error(stderr);
+        }
+      })
     })
   })
 }

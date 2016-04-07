@@ -3,56 +3,56 @@ var path = require('path')
 var fs = require('fs')
 var tape = require('tape')
 
-// tape('cli stdin', function (t) {
-//   spawnstylefmt([], readFixture('at-media.css'), function (err, output) {
-//     if (err) {
-//       throw err
-//     }
+tape('cli stdin', function (t) {
+  spawnstylefmt([], readFixture('at-media.css'), function (err, output) {
+    if (err) {
+      throw err
+    }
 
-//     var expected = readFixture('at-media.out.css')
-//     t.equal(output, expected)
-//     t.end()
-//   })
-// })
+    var expected = readFixture('at-media.out.css')
+    t.equal(output, expected)
+    t.end()
+  })
+})
 
-// tape('cli input file option', function (t) {
-//   var tempFile = fixturesPath('at-media.copy.css')
-//   fs.writeFileSync(tempFile, readFixture('at-media.css'), 'utf-8')
+tape('cli input file option', function (t) {
+  var tempFile = fixturesPath('at-media.copy.css')
+  fs.writeFileSync(tempFile, readFixture('at-media.css'), 'utf-8')
 
-//   spawnstylefmt([tempFile], null, function (err) {
-//     if (err) {
-//       throw err
-//     }
+  spawnstylefmt([tempFile], null, function (err) {
+    if (err) {
+      throw err
+    }
 
-//     var output = fs.readFileSync(tempFile, 'utf-8')
-//     fs.unlinkSync(tempFile)
+    var output = fs.readFileSync(tempFile, 'utf-8')
+    fs.unlinkSync(tempFile)
 
-//     var expected = readFixture('at-media.out.css')
-//     t.equal(output, expected)
+    var expected = readFixture('at-media.out.css')
+    t.equal(output, expected)
 
-//     t.end()
-//   })
-// })
+    t.end()
+  })
+})
 
-// tape('cli output file option', function (t) {
-//   var tempFile = fixturesPath('at-media.copy.css')
+tape('cli output file option', function (t) {
+  var tempFile = fixturesPath('at-media.copy.css')
 
-//   spawnstylefmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
-//     if (err) {
-//       throw err
-//     }
+  spawnstylefmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
+    if (err) {
+      throw err
+    }
 
-//     t.ok(fs.existsSync(tempFile), 'output file created')
+    t.ok(fs.existsSync(tempFile), 'output file created')
 
-//     var output = fs.readFileSync(tempFile, 'utf-8')
-//     fs.unlinkSync(tempFile)
+    var output = fs.readFileSync(tempFile, 'utf-8')
+    fs.unlinkSync(tempFile)
 
-//     var expected = readFixture('at-media.out.css')
-//     t.equal(output, expected)
+    var expected = readFixture('at-media.out.css')
+    t.equal(output, expected)
 
-//     t.end()
-//   })
-// })
+    t.end()
+  })
+})
 
 
 function fixturesPath (filename) {
