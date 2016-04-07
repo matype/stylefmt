@@ -1,3 +1,10 @@
+## v3.1.0
+
+Implement as an asynchronouse plugin. [#85](https://github.com/morishitter/stylefmt/pull/85)
+
+- Introduce cosmiconfig instead of rc-loader
+- Fixed [#81](https://github.com/morishitter/stylefmt/issues/81)
+
 ## stylefmt v3.0.0
 
 :tada: Renamed to stylefmt, and support to understand [stylelint](http://stylelint.io) configuration file.
