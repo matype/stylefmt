@@ -32,29 +32,35 @@ function test (testName) {
   })
 }
 
-function testWithStylelint (testName) {
+function testWithStylelint (testName, configFileName) {
+  if (!configFileName) {
+    configFileName = '.stylelintrc'
+  }
   tape(testName, function (t) {
+    t.plan(1)
     var cwd = process.cwd()
-    var configSrc = path.resolve(path.join(cwd, 'test/stylelint', testName), '.stylelintrc')
-    var configDest = path.resolve(cwd, '.stylelintrc')
+    var configSrc = path.resolve(path.join(cwd, 'test/stylelint', testName), configFileName)
+    var configDest = path.resolve(cwd, configFileName)
     fs.copySync(configSrc, configDest, { clobber: true })
-
     var testDir = path.join(cwd, 'test/stylelint', testName)
     postcss([stylefmt])
       .process(input(testDir, testName), { syntax: scss })
       .then(function (result) {
         t.equal(result.css, output(testDir, testName))
+        var config = path.resolve(process.cwd(), configFileName)
+        fs.removeSync(config)
         t.end()
       }).catch(function (err) {
         t.error(err)
         t.end()
       })
-  })
+    })
+
 }
 
 tape.onFinish(function () {
-  var config = path.resolve(process.cwd(), '.stylelintrc')
-  fs.removeSync(config)
+  var stylelintrc = path.resolve(process.cwd(), '.stylelintrc')
+  fs.removeSync(stylelintrc)
 })
 
 test('readme')
@@ -116,10 +122,10 @@ test('media-indent')
 test('media-indent-with-import')
 
 // for stylelint configuration
-testWithStylelint('selector-list-comma-space-before-always')
-testWithStylelint('selector-list-comma-space-before-never')
-testWithStylelint('selector-list-comma-space-before-always-single-line')
-testWithStylelint('selector-list-comma-space-before-never-single-line')
+testWithStylelint('selector-list-comma-space-before-always', '.stylelintrc.json')
+testWithStylelint('selector-list-comma-space-before-never', '.stylelintrc.config.js')
+testWithStylelint('selector-list-comma-space-before-always-single-line', '.stylelintrc.js')
+testWithStylelint('selector-list-comma-space-before-never-single-line', '.stylelintrc.yaml')
 testWithStylelint('selector-list-comma-newline-before-always')
 testWithStylelint('selector-list-comma-newline-before-always-multi-line')
 testWithStylelint('selector-list-comma-newline-before-never-multi-line')

@@ -18,7 +18,8 @@ var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
     }).then(function (root) {
       return root
     }).catch(function (err) {
-      throw new Error(err)
+      console.error(err)
+      return root
     })
   }
 })
