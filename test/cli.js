@@ -1,59 +1,63 @@
-var spawn = require('child_process').spawn
-var path = require('path')
 var fs = require('fs')
+var path = require('path')
+var spawn = require('child_process').spawn
+
 var tape = require('tape')
 
 tape('cli stdin', function (t) {
-  spawnstylefmt([], readFixture('at-media.css'), function (err, output) {
+  t.plan(1)
+  spawnStylefmt([], readFixture('at-media/at-media.css'), function (err, output) {
     if (err) {
-      throw err
+      t.end(err)
+      return
     }
-
-    var expected = readFixture('at-media.out.css')
-    t.equal(output, expected)
+    t.equal(output, readFixture('at-media/at-media.out.css'))
     t.end()
   })
 })
 
 tape('cli input file option', function (t) {
-  var tempFile = fixturesPath('at-media.copy.css')
-  fs.writeFileSync(tempFile, readFixture('at-media.css'), 'utf-8')
+  t.plan(1)
 
-  spawnstylefmt([tempFile], null, function (err) {
+  var tempFile = fixturesPath('at-media/at-media.copy.css')
+  fs.writeFileSync(tempFile, readFixture('at-media/at-media.css'), 'utf-8')
+
+  spawnStylefmt([tempFile], null, function (err) {
     if (err) {
-      throw err
+      t.end(err)
+      return
     }
 
     var output = fs.readFileSync(tempFile, 'utf-8')
+    t.equal(output, readFixture('at-media/at-media.out.css'))
     fs.unlinkSync(tempFile)
-
-    var expected = readFixture('at-media.out.css')
-    t.equal(output, expected)
-
     t.end()
   })
 })
 
 tape('cli output file option', function (t) {
-  var tempFile = fixturesPath('at-media.copy.css')
-
-  spawnstylefmt([fixturesPath('at-media.css'), tempFile], null, function(err) {
+  t.plan(1)
+  var tempFile = fixturesPath('at-media/at-media.copy.css')
+  spawnStylefmt([fixturesPath('at-media/at-media.css'), tempFile], null, function(err) {
     if (err) {
-      throw err
+      t.end(err)
+      return
     }
 
-    t.ok(fs.existsSync(tempFile), 'output file created')
+    try {
+      fs.statSync(tempFile)
+    } catch (err) {
+      t.error(err, 'output file not found')
+      t.end()
+      return
+    }
 
     var output = fs.readFileSync(tempFile, 'utf-8')
+    t.equal(output, readFixture('at-media/at-media.out.css'))
     fs.unlinkSync(tempFile)
-
-    var expected = readFixture('at-media.out.css')
-    t.equal(output, expected)
-
     t.end()
   })
 })
-
 
 function fixturesPath (filename) {
   return path.join(__dirname, 'fixtures', filename)
@@ -63,35 +67,35 @@ function readFixture (filename) {
   return fs.readFileSync(fixturesPath(filename), 'utf-8')
 }
 
-function spawnstylefmt (options, input, callback) {
-  var args = [path.join(__dirname, '../bin/cli.js')]
-  args = args.concat(options)
+function spawnStylefmt (options, input, callback) {
+  var args = [
+    path.join(__dirname, '../bin/cli.js')
+  ].concat(options)
 
-  var childprocess = spawn('node', args, {
+  var child = spawn('node', args, {
     stdio: ['pipe', 'pipe', 'pipe']
   })
-  var output = ''
-  var error = ''
 
-  childprocess.stdout.on('data', function (data) {
+  var output = ''
+  child.stdout.on('data', function (data) {
     output += data.toString()
   })
 
-  childprocess.stderr.on('data', function (data) {
+  var error = ''
+  child.stderr.on('data', function (data) {
     error += data.toString()
   })
 
-  childprocess.on('exit', function() {
+  child.on('exit', function () {
     if (error) {
       callback(new Error(error))
       return
     }
-
     callback(null, output)
   })
 
   if (input) {
-    childprocess.stdin.write(input)
-    childprocess.stdin.end()
+    child.stdin.write(input)
+    child.stdin.end()
   }
 }
