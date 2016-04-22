@@ -1,0 +1,5 @@
+{
+    "rules": {
+        "block-closing-brace-newline-after": "never-single-line"
+    }
+}

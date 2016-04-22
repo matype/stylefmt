@@ -36,7 +36,8 @@
     "tmp": "0.0.26"
   },
   "devDependencies": {
-    "fs-extra": "^0.26.7",
+    "each-series": "^1.0.0",
+    "klaw": "^1.2.0",
     "tape": "^4.0.2"
   }
 }
