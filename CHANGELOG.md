@@ -1,3 +1,10 @@
+## v3.2.0
+
+Supported the following stylelint rules
+
+- block-closing-brace-newline
+- block-closing-brace-newline-after
+
 ## v3.1.0
 
 Implement as an asynchronouse plugin. [#85](https://github.com/morishitter/stylefmt/pull/85)
