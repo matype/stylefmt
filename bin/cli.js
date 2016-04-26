@@ -82,7 +82,7 @@ if (argv._[0]) {
         .then(function (result) {
           var formatted = result.css
           if (css !== formatted) {
-            fs.writeFile(output, formatted, function (err) {
+            fs.writeFile(fullPath, formatted, function (err) {
               if (err) {
                 throw err
               }
