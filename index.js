@@ -15,7 +15,6 @@ var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
       formatAtRules(root, params)
       formatRules(root, params)
       formatSassVariables(root)
-    }).then(function (root) {
       return root
     }).catch(function (err) {
       console.error(err.stack)

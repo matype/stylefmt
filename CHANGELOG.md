@@ -1,3 +1,7 @@
+## v3.2.1
+
+Fixed the bug that occurs with `--recursive` option.
+
 ## v3.2.0
 
 Supported the following stylelint rules
