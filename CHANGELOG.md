@@ -1,3 +1,9 @@
+## v3.3.0
+
+Add support for stylelint extends. [#129](https://github.com/morishitter/stylefmt/issues/129)
+
+@seka implemented this feature. Thanks :) [#133](https://github.com/morishitter/stylefmt/pull/133)
+
 ## v3.2.1
 
 Fixed the bug that occurs with `--recursive` option.

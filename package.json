@@ -1,6 +1,6 @@
 {
   "name": "stylefmt",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "stylefmt is a tool that automatically formats stylesheets code.",
   "main": "index.js",
   "scripts": {
@@ -28,10 +28,12 @@
     "css-color-list": "0.0.1",
     "editorconfig": "^0.13.2",
     "minimist": "^1.1.2",
+    "object-assign": "^4.1.0",
     "postcss": "^5.0.6",
     "postcss-scss": "^0.1.0",
     "recursive-readdir": "^1.2.1",
     "repeat-string": "^1.5.2",
+    "resolve-from": "^2.0.0",
     "stdin": "0.0.1",
     "tmp": "0.0.26"
   },
