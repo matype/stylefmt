@@ -1,3 +1,10 @@
+## v3.4.0
+
+Support the following stylelint rules
+
+- declaration-colon-space-after, [#106](https://github.com/morishitter/stylefmt/issues/106)
+- declaration-colon-space-before, [#107](https://github.com/morishitter/stylefmt/issues/107)
+
 ## v3.3.1
 
 Fixed some bugs.
