@@ -1,3 +1,10 @@
+## v3.3.1
+
+Fixed some bugs.
+
+- [#132](https://github.com/morishitter/stylefmt/issues/132)
+- [#134](https://github.com/morishitter/stylefmt/issues/134)
+
 ## v3.3.0
 
 Add support for stylelint extends. [#129](https://github.com/morishitter/stylefmt/issues/129)

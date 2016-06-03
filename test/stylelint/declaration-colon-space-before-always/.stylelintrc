@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "declaration-colon-space-before": "always"
+  }
+}
