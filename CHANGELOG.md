@@ -1,3 +1,7 @@
+## v3.4.1
+
+- Fixed [#142](https://github.com/morishitter/stylefmt/issues/142)
+
 ## v3.4.0
 
 Support the following stylelint rules
