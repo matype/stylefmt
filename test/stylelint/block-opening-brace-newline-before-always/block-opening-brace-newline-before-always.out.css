@@ -7,3 +7,24 @@ a
 {
   color: pink;
 }
+
+@media (max-width: 980px)
+{
+  a
+  {
+    font-size: 12px;
+  }
+}
+
+@keyframes spin
+{
+  0%
+  {
+    transform: translateZ(0) rotate(0);
+  }
+
+  100%
+  {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
