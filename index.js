@@ -14,7 +14,7 @@ var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
       formatComments(root, params)
       formatAtRules(root, params)
       formatRules(root, params)
-      formatSassVariables(root)
+      formatSassVariables(root, params)
       return root
     }).catch(function (err) {
       console.error(err.stack)
