@@ -1,3 +1,8 @@
+## v3.4.2
+
+- Support `color-hex-case` rule of stylelint
+- Fixed [#146](https://github.com/morishitter/stylefmt/issues/146)
+
 ## v3.4.1
 
 - Fixed [#142](https://github.com/morishitter/stylefmt/issues/142)
