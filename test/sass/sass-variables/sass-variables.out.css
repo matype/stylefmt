@@ -1,8 +1,9 @@
+$fontSmall: 10px;
+$foo: 'fooooo';
+
 h2 {
   display: inline-block;
 }
-$fontSmall: 10px;
-$foo: 'fooooo';
 
 .bar {
   $fontSmall: 12px;
