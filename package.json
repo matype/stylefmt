@@ -1,6 +1,6 @@
 {
   "name": "stylefmt",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "stylefmt is a tool that automatically formats stylesheets code.",
   "main": "index.js",
   "scripts": {
