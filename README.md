@@ -321,10 +321,16 @@ stylefmt :heart: stylelint
 
 stylefmt supports the following stylelint rules:
 
+- [at-rule-semicolon-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/at-rule-semicolon-newline-after)
+- [block-closing-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-after)
+- [block-closing-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-before)
 - [block-opening-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-after)
 - [block-opening-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-newline-before)
 - [block-opening-brace-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-after)
 - [block-opening-brace-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-before)
+- [color-hex-case](https://github.com/stylelint/stylelint/tree/master/src/rules/color-hex-case)
+- [declaration-colon-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-after)
+- [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-before)
 - [indentation](https://github.com/stylelint/stylelint/tree/master/src/rules/indentation)
 - [selector-combinator-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-after)
 - [selector-combinator-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-before)
@@ -332,6 +338,8 @@ stylefmt supports the following stylelint rules:
 - [selector-list-comma-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-before)
 - [selector-list-comma-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-after)
 - [selector-list-comma-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-before)
+
+and we can also format from the other stylelint's configration files or packages e.g. [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard), [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) and so on.
 
 ## Default formatting rules (without stylelint config file)
 
