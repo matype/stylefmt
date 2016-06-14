@@ -1,3 +1,7 @@
+## v3.4.4
+
+- Fixed [#150](https://github.com/morishitter/stylefmt/pull/150)
+
 ## v3.4.3
 
 - Fixed [#87](https://github.com/morishitter/stylefmt/issues/87)
