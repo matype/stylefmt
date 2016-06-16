@@ -8,9 +8,11 @@ var formatComments = require('./lib/formatComments')
 var formatSassVariables = require('./lib/formatSassVariables')
 
 
-var stylefmt = postcss.plugin('stylefmt', function (fullPath) {
+var stylefmt = postcss.plugin('stylefmt', function (options) {
+  options = options || {}
+
   return function (root) {
-    return params(fullPath).then(function (params) {
+    return params(options).then(function (params) {
       formatComments(root, params)
       formatAtRules(root, params)
       formatRules(root, params)

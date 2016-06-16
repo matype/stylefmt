@@ -17,7 +17,8 @@ var argv = minimist(process.argv.slice(2), {
     h: 'help',
     v: 'version',
     d: 'diff',
-    R: 'recursive'
+    R: 'recursive',
+    c: 'config'
   }
 })
 
@@ -37,18 +38,25 @@ if (argv.h) {
   console.log('')
   console.log('  -d, --diff        output diff against original file')
   console.log('  -R, --recursive   format files recursively')
+  console.log('  -c, --config      Path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -v, --version     output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
 }
 
 
+var options ={}
+if (argv.c) {
+  options.config = argv.c
+}
+
 if (argv._[0]) {
   var input = argv._[0]
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
-  postcss([stylefmt])
+
+  postcss([stylefmt(options)])
     .process(css, { syntax: scss })
     .then(function (result) {
       var formatted = result.css
@@ -77,7 +85,7 @@ if (argv._[0]) {
 
       var css = fs.readFileSync(fullPath, 'utf-8')
 
-      postcss([stylefmt])
+      postcss([stylefmt(options)])
         .process(css, { syntax: scss })
         .then(function (result) {
           var formatted = result.css
@@ -93,7 +101,7 @@ if (argv._[0]) {
     })
 } else {
   stdin(function (css) {
-    postcss([stylefmt])
+    postcss([stylefmt(options)])
       .process(css, { syntax: scss })
       .then(function (result) {
         process.stdout.write(result.css)
