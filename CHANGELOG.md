@@ -1,3 +1,7 @@
+## v3.5.0
+
+- Add `--config` option to specific configuration file
+
 ## v3.4.4
 
 - Fixed [#150](https://github.com/morishitter/stylefmt/pull/150)
