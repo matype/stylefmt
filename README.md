@@ -282,6 +282,7 @@ Options:
 
   -d, --diff        output diff against original file
   -R, --recursive   format files recursively
+  -c, --config      Path to a specific configuration file (JSON, YAML, or CommonJS)
   -V, --versions    output the version number
   -h, --help        output usage information
 ```
