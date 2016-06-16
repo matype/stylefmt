@@ -38,7 +38,7 @@ if (argv.h) {
   console.log('')
   console.log('  -d, --diff        output diff against original file')
   console.log('  -R, --recursive   format files recursively')
-  console.log('  -c, --config      Path to a specific configuration file (JSON, YAML, or CommonJS)')
+  console.log('  -c, --config      path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -v, --version     output the version number')
   console.log('  -h, --help        output usage information')
   process.exit()
