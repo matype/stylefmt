@@ -1,7 +1,7 @@
 {
   "name": "stylefmt",
   "version": "3.5.0",
-  "description": "stylefmt is a tool that automatically formats stylesheets code.",
+  "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
@@ -19,7 +19,9 @@
     "formatter",
     "code style",
     "beautifier",
-    "postcss-plugin"
+    "postcss-plugin",
+    "postcss",
+    "stylelint"
   ],
   "author": "Masaaki Morishita",
   "license": "MIT",

@@ -44,7 +44,7 @@
 </p>
 <br>
 
-stylefmt is a tool that automatically formats your stylesheets.
+stylefmt is a tool that automatically formats CSS according to [stylelint](http://stylelint.io/) rules.
 
 stylefmt'd code is:
 
