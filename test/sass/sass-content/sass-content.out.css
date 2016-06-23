@@ -1,4 +1,3 @@
-/* https://robots.thoughtbot.com/sasss-content-directive */
 @mixin apply-to-ie6-only {
   * html {
     @content;

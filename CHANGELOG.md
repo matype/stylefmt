@@ -1,3 +1,7 @@
+## v4.0.0
+
+- Remove the default formatting rules for comments. [#158](https://github.com/morishitter/stylefmt/issues/158)
+
 ## v3.5.0
 
 - Add `--config` option to specific configuration file

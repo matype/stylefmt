@@ -18,6 +18,5 @@ $wrn: 20px;
 /* http://www.sitepoint.com/using-sasss-error-warn-and-debug-directives/ */
 @if unit($input) == 'px' {
   @warn "Please remember to use rem values in the `do-math()` function.";
-
   // do px math and @return a value;
 }

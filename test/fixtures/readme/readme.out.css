@@ -18,9 +18,8 @@
 
 .base {
   color: red;
-}
+} // placeholder
 
-// placeholder
 %base {
   padding: 12px;
 }
