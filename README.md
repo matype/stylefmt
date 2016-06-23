@@ -73,6 +73,7 @@ Input (input.css):
   --mainColor       :#12345678;
 --highlightColor:hwb(190, 35%, 20%);
 }
+
 /* custom media queries */
 @custom-media
 
@@ -88,6 +89,7 @@ padding: calc((var(--fontSize) / 2) + 1px)}
 @media (--viewport-medium) {
 body {font-size: calc(var(--fontSize) * 1.2); }
 }
+
 /* custom selectors */
 @custom-selector :--heading h1,h2,h3,    h4,h5,h6;
 :--heading { margin-top:0 }
@@ -105,6 +107,7 @@ a:any-link { color:color(var(--highlightColor) blackness(+20%)) }
 h2 {font-variant-caps:small-caps;
 }table{font-variant-numeric: lining-nums;
 }
+
 /* filters */
 .blur{filter:blur(4px)}.sepia{
 filter: sepia(.8);}
@@ -192,7 +195,6 @@ Input (input.scss):
 // mixin for clearfix
 
 
-
         @mixin      clearfix    ()      { &:before,
   &:after {
                 content:" ";
@@ -202,8 +204,9 @@ Input (input.scss):
    }.class
 {
        padding:10px;@include        clearfix();}
-     .base {  color: red;  } // placeholder
+     .base {  color: red;  }
 
+// placeholder
 %base
 {
 
@@ -356,15 +359,13 @@ and we can also format from the other stylelint's configration files or packages
 - require `;` in last declaration
 - require 1 space between values and `!important`
 - disallow any spaces between `!` and `important`
-- open 1 blank line between rules
-- open 1 blank line between rules in atrules
-- open 1 blank lines before comments
-- require new line between a comment and rules
+- leave 1 blank line between rules
+- leave 1 blank line between rules in atrules
 - disallow any brank lines between `@import`
 
 ### for nested selector syntax
 
--  open 1 line between declarations and nested rules
+-  leave 1 line between declarations and nested rules
 
 ### SCSS
 
