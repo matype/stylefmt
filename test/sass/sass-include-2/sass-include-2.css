@@ -1,13 +1,13 @@
 @include font-face("Pictos", "../fonts/pictos-web");
 
-@include transform(translateZ(0) translateY(20px));
-@include transform(translateZ(0) /* translateY(20px) */ translateX(0));
-@include transform(translateZ(0)/* translateY(20px) */translateX(0));
+@include transform(translateZ(0)   translateY(20px));
+@include transform(translateZ(0)   translateX(0));
+@include transform(translateZ(0)    translateX(0));
 
 
 
-@include transform(translateZ(0), /* translateY(20px) */translateX(0));
-@include transform(  translateZ(0),   /** translateY(20px) **/   translateX(0)  );
+@include transform(translateZ(0),translateX(0));
+@include transform(  translateZ(0),    translateX(0)  );
 div {
   color: blue;
   @extend %class;

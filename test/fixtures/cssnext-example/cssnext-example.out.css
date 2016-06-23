@@ -22,7 +22,6 @@ body {
     font-size: calc(var(--fontSize) * 1.2);
   }
 }
-
 /* custom selectors */
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
@@ -56,7 +55,6 @@ h2 {
 table {
   font-variant-numeric: lining-nums;
 }
-
 /* filters */
 .blur {
   filter: blur(4px);
