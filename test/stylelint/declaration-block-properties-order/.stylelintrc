@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "declaration-block-properties-order": [
+      "@atrule",
+      "display",
+      "width",
+      "height",
+      "color",
+      "background"
+    ]
+  }
+}

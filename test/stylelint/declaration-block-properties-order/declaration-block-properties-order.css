@@ -1,0 +1,8 @@
+a {
+  height: 20px;
+  color: #000;
+  @include "foo";
+  width: 10px;
+  display: block;
+  background: #fff;
+}

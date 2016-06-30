@@ -33,6 +33,7 @@
     "object-assign": "^4.1.0",
     "postcss": "^5.0.21",
     "postcss-scss": "^0.1.8",
+    "postcss-sorting": "^1.6.1",
     "recursive-readdir": "^2.0.0",
     "repeat-string": "^1.5.4",
     "resolve-from": "^2.0.0",
