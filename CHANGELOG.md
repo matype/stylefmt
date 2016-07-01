@@ -1,3 +1,7 @@
+## v4.1.0
+
+- Add support for declaration-block-properties-order rule of stylelint. [#161](https://github.com/morishitter/stylefmt/pull/161)
+
 ## v4.0.0
 
 - Remove the default formatting rules for comments. [#158](https://github.com/morishitter/stylefmt/issues/158)
