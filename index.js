@@ -3,6 +3,7 @@ var scss = require('postcss-scss')
 
 var params = require('./lib/params')
 var formatAtRules = require('./lib/formatAtRules')
+var formatOrder = require('./lib/formatOrder')
 var formatRules = require('./lib/formatRules')
 var formatComments = require('./lib/formatComments')
 var formatSassVariables = require('./lib/formatSassVariables')
@@ -15,6 +16,7 @@ var stylefmt = postcss.plugin('stylefmt', function (options) {
     return params(options).then(function (params) {
       formatComments(root, params)
       formatAtRules(root, params)
+      formatOrder(root, params)
       formatRules(root, params)
       formatSassVariables(root, params)
       return root
