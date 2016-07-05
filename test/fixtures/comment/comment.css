@@ -20,9 +20,12 @@
 @media only screen {
   /* inner at rule comment */
   .foo { display: none; }
+
   /*
    * another comment
    */
+   /* in a row */
+
 .bar {
   color:yellow;
 }
