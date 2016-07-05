@@ -1,3 +1,7 @@
+## v4.1.1
+
+- Fixed [#162](https://github.com/morishitter/stylefmt/pull/162)
+
 ## v4.1.0
 
 - Add support for declaration-block-properties-order rule of stylelint. [#161](https://github.com/morishitter/stylefmt/pull/161)
