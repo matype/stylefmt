@@ -314,7 +314,7 @@ postcss([
 
 ### in Task Runners
 
-We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-cssfmt), [gulp](https://github.com/morishitter/gulp-cssfmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
+We can use stylefmt in [Grunt](https://github.com/morishitter/grunt-stylefmt), [gulp](https://github.com/morishitter/gulp-stylefmt), and [Fly](https://github.com/morishitter/fly-cssfmt).
 
 
 ## stylelint rules that stylefmt can handle
@@ -387,8 +387,8 @@ and we can also format from the other stylelint's configration files or packages
 
 ### for Task Runners
 
-- [gulp-stylefmt](https://github.com/morishitter/gulp-cssfmt)
-- [grunt-stylefmt](https://github.com/morishitter/grunt-cssfmt)
+- [gulp-stylefmt](https://github.com/morishitter/gulp-stylefmt)
+- [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
 - [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
 
