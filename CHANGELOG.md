@@ -1,3 +1,7 @@
+## v4.2.0
+
+- Add support for string-quotes rule of stylelint. [#164](https://github.com/morishitter/stylefmt/pull/164)
+
 ## v4.1.1
 
 - Fixed [#162](https://github.com/morishitter/stylefmt/pull/162)
