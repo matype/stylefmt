@@ -1,6 +1,7 @@
 ## v4.2.0
 
 - Add support for string-quotes rule of stylelint. [#164](https://github.com/morishitter/stylefmt/pull/164)
+- Add support for groups in declaration-block-properties and fixed [#165](https://github.com/morishitter/stylefmt/issues/165). [#167](https://github.com/morishitter/stylefmt/pull/167)
 
 ## v4.1.1
 
