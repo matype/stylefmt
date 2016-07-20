@@ -1,0 +1,10 @@
+a {
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  width: 10px;
+  height: 20px;
+  color: #000;
+  background: #fff;
+  opacity: .8;
+}
