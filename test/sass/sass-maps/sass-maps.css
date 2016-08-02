@@ -5,3 +5,8 @@ $map: (
     light: lighten(rgb(128, 128, 128), 10%)
   )
 );
+
+$color: (
+  hoge: #fff,
+  fuga: #000
+);
