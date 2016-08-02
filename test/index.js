@@ -12,9 +12,9 @@ var stylefmt = require('..')
 
 var cwd = process.cwd()
 var testBaseDirPaths = [
-  // path.join(cwd, 'test/fixtures'),
+  path.join(cwd, 'test/fixtures'),
   path.join(cwd, 'test/sass'),
-  // path.join(cwd, 'test/stylelint')
+  path.join(cwd, 'test/stylelint')
 ]
 
 ;(function main () {
