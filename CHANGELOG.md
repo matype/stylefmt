@@ -1,3 +1,7 @@
+## v4.2.3
+
+- Fixed a bug.
+
 ## v4.2.2
 
 - Support for severities with block-closing-brace-newline-after[#173](https://github.com/morishitter/stylefmt/pull/173)
