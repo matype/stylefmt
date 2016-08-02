@@ -1,3 +1,9 @@
+## v4.2.2
+
+- Support for severities with block-closing-brace-newline-after[#173](https://github.com/morishitter/stylefmt/pull/173)
+- Don't format in Sass maps
+- Don't space in sass map functions
+
 ## v4.2.1
 
 - Fixed [#170](https://github.com/morishitter/stylefmt/pull/170). [#171](https://github.com/morishitter/stylefmt/pull/171)
