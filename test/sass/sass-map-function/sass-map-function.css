@@ -1,0 +1,14 @@
+.foo {
+  @each $category in map-keys($category-background-color) {
+    &-#{$category} {
+      @extend %adventCalendarRankingCategoryCardTitle;
+      background-color: map-get($category-background-color, $category);
+      color: map-get($category-color, $category);
+
+      a {
+        color: map-get($category-color, $category);
+        opacity: .7;
+      }
+    }
+  }
+}

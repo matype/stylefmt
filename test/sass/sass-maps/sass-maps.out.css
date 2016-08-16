@@ -1,0 +1,12 @@
+$map: (
+  grey: (
+    dark: darken(rgb(128, 128, 128), 10%),
+    base: rgb(128, 128, 128),
+    light: lighten(rgb(128, 128, 128), 10%)
+  )
+);
+
+$color: (
+  hoge: #fff,
+  fuga: #000
+);

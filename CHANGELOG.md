@@ -1,3 +1,17 @@
+## v4.2.3
+
+- Fixed a bug.
+
+## v4.2.2
+
+- Support for severities with block-closing-brace-newline-after[#173](https://github.com/morishitter/stylefmt/pull/173)
+- Don't format in Sass maps
+- Don't space in sass map functions
+
+## v4.2.1
+
+- Fixed [#170](https://github.com/morishitter/stylefmt/pull/170). [#171](https://github.com/morishitter/stylefmt/pull/171)
+
 ## v4.2.0
 
 - Add support for string-quotes rule of stylelint. [#164](https://github.com/morishitter/stylefmt/pull/164)
