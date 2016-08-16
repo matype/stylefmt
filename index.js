@@ -1,5 +1,4 @@
 var postcss = require('postcss')
-var scss = require('postcss-scss')
 
 var params = require('./lib/params')
 var formatAtRules = require('./lib/formatAtRules')
