@@ -392,6 +392,7 @@ and we can also format from the other stylelint's configration files or packages
 - [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
 - [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
+- [stylefmt-loader] (https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
 
 ## License
 
