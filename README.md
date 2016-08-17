@@ -336,6 +336,7 @@ stylefmt supports the following stylelint rules:
 - [declaration-colon-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-after)
 - [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-before)
 - [indentation](https://github.com/stylelint/stylelint/tree/master/src/rules/indentation)
+- [length-zero-no-unit](https://github.com/stylelint/stylelint/tree/master/src/rules/length-zero-no-unit)
 - [selector-combinator-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-after)
 - [selector-combinator-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-before)
 - [selector-list-comma-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-after)
