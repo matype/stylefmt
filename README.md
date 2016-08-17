@@ -331,6 +331,7 @@ stylefmt supports the following stylelint rules:
 - [block-opening-brace-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-after)
 - [block-opening-brace-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-opening-brace-space-before)
 - [color-hex-case](https://github.com/stylelint/stylelint/tree/master/src/rules/color-hex-case)
+- [color-hex-length](https://github.com/stylelint/stylelint/tree/master/src/rules/color-hex-length)
 - [declaration-block-properties-order](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-block-properties-order)
 - [declaration-colon-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-after)
 - [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-before)
@@ -392,6 +393,7 @@ and we can also format from the other stylelint's configration files or packages
 - [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
 - [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
+- [stylefmt-loader] (https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
 
 ## License
 
