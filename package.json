@@ -15,7 +15,7 @@
     "url": "git://github.com/morishitter/stylefmt/git"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.2.0"
   },
   "keywords": [
     "css",
