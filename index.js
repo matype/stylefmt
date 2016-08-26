@@ -13,7 +13,7 @@ var stylefmt = postcss.plugin('stylefmt', function (options) {
   options = options || {}
 
   return function (root) {
-    return params(options).then(function (params) {
+    return params(options, root.source.input.file).then(function (params) {
       formatComments(root, params)
       formatAtRules(root, params)
       formatOrder(root, params)
