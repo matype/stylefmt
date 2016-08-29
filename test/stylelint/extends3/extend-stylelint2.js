@@ -2,8 +2,7 @@ module.exports = {
   "extends": "./extend-stylelint3.js",
   "rules": {
     "at-rule-empty-line-before": [ "always", {
-      except: [ "blockless-group", "first-nested" ],
-      ignore: ["after-comment"],
+      except: [ "blockless-group" ]
     } ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
