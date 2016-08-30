@@ -4,7 +4,7 @@
   "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
+    "test": "tape test/*.js | faucet",
     "lint": "eslint -c .eslintrc.json index.js lib bin"
   },
   "bin": {
@@ -46,6 +46,7 @@
   "devDependencies": {
     "each-series": "^1.0.0",
     "eslint": "^3.3.1",
+    "faucet": "0.0.1",
     "klaw": "^1.3.0",
     "tape": "^4.6.0"
   }
