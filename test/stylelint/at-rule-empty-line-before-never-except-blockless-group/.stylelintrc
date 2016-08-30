@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "at-rule-empty-line-before": ["never", {
+      except: ["blockless-group"]
+    }],
+  }
+}

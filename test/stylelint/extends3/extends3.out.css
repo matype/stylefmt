@@ -30,6 +30,7 @@
   width: 30%;
 }
 /* Single-line comment */
+
 @media (min-width >= 60em) {
   .selector {
     /* Flush to parent comment */
@@ -44,6 +45,7 @@
   }
 }
 /* Flush single line comment */
+
 @media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .selector {
     background-image: repeating-linear-gradient(-45deg, transparent, #fff 25px, rgba(255, 255, 255, 1) 50px);

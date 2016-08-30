@@ -1,0 +1,5 @@
+@import url("y.css");
+
+@import url("x.css");
+
+.test { display: block; }

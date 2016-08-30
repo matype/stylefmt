@@ -323,6 +323,7 @@ stylefmt :heart: stylelint
 
 stylefmt supports the following stylelint rules:
 
+- [at-rule-empty-line-before](https://github.com/stylelint/stylelint/blob/master/src/rules/at-rule-empty-line-before) ("always"|"never" and except "blockless-group" only)
 - [at-rule-semicolon-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/at-rule-semicolon-newline-after)
 - [block-closing-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-after)
 - [block-closing-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-before)
@@ -394,7 +395,7 @@ and we can also format from the other stylelint's configration files or packages
 - [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
 - [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
-- [stylefmt-loader] (https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
+- [stylefmt-loader](https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
 
 ## License
 
