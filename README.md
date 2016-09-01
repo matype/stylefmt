@@ -346,6 +346,7 @@ stylefmt supports the following stylelint rules:
 - [selector-list-comma-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-before)
 - [selector-list-comma-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-after)
 - [selector-list-comma-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-before)
+- [shorthand-property-no-redundant-values](https://github.com/stylelint/stylelint/tree/master/src/rules/shorthand-property-no-redundant-values)
 - [string-quotes](https://github.com/stylelint/stylelint/tree/master/src/rules/string-quotes)
 
 and we can also format from the other stylelint's configration files or packages (e.g. [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard), [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) and so on) using `extends` property.
