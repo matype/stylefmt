@@ -281,11 +281,12 @@ Usage: stylefmt [options] input-file [output-file]
 
 Options:
 
-  -d, --diff        output diff against original file
-  -R, --recursive   format files recursively
-  -c, --config      path to a specific configuration file (JSON, YAML, or CommonJS)
-  -V, --versions    output the version number
-  -h, --help        output usage information
+  -d, --diff             output diff against original file
+  -R, --recursive        format files recursively
+  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)
+  -b, --config-basedir   path to the directory that relative paths defining "extends"
+  -V, --versions         output the version number
+  -h, --help             output usage information
 ```
 
 stylefmt can also read a file from stdin if there are no input-fle as argument in CLI.
@@ -393,7 +394,7 @@ and we can also format from the other stylelint's configration files or packages
 - [grunt-stylefmt](https://github.com/morishitter/grunt-stylefmt)
 - [fly-stylefmt](https://github.com/morishitter/fly-cssfmt)
 - [laravel-elixir-stylefmt](https://github.com/appleboy/laravel-elixir-cssfmt) by [@appleboy](https://github.com/appleboy)
-- [stylefmt-loader] (https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
+- [stylefmt-loader](https://github.com/tomasAlabes/stylefmt-loader) by [@tomasAlabes](https://github.com/tomasAlabes)
 
 ## License
 

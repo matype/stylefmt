@@ -18,6 +18,7 @@ var argv = minimist(process.argv.slice(2), {
     v: 'version',
     d: 'diff',
     R: 'recursive',
+    b: 'config-basedir',
     c: 'config'
   }
 })
@@ -36,18 +37,25 @@ if (argv.h) {
   console.log('')
   console.log('Options:')
   console.log('')
-  console.log('  -d, --diff        output diff against original file')
-  console.log('  -R, --recursive   format files recursively')
-  console.log('  -c, --config      path to a specific configuration file (JSON, YAML, or CommonJS)')
-  console.log('  -v, --version     output the version number')
-  console.log('  -h, --help        output usage information')
+  console.log('  -d, --diff             output diff against original file')
+  console.log('  -R, --recursive        format files recursively')
+  console.log('  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)')
+  console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
+  console.log('  -v, --version          output the version number')
+  console.log('  -h, --help             output usage information')
   process.exit()
 }
 
 
 var options ={}
 if (argv.c) {
-  options.config = argv.c
+  options.configFile = argv.c
+}
+
+if (argv.b) {
+  options.configBasedir = (path.isAbsolute(argv.b))
+    ? argv.b
+    : path.resolve(process.cwd(), argv.b)
 }
 
 if (argv._[0]) {
