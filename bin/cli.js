@@ -4,6 +4,7 @@ var fs = require('fs')
 var path = require('path')
 var child_process = require('child_process')
 var stdin = require('stdin')
+var resolveFrom = require('resolve-from')
 var pkg = require('../package.json')
 var stylefmt = require('../')
 
@@ -51,7 +52,14 @@ if (argv.h) {
 
 var options ={}
 if (argv.c) {
-  options.configFile = argv.c
+  // Should check these possibilities:
+  //   a. name of a node_module
+  //   b. absolute path
+  //   c. relative path relative to `process.cwd()`.
+  // If none of the above work, we'll try a relative path starting
+  // in `process.cwd()`.
+  options.configFile = resolveFrom(process.cwd(), argv.c)
+    || path.join(process.cwd(), argv.c)
 }
 
 if (argv.b) {
