@@ -324,6 +324,7 @@ stylefmt :heart: stylelint
 
 stylefmt supports the following stylelint rules:
 
+- [at-rule-empty-line-before](https://github.com/stylelint/stylelint/blob/master/src/rules/at-rule-empty-line-before) ("always"|"never" and except "blockless-group" only)
 - [at-rule-semicolon-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/at-rule-semicolon-newline-after)
 - [block-closing-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-after)
 - [block-closing-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/block-closing-brace-newline-before)
@@ -337,6 +338,7 @@ stylefmt supports the following stylelint rules:
 - [declaration-colon-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-after)
 - [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-before)
 - [indentation](https://github.com/stylelint/stylelint/tree/master/src/rules/indentation)
+- [length-zero-no-unit](https://github.com/stylelint/stylelint/tree/master/src/rules/length-zero-no-unit)
 - [selector-combinator-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-after)
 - [selector-combinator-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-before)
 - [selector-list-comma-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-after)

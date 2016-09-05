@@ -17,6 +17,7 @@ var argv = minimist(process.argv.slice(2), {
     h: 'help',
     v: 'version',
     d: 'diff',
+    l: 'list',
     R: 'recursive',
     b: 'config-basedir',
     c: 'config'
@@ -38,6 +39,7 @@ if (argv.h) {
   console.log('Options:')
   console.log('')
   console.log('  -d, --diff             output diff against original file')
+  console.log('  -l, --list             format list of space seperated files in place')
   console.log('  -R, --recursive        format files recursively')
   console.log('  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
@@ -58,7 +60,10 @@ if (argv.b) {
     : path.resolve(process.cwd(), argv.b)
 }
 
-if (argv._[0]) {
+if (argv.l) {
+  var files = [argv.l].concat(argv._)
+  processMultipleFiles(files)
+} else if (argv._[0]) {
   var input = argv._[0]
   var output = argv._[1] || argv._[0]
 
@@ -85,34 +90,39 @@ if (argv._[0]) {
   var recursive = require('recursive-readdir')
 
   recursive(argv.R, function (err, files) {
-    files.forEach(function (file) {
-      var fullPath = path.resolve(process.cwd(), file)
-      if (!isCss(fullPath)) {
-        return
-      }
-
-      var css = fs.readFileSync(fullPath, 'utf-8')
-
-      postcss([stylefmt(options)])
-        .process(css, { syntax: scss })
-        .then(function (result) {
-          var formatted = result.css
-          if (css !== formatted) {
-            fs.writeFile(fullPath, formatted, function (err) {
-              if (err) {
-                throw err
-              }
-            })
-          }
-        })
-      })
-    })
+    processMultipleFiles(files)
+  })
 } else {
   stdin(function (css) {
     postcss([stylefmt(options)])
       .process(css, { syntax: scss })
       .then(function (result) {
         process.stdout.write(result.css)
+      })
+  })
+}
+
+
+function processMultipleFiles (files) {
+  files.forEach(function (file) {
+    var fullPath = path.resolve(process.cwd(), file)
+    if (!isCss(fullPath)) {
+      return
+    }
+
+    var css = fs.readFileSync(fullPath, 'utf-8')
+
+    postcss([stylefmt(options)])
+      .process(css, { syntax: scss })
+      .then(function (result) {
+        var formatted = result.css
+        if (css !== formatted) {
+          fs.writeFile(fullPath, formatted, function (err) {
+            if (err) {
+              throw err
+            }
+          })
+        }
       })
   })
 }

@@ -4,7 +4,8 @@
   "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js | faucet",
+    "lint": "eslint -c .eslintrc.json index.js lib bin"
   },
   "bin": {
     "stylefmt": "bin/cli.js"
@@ -14,7 +15,7 @@
     "url": "git://github.com/morishitter/stylefmt/git"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.2.0"
   },
   "keywords": [
     "css",
@@ -38,13 +39,14 @@
     "postcss-scss": "^0.1.8",
     "postcss-sorting": "^1.6.1",
     "recursive-readdir": "^2.0.0",
-    "repeat-string": "^1.5.4",
     "resolve-from": "^2.0.0",
     "stdin": "0.0.1",
     "tmp": "0.0.28"
   },
   "devDependencies": {
     "each-series": "^1.0.0",
+    "eslint": "^3.3.1",
+    "faucet": "0.0.1",
     "klaw": "^1.3.0",
     "tape": "^4.6.0"
   }

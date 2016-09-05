@@ -1,15 +1,14 @@
-var postcss = require('postcss')
-var scss = require('postcss-scss')
+const postcss = require('postcss')
 
-var params = require('./lib/params')
-var formatAtRules = require('./lib/formatAtRules')
-var formatOrder = require('./lib/formatOrder')
-var formatRules = require('./lib/formatRules')
-var formatComments = require('./lib/formatComments')
-var formatSassVariables = require('./lib/formatSassVariables')
+const params = require('./lib/params')
+const formatAtRules = require('./lib/formatAtRules')
+const formatOrder = require('./lib/formatOrder')
+const formatRules = require('./lib/formatRules')
+const formatComments = require('./lib/formatComments')
+const formatSassVariables = require('./lib/formatSassVariables')
 
 
-var stylefmt = postcss.plugin('stylefmt', function (options) {
+const stylefmt = postcss.plugin('stylefmt', function (options) {
   options = options || {}
 
   return function (root) {

@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "at-rule-empty-line-before": "never"
+  }
+}
