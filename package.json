@@ -38,6 +38,7 @@
     "postcss": "^5.0.21",
     "postcss-scss": "^0.1.8",
     "postcss-sorting": "^1.6.1",
+    "postcss-value-parser": "^3.3.0",
     "recursive-readdir": "^2.0.0",
     "resolve-from": "^2.0.0",
     "stdin": "0.0.1",
