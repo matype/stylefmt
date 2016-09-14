@@ -11,6 +11,8 @@
  - at-rule-empty-line-before
 - Fixed some bugs
 
+Thank you for all contributors :)
+
 ## v4.2.3
 
 - Fixed a bug.
