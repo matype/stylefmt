@@ -1,3 +1,16 @@
+## v4.3.0
+
+- Drop to support Node.js v0.12
+- Support the following stylelint rules:
+ - number-leading-zero
+ - shorthand-property-no-redundant-values
+ - number-no-trailing-zeros
+ - number-leading-zero
+ - length-zero-no-unit
+ - color-hex-length
+ - at-rule-empty-line-before
+- Fixed some bugs
+
 ## v4.2.3
 
 - Fixed a bug.
