@@ -5,6 +5,10 @@
     "es6": true
   },
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "space-before-function-paren": [2, "always"],
+    "semi": [2, "never"],
+    "eqeqeq": [2, "always"],
+    "block-spacing": [2, "always"]
   }
 }

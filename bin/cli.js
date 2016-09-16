@@ -140,15 +140,15 @@ function handleDiff (fullPath, original, formatted) {
 
     fs.writeSync(fd, formatted, function (err) {
       if (err) {
-        throw err;
+        throw err
       }
 
       diff(fullPath, tmpPath, function (err, stdout, stderr) {
         if (stdout) {
-          console.log(stdout);
+          console.log(stdout)
         }
         if (stderr) {
-          console.error(stderr);
+          console.error(stderr)
         }
       })
     })
