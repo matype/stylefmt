@@ -1,3 +1,7 @@
+## v4.3.1
+
+- Fixed [#208](https://github.com/morishitter/stylefmt/issues/208)
+
 ## v4.3.0
 
 - Drop to support Node.js v0.12
