@@ -1,0 +1,4 @@
+p {
+  line-height: .5;
+  transition: .4s cubic-bezier(.23, 1, .32, 1);
+}

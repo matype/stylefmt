@@ -1,10 +1,10 @@
 {
   "name": "stylefmt",
-  "version": "4.2.3",
+  "version": "4.3.1",
   "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js | faucet",
+    "test": "tape test/*.js | faucet && npm run lint",
     "lint": "eslint -c .eslintrc.json index.js lib bin"
   },
   "bin": {
@@ -38,6 +38,7 @@
     "postcss": "^5.0.21",
     "postcss-scss": "^0.1.8",
     "postcss-sorting": "^1.6.1",
+    "postcss-value-parser": "^3.3.0",
     "recursive-readdir": "^2.0.0",
     "resolve-from": "^2.0.0",
     "stdin": "0.0.1",

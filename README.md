@@ -338,12 +338,15 @@ stylefmt supports the following stylelint rules:
 - [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/declaration-colon-space-before)
 - [indentation](https://github.com/stylelint/stylelint/tree/master/src/rules/indentation)
 - [length-zero-no-unit](https://github.com/stylelint/stylelint/tree/master/src/rules/length-zero-no-unit)
+- [number-leading-zero](https://github.com/stylelint/stylelint/tree/master/src/rules/number-leading-zero)
+- [number-no-trailing-zeros](https://github.com/stylelint/stylelint/tree/master/src/rules/number-no-trailing-zeros)
 - [selector-combinator-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-after)
 - [selector-combinator-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-combinator-space-before)
 - [selector-list-comma-newline-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-after)
 - [selector-list-comma-newline-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-newline-before)
 - [selector-list-comma-space-after](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-after)
 - [selector-list-comma-space-before](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-list-comma-space-before)
+- [shorthand-property-no-redundant-values](https://github.com/stylelint/stylelint/tree/master/src/rules/shorthand-property-no-redundant-values)
 - [string-quotes](https://github.com/stylelint/stylelint/tree/master/src/rules/string-quotes)
 
 and we can also format from the other stylelint's configration files or packages (e.g. [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard), [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) and so on) using `extends` property.

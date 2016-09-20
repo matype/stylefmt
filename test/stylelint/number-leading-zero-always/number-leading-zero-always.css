@@ -1,0 +1,4 @@
+p {
+  transition: .4s cubic-bezier(.23, 1, .32, 1);
+  opacity: 0.5;
+}
