@@ -53,7 +53,6 @@ function test (testDirPath, index, nextTest) {
     t.plan(1)
     process.chdir(testDirPath)
     postcss([stylefmt]).process(input, {
-      from: path.join(testDirPath, testName + '.css'),
       syntax: scss
     }).then(function (result) {
       t.equal(result.css, expected)

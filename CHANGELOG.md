@@ -1,5 +1,6 @@
 ## Head
 
+- Fixed [#218](https://github.com/morishitter/stylefmt/issues/218)
 - Fixed: `config` option to CLI. Async with [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L44)
   - support name of a node_module
   - support absolute path
@@ -8,7 +9,7 @@
 - Fixed: `config` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#config)
 - Added: `configBasedir` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#configbasedir)
 - Added: `configFile` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#configfile)
-- Fixed: read style file path will pass to `editorconfig`
+- Fixed: style file path will pass to `editorconfig`
 
 ## v4.3.1
 
