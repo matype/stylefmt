@@ -59,7 +59,7 @@ if (argv.c) {
   // If none of the above work, we'll try a relative path starting
   // in `process.cwd()`.
   options.configFile = resolveFrom(process.cwd(), argv.c)
-    || path.join(process.cwd(), argv.c)
+    || path.resolve(process.cwd(), argv.c)
 }
 
 if (argv.b) {
@@ -72,13 +72,16 @@ if (argv.l) {
   var files = [argv.l].concat(argv._)
   processMultipleFiles(files)
 } else if (argv._[0]) {
-  var input = argv._[0]
+  var input = path.resolve(process.cwd(), argv._[0])
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
 
   postcss([stylefmt(options)])
-    .process(css, { syntax: scss })
+    .process(css, {
+      from: input,
+      syntax: scss
+    })
     .then(function (result) {
       var formatted = result.css
       if (argv.d) {
@@ -121,7 +124,10 @@ function processMultipleFiles (files) {
     var css = fs.readFileSync(fullPath, 'utf-8')
 
     postcss([stylefmt(options)])
-      .process(css, { syntax: scss })
+      .process(css, {
+        from: fullPath,
+        syntax: scss
+      })
       .then(function (result) {
         var formatted = result.css
         if (css !== formatted) {
