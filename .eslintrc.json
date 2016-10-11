@@ -8,7 +8,7 @@
     "no-console": 0,
     "space-before-function-paren": [2, "always"],
     "semi": [2, "never"],
-    "eqeqeq": [2, "always"],
+    "eqeqeq": [2, "allow-null"],
     "block-spacing": [2, "always"]
   }
 }
