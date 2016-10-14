@@ -1,12 +1,32 @@
 ## Head
 
-- Fixed [#218](https://github.com/morishitter/stylefmt/issues/218)
-- Fixed: `--config` option to CLI. Async with [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L44)
-- Added: `--config-basedir` option to CLI. Async with [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L57)
-- Fixed: `config` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#config)
-- Added: `configBasedir` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#configbasedir)
-- Added: `configFile` option to Node.js API. Async with [stylelint API](http://stylelint.io/user-guide/node-api/#configfile)
-- Fixed: style file path will pass to `editorconfig`
+- Fixed [Same issue in stylelint #218](https://github.com/stylelint/stylelint/issues/1881) use `stylelint` to load configuration file.
+- Fixed: `--config` option to CLI. same as [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L44)
+- Added: `--config-basedir` option to CLI. same as [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L57)
+- Fixed: `config` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#config)
+- Added: `configBasedir` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configbasedir)
+- Added: `configFile` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configfile)
+- Added: rules that not found in `stylelint` configuration file, will extends from `editorconfig`: 
+  - [indentation](http://stylelint.io/user-guide/rules/indentation/)
+  - [no-missing-end-of-source-newline](http://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/)
+  - [no-eol-whitespace](http://stylelint.io/user-guide/rules/no-eol-whitespace/)
+- Fixed: rules that value is an array, can work properly:
+  - [at-rule-semicolon-newline-after](http://stylelint.io/user-guide/rules/at-rule-semicolon-newline-after/)
+  - [block-closing-brace-newline-after](http://stylelint.io/user-guide/rules/block-closing-brace-newline-after/)
+  - [block-opening-brace-newline-before](http://stylelint.io/user-guide/rules/block-opening-brace-newline-before/)
+  - [block-opening-brace-space-before](http://stylelint.io/user-guide/rules/block-opening-brace-space-before/)
+  - [declaration-colon-space-after](http://stylelint.io/user-guide/rules/declaration-colon-space-after/)
+  - [declaration-colon-space-before](http://stylelint.io/user-guide/rules/declaration-colon-space-before/)
+  - [length-zero-no-unit](http://stylelint.io/user-guide/rules/length-zero-no-unit/)
+  - [number-leading-zero](http://stylelint.io/user-guide/rules/number-leading-zero/)
+  - [number-no-trailing-zeros](http://stylelint.io/user-guide/rules/number-no-trailing-zeros/)
+  - [selector-combinator-space-after](http://stylelint.io/user-guide/rules/selector-combinator-space-after/)
+  - [selector-combinator-space-before](http://stylelint.io/user-guide/rules/selector-combinator-space-before/)
+  - [selector-list-comma-newline-after](http://stylelint.io/user-guide/rules/selector-list-comma-newline-after/)
+  - [selector-list-comma-newline-before](http://stylelint.io/user-guide/rules/selector-list-comma-newline-before/)
+  - [selector-list-comma-space-after](http://stylelint.io/user-guide/rules/selector-list-comma-space-after/)
+  - [selector-list-comma-space-before](http://stylelint.io/user-guide/rules/selector-list-comma-space-before/)
+  - [shorthand-property-no-redundant-values](http://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 
 ## v4.3.1
 

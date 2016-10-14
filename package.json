@@ -39,7 +39,7 @@
     "postcss-value-parser": "^3.3.0",
     "recursive-readdir": "^2.0.0",
     "stdin": "0.0.1",
-    "stylelint": "^7.4.0",
+    "stylelint": "^7.4.2",
     "tmp": "0.0.28"
   },
   "devDependencies": {
