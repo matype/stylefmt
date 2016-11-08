@@ -1,0 +1,6 @@
+node_modules
+test
+.editorconfig
+.eslintrc.json
+.travis.yml
+CHANGELOG.md
