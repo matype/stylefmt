@@ -6,7 +6,7 @@
 - Fixed: `config` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#config)
 - Added: `configBasedir` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configbasedir)
 - Added: `configFile` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configfile)
-- Added: rules that not found in `stylelint` configuration file, will extends from `editorconfig`: 
+- Added: When `stylelint` configuration file not found, it will extends from `editorconfig`: 
   - [indentation](http://stylelint.io/user-guide/rules/indentation/)
   - [no-missing-end-of-source-newline](http://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/)
   - [no-eol-whitespace](http://stylelint.io/user-guide/rules/no-eol-whitespace/)
