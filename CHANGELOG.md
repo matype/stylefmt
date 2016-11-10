@@ -1,4 +1,4 @@
-## Head
+## v4.4.0
 
 - Fixed [Same issue in stylelint #218](https://github.com/stylelint/stylelint/issues/1881) use `stylelint` to load configuration file.
 - Fixed: `--config` option to CLI. same as [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L44)
