@@ -281,11 +281,12 @@ Usage: stylefmt [options] input-file [output-file]
 
 Options:
 
-  -d, --diff        output diff against original file
-  -R, --recursive   format files recursively
-  -c, --config      path to a specific configuration file (JSON, YAML, or CommonJS)
-  -V, --versions    output the version number
-  -h, --help        output usage information
+  -d, --diff             output diff against original file
+  -R, --recursive        format files recursively
+  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)
+  -b, --config-basedir   path to the directory that relative paths defining "extends"
+  -V, --versions         output the version number
+  -h, --help             output usage information
 ```
 
 stylefmt can also read a file from stdin if there are no input-fle as argument in CLI.

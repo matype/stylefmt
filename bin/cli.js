@@ -19,6 +19,7 @@ var argv = minimist(process.argv.slice(2), {
     d: 'diff',
     l: 'list',
     R: 'recursive',
+    b: 'config-basedir',
     c: 'config'
   }
 })
@@ -37,32 +38,42 @@ if (argv.h) {
   console.log('')
   console.log('Options:')
   console.log('')
-  console.log('  -d, --diff        output diff against original file')
-  console.log('  -l, --list        format list of space seperated files in place')
-  console.log('  -R, --recursive   format files recursively')
-  console.log('  -c, --config      path to a specific configuration file (JSON, YAML, or CommonJS)')
-  console.log('  -v, --version     output the version number')
-  console.log('  -h, --help        output usage information')
+  console.log('  -d, --diff             output diff against original file')
+  console.log('  -l, --list             format list of space seperated files in place')
+  console.log('  -R, --recursive        format files recursively')
+  console.log('  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)')
+  console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
+  console.log('  -v, --version          output the version number')
+  console.log('  -h, --help             output usage information')
   process.exit()
 }
 
 
-var options ={}
+var options = {}
 if (argv.c) {
-  options.config = argv.c
+  options.configFile = argv.c
+}
+
+if (argv.b) {
+  options.configBasedir = (path.isAbsolute(argv.b))
+    ? argv.b
+    : path.resolve(process.cwd(), argv.b)
 }
 
 if (argv.l) {
   var files = [argv.l].concat(argv._)
   processMultipleFiles(files)
 } else if (argv._[0]) {
-  var input = argv._[0]
+  var input = path.resolve(process.cwd(), argv._[0])
   var output = argv._[1] || argv._[0]
 
   var css = fs.readFileSync(input, 'utf-8')
 
   postcss([stylefmt(options)])
-    .process(css, { syntax: scss })
+    .process(css, {
+      from: input,
+      syntax: scss
+    })
     .then(function (result) {
       var formatted = result.css
       if (argv.d) {
@@ -105,7 +116,10 @@ function processMultipleFiles (files) {
     var css = fs.readFileSync(fullPath, 'utf-8')
 
     postcss([stylefmt(options)])
-      .process(css, { syntax: scss })
+      .process(css, {
+        from: fullPath,
+        syntax: scss
+      })
       .then(function (result) {
         var formatted = result.css
         if (css !== formatted) {

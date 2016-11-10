@@ -9,10 +9,9 @@ const formatSassVariables = require('./lib/formatSassVariables')
 
 
 const stylefmt = postcss.plugin('stylefmt', function (options) {
-  options = options || {}
-
+  var paramer = params(options)
   return function (root) {
-    return params(options).then(function (params) {
+    return paramer(root).then(function (params) {
       formatComments(root, params)
       formatAtRules(root, params)
       formatOrder(root, params)
