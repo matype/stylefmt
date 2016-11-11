@@ -38,7 +38,7 @@ tape('cli input file option', function (t) {
 tape('cli output file option', function (t) {
   t.plan(1)
   var tempFile = fixturesPath('at-media/at-media.copy.css')
-  spawnStylefmt([fixturesPath('at-media/at-media.css'), tempFile], null, function(err) {
+  spawnStylefmt([fixturesPath('at-media/at-media.css'), tempFile], null, function (err) {
     if (err) {
       t.end(err)
       return
@@ -55,6 +55,38 @@ tape('cli output file option', function (t) {
     var output = fs.readFileSync(tempFile, 'utf-8')
     t.equal(output, readFixture('at-media/at-media.out.css'))
     fs.unlinkSync(tempFile)
+    t.end()
+  })
+})
+
+tape('cli ignore option', function (t) {
+  t.plan(1)
+  var filename = path.join(__dirname, 'ignore/ignore.css')
+  var configFile = path.join(__dirname, 'ignore/.stylelintrc')
+  var code = fs.readFileSync(filename, 'utf-8')
+  spawnStylefmt(['--stdin-filename', filename, '--config', configFile], code, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output, code)
+    t.end()
+  })
+})
+
+tape('cli ignore disables option', function (t) {
+  t.plan(1)
+  var filename = path.join(__dirname, 'ignore/ignore.css')
+  var configFile = path.join(__dirname, 'ignore/.stylelintrc')
+  var code = fs.readFileSync(filename, 'utf-8')
+  spawnStylefmt(['--stdin-filename', filename, '--config', configFile, '--ignore-disables'], code, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output, 'a {\n  color: #zzzzzz;\n}\n')
     t.end()
   })
 })
