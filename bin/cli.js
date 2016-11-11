@@ -44,7 +44,7 @@ if (argv.h) {
   console.log('  -l, --list             Format list of space seperated files in place')
   console.log('  -R, --recursive        Format files recursively')
   console.log('  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)')
-  console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
+  console.log('  -b, --config-basedir   Path to the directory that relative paths defining "extends"')
   console.log('  -v, --version          Output the version number')
   console.log('  -h, --help             Output usage information')
   console.log('  -i, --ignore-path      Path to a file containing patterns that describe files to ignore.')
