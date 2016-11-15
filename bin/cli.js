@@ -50,6 +50,7 @@ if (argv.h) {
   console.log('  -i, --ignore-path      Path to a file containing patterns that describe files to ignore.')
   console.log('  -id --ignore-disables  Ignore disables')
   console.log('  --stdin-filename       A filename to assign stdin input.')
+  process.exit()
 }
 
 
@@ -108,7 +109,6 @@ if (argv.l) {
     processMultipleFiles(files)
   })
 } else {
-
   stdin(function (css) {
     options.codeFilename = argv['stdin-filename']
     postcss([stylefmt(options)])
