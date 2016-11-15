@@ -97,7 +97,7 @@ if (argv.l) {
 
 
 function processMultipleFiles (files) {
-  files = files.filter(isCss)
+  files = files.filter(isCss).sort()
   if(!files.length){
     console.error("Files glob patterns specified did not match any css files")
     return
