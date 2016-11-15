@@ -39,7 +39,7 @@ if (argv.h) {
   console.log('Options:')
   console.log('')
   console.log('  -d, --diff             output diff against original file')
-  console.log('  -l, --list             format list of space seperated globs in place')
+  console.log('  -l, --list             Format list of space seperated globs in place')
   console.log('  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
   console.log('  -v, --version          output the version number')
