@@ -282,7 +282,7 @@ Usage: stylefmt [options] input-file [output-file]
 Options:
 
   -d, --diff             output diff against original file
-  -l, --list             Format list of space seperated globs in place
+  -l, --list             Format list of space seperated files(globs) in place
   -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)
   -b, --config-basedir   path to the directory that relative paths defining "extends"
   -V, --versions         output the version number
