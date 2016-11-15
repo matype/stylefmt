@@ -38,7 +38,6 @@
     "postcss-scss": "^0.4.0",
     "postcss-sorting": "^1.7.0",
     "postcss-value-parser": "^3.3.0",
-    "recursive-readdir": "^2.1.0",
     "stdin": "0.0.1",
     "stylelint": "^7.5.0",
     "tmp": "0.0.30"
