@@ -2,6 +2,7 @@
 
 - Added: globs support for `--list` option in CLI. #223
 - Deleted: `--recursive` option in CLI, please use the `stylefmt --list /readdir/**/*.css` instead.
+- Fixed: `--diff` option in CLI can use with `--list`.
 
 ## v4.4.0
 

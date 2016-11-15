@@ -2,7 +2,6 @@
 
 var fs = require('fs')
 var path = require('path')
-var child_process = require('child_process')
 var stdin = require('stdin')
 var pkg = require('../package.json')
 var stylefmt = require('../')
@@ -24,7 +23,6 @@ var argv = minimist(process.argv.slice(2), {
   }
 })
 
-var tmp = require('tmp')
 var postcss = require('postcss')
 var scss = require('postcss-scss')
 
@@ -76,8 +74,7 @@ if (argv.l) {
     .then(function (result) {
       var formatted = result.css
       if (argv.d) {
-        var fullPath = path.resolve(process.cwd(), input)
-        handleDiff(fullPath, input, formatted)
+        handleDiff(input, input, formatted)
       } else {
         if (css !== formatted) {
           fs.writeFile(output, formatted, function (err) {
@@ -100,11 +97,14 @@ if (argv.l) {
 
 
 function processMultipleFiles (files) {
+  files = files.filter(isCss)
+  if(!files.length){
+    console.error("Files glob patterns specified did not match any css files")
+    return
+  }
+
   files.forEach(function (file) {
     var fullPath = path.resolve(process.cwd(), file)
-    if (!isCss(fullPath)) {
-      return
-    }
 
     var css = fs.readFileSync(fullPath, 'utf-8')
 
@@ -115,7 +115,9 @@ function processMultipleFiles (files) {
       })
       .then(function (result) {
         var formatted = result.css
-        if (css !== formatted) {
+        if (argv.d) {
+          handleDiff(file, css, formatted)
+        } else if (css !== formatted) {
           fs.writeFile(fullPath, formatted, function (err) {
             if (err) {
               throw err
@@ -132,32 +134,16 @@ function isCss (filePath) {
 }
 
 
-function diff (pathA, pathB, callback) {
-  child_process.exec([
-    'git', 'diff', '--ignore-space-at-eol', '--no-index', '--', pathA, pathB
-  ].join(' '), callback)
-}
-
 function handleDiff (fullPath, original, formatted) {
-  tmp.file(function (err, tmpPath, fd) {
-    if (err) {
-      console.error(err)
-      return
+  var JsDiff = require('diff')
+  var chalk = require('chalk')
+  var diff = JsDiff.diffCss(original, formatted).map(function (part) {
+    if (part.added) {
+      return chalk.bgGreen(part.value)
+    } else if(part.removed) {
+      return chalk.bgRed(part.value)
     }
-
-    fs.writeSync(fd, formatted, function (err) {
-      if (err) {
-        throw err
-      }
-
-      diff(fullPath, tmpPath, function (err, stdout, stderr) {
-        if (stdout) {
-          console.log(stdout)
-        }
-        if (stderr) {
-          console.error(stderr)
-        }
-      })
-    })
+    return part.value
   })
+  console.log(fullPath + chalk.black.bgWhite('\n' + diff.join('')) + '\n')
 }

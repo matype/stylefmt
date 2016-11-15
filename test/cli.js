@@ -3,6 +3,7 @@ var path = require('path')
 var spawn = require('child_process').spawn
 
 var tape = require('tape')
+var chalk = require('chalk')
 
 tape('cli stdin', function (t) {
   t.plan(1)
@@ -38,7 +39,7 @@ tape('cli input file option', function (t) {
 tape('cli output file option', function (t) {
   t.plan(1)
   var tempFile = fixturesPath('at-media/at-media.copy.css')
-  spawnStylefmt([fixturesPath('at-media/at-media.css'), tempFile], null, function(err) {
+  spawnStylefmt([fixturesPath('at-media/at-media.css'), tempFile], null, function (err) {
     if (err) {
       t.end(err)
       return
@@ -58,6 +59,19 @@ tape('cli output file option', function (t) {
     t.end()
   })
 })
+
+tape('cli globs option', function (t) {
+  t.plan(1)
+  spawnStylefmt(['--list', 'test/recursive/**/*.css', '--diff'], null, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+    t.equal(output.trim(), 'test/recursive/bar.css\n.bar {\n  color: red;\n}\n\n\ntest/recursive/foo.css\n.foo {\n  padding: 10px;\n}\n\n\ntest/recursive/foo/foo.css\n.foo {\n  padding: 10px;\n}')
+    t.end()
+  })
+})
+
 
 function fixturesPath (filename) {
   return path.join(__dirname, 'fixtures', filename)
@@ -91,7 +105,7 @@ function spawnStylefmt (options, input, callback) {
       callback(new Error(error))
       return
     }
-    callback(null, output)
+    callback(null, chalk.stripColor(output))
   })
 
   if (input) {
