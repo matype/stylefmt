@@ -61,20 +61,21 @@ if (argv.l) {
   var globby = require('globby')
   globby([argv.l].concat(argv._)).then(processMultipleFiles)
 } else if (argv._[0]) {
-  var input = path.resolve(process.cwd(), argv._[0])
+  var input = argv._[0]
+  var fullPath = path.resolve(process.cwd(), input)
   var output = argv._[1] || argv._[0]
 
-  var css = fs.readFileSync(input, 'utf-8')
+  var css = fs.readFileSync(fullPath, 'utf-8')
 
   postcss([stylefmt(options)])
     .process(css, {
-      from: input,
+      from: fullPath,
       syntax: scss
     })
     .then(function (result) {
       var formatted = result.css
       if (argv.d) {
-        handleDiff(input, input, formatted)
+        console.log(handleDiff(input, css, formatted))
       } else {
         if (css !== formatted) {
           fs.writeFile(output, formatted, function (err) {
@@ -103,12 +104,12 @@ function processMultipleFiles (files) {
     return
   }
 
-  files.forEach(function (file) {
+  Promise.all(files.map(function (file) {
     var fullPath = path.resolve(process.cwd(), file)
 
     var css = fs.readFileSync(fullPath, 'utf-8')
 
-    postcss([stylefmt(options)])
+    return postcss([stylefmt(options)])
       .process(css, {
         from: fullPath,
         syntax: scss
@@ -116,7 +117,7 @@ function processMultipleFiles (files) {
       .then(function (result) {
         var formatted = result.css
         if (argv.d) {
-          handleDiff(file, css, formatted)
+          return handleDiff(file, css, formatted)
         } else if (css !== formatted) {
           fs.writeFile(fullPath, formatted, function (err) {
             if (err) {
@@ -125,6 +126,8 @@ function processMultipleFiles (files) {
           })
         }
       })
+  })).then(function (messages) {
+    console.log(messages.join('\n'))
   })
 }
 
@@ -134,16 +137,23 @@ function isCss (filePath) {
 }
 
 
-function handleDiff (fullPath, original, formatted) {
-  var JsDiff = require('diff')
+function handleDiff (file, original, formatted) {
   var chalk = require('chalk')
-  var diff = JsDiff.diffCss(original, formatted).map(function (part) {
-    if (part.added) {
-      return chalk.bgGreen(part.value)
-    } else if(part.removed) {
-      return chalk.bgRed(part.value)
-    }
-    return part.value
-  })
-  console.log(fullPath + chalk.black.bgWhite('\n' + diff.join('')) + '\n')
+  if (chalk.supportsColor) {
+    var JsDiff = require('diff')
+    var diff = JsDiff.diffChars(original, formatted).map(function (part) {
+      var value = part.value
+      if (part.added) {
+        value = chalk.bgGreen(part.value)
+      } else if(part.removed) {
+        value = chalk.bgRed(part.value)
+      } else {
+        return value
+      }
+      return value
+    }).join('')
+    return file + chalk.black.bgWhite('\n' + diff)
+  } else {
+    return file + '\n' + formatted
+  }
 }

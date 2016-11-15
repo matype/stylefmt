@@ -3,7 +3,6 @@ var path = require('path')
 var spawn = require('child_process').spawn
 
 var tape = require('tape')
-var chalk = require('chalk')
 
 tape('cli stdin', function (t) {
   t.plan(1)
@@ -60,6 +59,38 @@ tape('cli output file option', function (t) {
   })
 })
 
+tape('cli diff option', function (t) {
+  t.plan(1)
+
+  var cssFile = fixturesPath('at-media/at-media.css')
+
+  spawnStylefmt([cssFile, '--diff'], null, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output.trim(), cssFile + '\n' + readFixture('at-media/at-media.out.css').trim())
+    t.end()
+  })
+})
+
+tape('cli stdin with diff option', function (t) {
+  t.plan(1)
+
+  var cssFile = fixturesPath('at-media/at-media.css')
+
+  spawnStylefmt(['--diff'], fs.readFileSync(cssFile, 'utf-8'), function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output.trim(), readFixture('at-media/at-media.out.css').trim())
+    t.end()
+  })
+})
+
 tape('cli globs option', function (t) {
   t.plan(1)
   spawnStylefmt(['--list', 'test/recursive/**/*.css', '--diff'], null, function (err, output) {
@@ -67,7 +98,7 @@ tape('cli globs option', function (t) {
       t.end(err)
       return
     }
-    t.equal(output.trim(), 'test/recursive/bar.css\n.bar {\n  color: red;\n}\n\n\ntest/recursive/foo.css\n.foo {\n  padding: 10px;\n}\n\n\ntest/recursive/foo/foo.css\n.foo {\n  padding: 10px;\n}')
+    t.equal(output.trim(), 'test/recursive/bar.css\n.bar {\n  color: red;\n}\n\ntest/recursive/foo.css\n.foo {\n  padding: 10px;\n}\n\ntest/recursive/foo/foo.css\n.foo {\n  padding: 10px;\n}')
     t.end()
   })
 })
@@ -84,7 +115,7 @@ function readFixture (filename) {
 function spawnStylefmt (options, input, callback) {
   var args = [
     path.join(__dirname, '../bin/cli.js')
-  ].concat(options)
+  ].concat(options).concat('--no-color')
 
   var child = spawn('node', args, {
     stdio: ['pipe', 'pipe', 'pipe']
@@ -105,7 +136,7 @@ function spawnStylefmt (options, input, callback) {
       callback(new Error(error))
       return
     }
-    callback(null, chalk.stripColor(output))
+    callback(null, output)
   })
 
   if (input) {
