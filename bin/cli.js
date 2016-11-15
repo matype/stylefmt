@@ -39,8 +39,7 @@ if (argv.h) {
   console.log('Options:')
   console.log('')
   console.log('  -d, --diff             output diff against original file')
-  console.log('  -l, --list             format list of space seperated files in place')
-  console.log('  -R, --recursive        format files recursively')
+  console.log('  -l, --list             format list of space seperated globs in place')
   console.log('  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -b, --config-basedir   path to the directory that relative paths defining "extends"')
   console.log('  -v, --version          output the version number')
@@ -61,8 +60,8 @@ if (argv.b) {
 }
 
 if (argv.l) {
-  var files = [argv.l].concat(argv._)
-  processMultipleFiles(files)
+  var globby = require('globby')
+  globby([argv.l].concat(argv._)).then(processMultipleFiles)
 } else if (argv._[0]) {
   var input = path.resolve(process.cwd(), argv._[0])
   var output = argv._[1] || argv._[0]
@@ -89,12 +88,6 @@ if (argv.l) {
         }
       }
     })
-} else if (argv.R) {
-  var recursive = require('recursive-readdir')
-
-  recursive(argv.R, function (err, files) {
-    processMultipleFiles(files)
-  })
 } else {
   stdin(function (css) {
     postcss([stylefmt(options)])

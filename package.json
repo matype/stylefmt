@@ -32,6 +32,7 @@
   "dependencies": {
     "css-color-list": "0.0.1",
     "editorconfig": "^0.13.2",
+    "globby": "^6.1.0",
     "minimist": "^1.2.0",
     "postcss": "^5.2.5",
     "postcss-scss": "^0.4.0",
