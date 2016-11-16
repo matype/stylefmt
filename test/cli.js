@@ -98,7 +98,7 @@ tape('cli globs option', function (t) {
       t.end(err)
       return
     }
-    t.equal(output.trim(), 'test/recursive/bar.css\n.bar {\n  color: red;\n}\n\ntest/recursive/foo.css\n.foo {\n  padding: 10px;\n}\n\ntest/recursive/foo/foo.css\n.foo {\n  padding: 10px;\n}')
+    t.equal(output.trim(), 'test/recursive/bar.css\nThere is no difference with the original file.\n\ntest/recursive/foo.css\nThere is no difference with the original file.\n\ntest/recursive/foo/foo.css\nThere is no difference with the original file.')
     t.end()
   })
 })
