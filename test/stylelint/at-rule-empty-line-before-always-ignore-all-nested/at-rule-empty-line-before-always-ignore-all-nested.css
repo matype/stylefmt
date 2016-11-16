@@ -1,0 +1,21 @@
+a {
+  @extend foo;
+  color: pink;
+}
+
+a {
+
+  @extend foo;
+  color: pink;
+}
+
+b {
+  color: pink;
+  @extend foo;
+}
+
+b {
+  color: pink;
+
+  @extend foo;
+}
