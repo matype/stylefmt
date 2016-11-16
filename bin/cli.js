@@ -100,7 +100,7 @@ if (argv.l) {
 function processMultipleFiles (files) {
   files = files.filter(isCss).sort()
   if(!files.length){
-    console.error("Files glob patterns specified did not match any css files")
+    console.error("Files glob patterns specified did not match any css files.")
     return
   }
 
@@ -124,10 +124,23 @@ function processMultipleFiles (files) {
               throw err
             }
           })
+          return file
         }
       })
   })).then(function (messages) {
-    console.log(messages.join('\n'))
+    if (argv.d) {
+      console.log(messages.join('\n'))
+    } else {
+      messages = messages.filter(function (file){
+        return file
+      })
+      if(messages.length){
+        messages = messages.join(', ') + '\n\n' + messages.length
+      } else {
+        messages = 'No'
+      }
+      console.log(messages + ' files are formatted.')
+    }
   })
 }
 
