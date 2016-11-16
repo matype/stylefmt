@@ -1,3 +1,9 @@
+## HEAD
+
+- Added: globs support for `--list` option in CLI. #223
+- Deleted: `--recursive` option in CLI, please use the `stylefmt --list /readdir/**/*.css` instead.
+- Fixed: options `--diff` and `--list` in CLI can be used together.
+
 ## v4.4.0
 
 - Fixed [Same issue in stylelint #218](https://github.com/stylelint/stylelint/issues/1881) use `stylelint` to load configuration file.
