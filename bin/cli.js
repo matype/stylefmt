@@ -19,7 +19,6 @@ var argv = minimist(process.argv.slice(2), {
     d: 'diff',
     h: 'help',
     i: 'ignore-path',
-    id: 'ignore-disables',
     l: 'list',
     R: 'recursive',
     v: 'version',
