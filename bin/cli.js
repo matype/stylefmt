@@ -48,7 +48,6 @@ if (argv.h) {
   console.log('  -v, --version          Output the version number')
   console.log('  -h, --help             Output usage information')
   console.log('  -i, --ignore-path      Path to a file containing patterns that describe files to ignore.')
-  console.log('  -id --ignore-disables  Ignore disables')
   console.log('  --stdin-filename       A filename to assign stdin input.')
   process.exit()
 }
@@ -67,10 +66,6 @@ if (argv.b) {
 
 if (argv.i) {
   options.ignorePath = argv.i
-}
-
-if (argv.id) {
-  options.ignoreDisables = argv.id
 }
 
 if (argv.l) {
