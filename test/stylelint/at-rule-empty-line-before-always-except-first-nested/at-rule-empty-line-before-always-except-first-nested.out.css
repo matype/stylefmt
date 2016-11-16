@@ -1,0 +1,4 @@
+a {
+  @extend foo;
+  color: pink;
+}
