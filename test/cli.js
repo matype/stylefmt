@@ -59,6 +59,50 @@ tape('cli output file option', function (t) {
   })
 })
 
+tape('cli diff option', function (t) {
+  t.plan(1)
+
+  var cssFile = fixturesPath('at-media/at-media.css')
+
+  spawnStylefmt([cssFile, '--diff'], null, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output.trim(), cssFile + '\n' + readFixture('at-media/at-media.out.css').trim())
+    t.end()
+  })
+})
+
+tape('cli stdin with diff option', function (t) {
+  t.plan(1)
+
+  var cssFile = fixturesPath('at-media/at-media.css')
+
+  spawnStylefmt(['--diff'], fs.readFileSync(cssFile, 'utf-8'), function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output.trim(), readFixture('at-media/at-media.out.css').trim())
+    t.end()
+  })
+})
+
+tape('cli globs option', function (t) {
+  t.plan(1)
+  spawnStylefmt(['--list', 'test/recursive/**/*.css', '--diff'], null, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+    t.equal(output.trim(), 'test/recursive/bar.css\nThere is no difference with the original file.\n\ntest/recursive/foo.css\nThere is no difference with the original file.\n\ntest/recursive/foo/foo.css\nThere is no difference with the original file.')
+    t.end()
+  })
+})
+
 tape('cli ignore option', function (t) {
   t.plan(1)
   var filename = path.join(__dirname, 'ignore/ignore.css')
@@ -86,7 +130,7 @@ function readFixture (filename) {
 function spawnStylefmt (options, input, callback) {
   var args = [
     path.join(__dirname, '../bin/cli.js')
-  ].concat(options)
+  ].concat(options).concat('--no-color')
 
   var child = spawn('node', args, {
     stdio: ['pipe', 'pipe', 'pipe']

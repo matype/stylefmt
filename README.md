@@ -282,8 +282,7 @@ Usage: stylefmt [options] input-name [output-name]
 Options:
 
   -d, --diff             Output diff against original file
-  -l, --list             Format list of space seperated files in place
-  -R, --recursive        Format files recursively
+  -l, --list             Format list of space seperated files(globs) in place
   -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)
   -b, --config-basedir   Path to the directory that relative paths defining "extends"
   -v, --version          Output the version number
