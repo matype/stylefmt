@@ -129,7 +129,7 @@ function processMultipleFiles (files) {
       })
   })).then(function (messages) {
     if (argv.d) {
-      console.log(messages.join('\n'))
+      console.log(messages.join('\n\n'))
     } else {
       messages = messages.filter(function (file){
         return file
@@ -151,6 +151,10 @@ function isCss (filePath) {
 
 
 function handleDiff (file, original, formatted) {
+  if (original === formatted) {
+    return file + '\nThere is no difference with the original file.'
+  }
+
   var chalk = require('chalk')
   if (chalk.supportsColor) {
     var JsDiff = require('diff')
