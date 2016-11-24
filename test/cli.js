@@ -93,7 +93,7 @@ tape('cli stdin with diff option', function (t) {
 
 tape('cli globs option', function (t) {
   t.plan(1)
-  spawnStylefmt(['--list', 'test/recursive/**/*.css', '--diff'], null, function (err, output) {
+  spawnStylefmt(['--recursive', 'test/recursive/**/*.css', '--diff'], null, function (err, output) {
     if (err) {
       t.end(err)
       return
