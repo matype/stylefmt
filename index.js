@@ -21,8 +21,6 @@ const stylefmt = postcss.plugin('stylefmt', function (options) {
       }
     }).catch(function (err) {
       console.error(err.stack)
-    }).then(function () {
-      return root
     })
   }
 })
