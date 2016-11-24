@@ -3,6 +3,10 @@
 - Added: globs support for `--list` option in CLI. #223
 - Deleted: `--recursive` option in CLI, please use the `stylefmt --list /readdir/**/*.css` instead.
 - Fixed: options `--diff` and `--list` in CLI can be used together.
+- Added: `--stdin-filename` option to CLI. same as [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L75)
+- Added: `--ignore-path` option to CLI. same as [stylelint CLI](https://github.com/stylelint/stylelint/blob/master/src/cli.js#L63)
+- Added: `ignorePath` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#ignorepath)
+- Added: `ignoreFiles` option to configuration file. same as [stylelint configuration](http://stylelint.io/user-guide/configuration/#ignorefiles)
 
 ## v4.4.0
 

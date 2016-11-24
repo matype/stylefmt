@@ -103,6 +103,21 @@ tape('cli globs option', function (t) {
   })
 })
 
+tape('cli ignore option', function (t) {
+  t.plan(1)
+  var filename = path.join(__dirname, 'ignore/ignore.css')
+  var configFile = path.join(__dirname, 'ignore/.stylelintrc')
+  var code = fs.readFileSync(filename, 'utf-8')
+  spawnStylefmt(['--stdin-filename', filename, '--config', configFile], code, function (err, output) {
+    if (err) {
+      t.end(err)
+      return
+    }
+
+    t.equal(output, code)
+    t.end()
+  })
+})
 
 function fixturesPath (filename) {
   return path.join(__dirname, 'fixtures', filename)

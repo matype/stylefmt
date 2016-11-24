@@ -1,0 +1,4 @@
+{
+  "ignoreFiles": "*",
+  "extends": "./extend-stylelint.js"
+}

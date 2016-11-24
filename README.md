@@ -277,22 +277,25 @@ $ stylefmt --help
 ```
 
 ```
-Usage: stylefmt [options] input-file [output-file]
+Usage: stylefmt [options] input-name [output-name]
 
 Options:
 
-  -d, --diff             output diff against original file
+  -d, --diff             Output diff against original file
   -l, --list             Format list of space seperated files(globs) in place
-  -c, --config           path to a specific configuration file (JSON, YAML, or CommonJS)
-  -b, --config-basedir   path to the directory that relative paths defining "extends"
-  -V, --versions         output the version number
-  -h, --help             output usage information
+  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)
+  -b, --config-basedir   Path to the directory that relative paths defining "extends"
+  -v, --version          Output the version number
+  -h, --help             Output usage information
+  -i, --ignore-path      Path to a file containing patterns that describe files to ignore.
+  -id --ignore-disables  Ignore disables
+  --stdin-filename       A filename to assign stdin input.
 ```
 
 stylefmt can also read a file from stdin if there are no input-fle as argument in CLI.
 
 ```
-$ cat input.css | stylefmt
+$ cat input.css | stylefmt --stdin-filename input.css
 ```
 
 ### in Node.js
@@ -307,7 +310,10 @@ var css = fs.readFileSync('input.css', 'utf-8');
 
 postcss([
   stylefmt
-]).process(css, { syntax: scss })
+]).process(css, {
+    from: 'input.css',
+    syntax: scss
+  })
   .then(function (result) {
     result.css; // formatted code
   });
