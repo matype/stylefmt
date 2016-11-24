@@ -18,8 +18,7 @@ var argv = minimist(process.argv.slice(2), {
     d: 'diff',
     h: 'help',
     i: 'ignore-path',
-    l: 'list',
-    R: 'recursive',
+    r: 'recursive',
     v: 'version',
   }
 })
@@ -37,10 +36,10 @@ if (argv.h) {
   console.log('')
   console.log('Options:')
   console.log('')
-  console.log('  -d, --diff             Output diff against original file')
-  console.log('  -l, --list             Format list of space seperated files(globs) in place')
-  console.log('  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)')
   console.log('  -b, --config-basedir   Path to the directory that relative paths defining "extends"')
+  console.log('  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)')
+  console.log('  -d, --diff             Output diff against original file')
+  console.log('  -r, --recursive        Format list of space seperated files(globs) in place')
   console.log('  -v, --version          Output the version number')
   console.log('  -h, --help             Output usage information')
   console.log('  -i, --ignore-path      Path to a file containing patterns that describe files to ignore.')
@@ -64,9 +63,9 @@ if (argv.i) {
   options.ignorePath = argv.i
 }
 
-if (argv.l) {
+if (argv.r) {
   var globby = require('globby')
-  globby([argv.l].concat(argv._)).then(processMultipleFiles)
+  globby([argv.r].concat(argv._)).then(processMultipleFiles)
 } else if (argv._[0]) {
   var input = argv._[0]
   var fullPath = path.resolve(process.cwd(), input)
