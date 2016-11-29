@@ -1,3 +1,7 @@
+## v5.0.1
+
+- Fixed: `path.join()` before globby gets pathes.
+
 ## v5.0.0
 
 - Added: globs support for `--recursive` option in CLI. #223
