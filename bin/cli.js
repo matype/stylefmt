@@ -65,7 +65,7 @@ if (argv.i) {
 
 if (argv.r) {
   var globby = require('globby')
-  globby([argv.r].concat(argv._)).then(processMultipleFiles)
+  globby([path.join(argv.r)].concat(argv._)).then(processMultipleFiles)
 } else if (argv._[0]) {
   var input = argv._[0]
   var fullPath = path.resolve(process.cwd(), input)
