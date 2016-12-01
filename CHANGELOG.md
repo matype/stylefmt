@@ -1,3 +1,7 @@
+## v5.0.2
+
+- Beautify the CLI output. #241
+
 ## v5.0.1
 
 - Fixed: `path.join()` before globby gets pathes.
