@@ -161,26 +161,34 @@ function isCss (filePath) {
 
 
 function handleDiff (file, original, formatted) {
+  var diff
+  var chalk = require('chalk')
+
   if (original === formatted) {
-    return file + '\nThere is no difference with the original file.'
+    diff = 'There is no difference with the original file.'
   }
 
-  var chalk = require('chalk')
   if (chalk.supportsColor) {
-    var JsDiff = require('diff')
-    var diff = JsDiff.diffChars(original, formatted).map(function (part) {
-      var value = part.value
-      if (part.added) {
-        value = chalk.bgGreen(part.value)
-      } else if(part.removed) {
-        value = chalk.bgRed(part.value)
-      } else {
-        return value
-      }
-      return value
-    }).join('')
-    return file + chalk.black.bgWhite('\n' + diff)
-  } else {
-    return file + '\n' + formatted
+    file = chalk.blue(file)
+    if(diff) {
+      diff = chalk.gray(diff)
+    } else {
+      var JsDiff = require('diff')
+      diff = JsDiff.createPatch(file, original, formatted)
+      diff = diff.split('\n').splice(4).map(function (line) {
+        if (line[0] === '+') {
+          line = chalk.green(line)
+        } else if (line[0] === '-') {
+          line = chalk.red(line)
+        } else if (line.match(/^@@\s+.+?\s+@@/) || '\\ No newline at end of file' === line) {
+          line = ''
+        }
+        return chalk.gray(line)
+      })
+      diff = diff.join('\n').trim()
+    }
+  } else if (!diff) {
+    diff = formatted
   }
+  return file + '\n' + diff
 }
