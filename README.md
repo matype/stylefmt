@@ -281,14 +281,13 @@ Usage: stylefmt [options] input-name [output-name]
 
 Options:
 
-  -d, --diff             Output diff against original file
-  -l, --list             Format list of space seperated files(globs) in place
-  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)
   -b, --config-basedir   Path to the directory that relative paths defining "extends"
+  -c, --config           Path to a specific configuration file (JSON, YAML, or CommonJS)
+  -d, --diff             Output diff against original file
+  -r, --recursive        Format list of space seperated files(globs) in place
   -v, --version          Output the version number
   -h, --help             Output usage information
   -i, --ignore-path      Path to a file containing patterns that describe files to ignore.
-  -id --ignore-disables  Ignore disables
   --stdin-filename       A filename to assign stdin input.
 ```
 
