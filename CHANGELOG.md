@@ -1,3 +1,7 @@
+## v5.0.3
+
+- Fixed [#246](https://github.com/morishitter/stylefmt/issues/246)
+
 ## v5.0.2
 
 - Beautify the CLI output. #241
