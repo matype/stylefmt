@@ -156,7 +156,7 @@ function processMultipleFiles (files) {
 
 
 function isCss (filePath) {
-  return /^\.css|\.scss$/i.test(path.extname(filePath))
+  return /^\.css|\.scss|\.wxss$/i.test(path.extname(filePath))
 }
 
 
