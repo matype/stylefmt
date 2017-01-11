@@ -1,3 +1,7 @@
+## v5.0.4
+
+- Fixed [#253](https://github.com/morishitter/stylefmt/issues/253)
+
 ## v5.0.3
 
 - Fixed [#246](https://github.com/morishitter/stylefmt/issues/246)
