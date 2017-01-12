@@ -1,3 +1,7 @@
+## v5.1.0
+
+- Support `.wxss` extention. #255
+
 ## v5.0.4
 
 - Fixed [#253](https://github.com/morishitter/stylefmt/issues/253)
