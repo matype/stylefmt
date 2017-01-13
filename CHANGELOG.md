@@ -1,3 +1,7 @@
+## v5.1.1
+
+- Bump up postcss-sorting version.
+
 ## v5.1.0
 
 - Support `.wxss` extention. #255
