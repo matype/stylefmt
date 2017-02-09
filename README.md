@@ -291,7 +291,7 @@ Options:
   --stdin-filename       A filename to assign stdin input.
 ```
 
-stylefmt can also read a file from stdin if there are no input-fle as argument in CLI.
+stylefmt can also read a file from stdin if there are no input-file as argument in CLI.
 
 ```
 $ cat input.css | stylefmt --stdin-filename input.css
