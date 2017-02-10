@@ -1,3 +1,7 @@
+## v5.1.2
+
+- Prevent space between EOL and semicolon for `@value` for CSS Modules
+
 ## v5.1.1
 
 - Bump up postcss-sorting version.
