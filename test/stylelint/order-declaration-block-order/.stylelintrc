@@ -1,0 +1,33 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+
+  "rules": {
+    "order/declaration-block-order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/declaration-block-property-groups-structure": [
+      [
+        {
+          "emptyLineBefore": "always",
+          "properties": [
+            "font-size",
+            "line-height"
+          ]
+        },
+        {
+          "emptyLineBefore": "always",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ]
+        }
+      ]
+    ]
+  }
+}

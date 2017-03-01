@@ -1,0 +1,9 @@
+body {
+  --text-normal: #000;
+  font-size: 13px;
+  line-height: 10px;
+
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
