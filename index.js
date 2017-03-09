@@ -15,9 +15,10 @@ const stylefmt = postcss.plugin('stylefmt', function (options) {
       if(params) {
         formatComments(root, params)
         formatAtRules(root, params)
-        formatOrder(root, params)
         formatRules(root, params)
         formatSassVariables(root, params)
+        // order should be the last to prevent empty line collapse in order rules
+        formatOrder(root, params)
       }
     }).catch(function (err) {
       console.error(err.stack)
