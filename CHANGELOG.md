@@ -1,3 +1,7 @@
+## v5.2.0
+
+- Support `stylelint-order` plugin instead of `declaration-block-properties-order`. #263
+
 ## v5.1.2
 
 - Prevent space between EOL and semicolon for `@value` for CSS Modules
