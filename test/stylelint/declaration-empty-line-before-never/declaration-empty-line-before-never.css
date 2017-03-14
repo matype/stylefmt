@@ -1,0 +1,11 @@
+a {
+  --foo: pink;
+
+  top: 5px;
+}
+a {
+
+  bottom: 15px;
+
+  top: 5px;
+}

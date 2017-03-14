@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "declaration-empty-line-before": ["always", { ignore: ["after-comment", "after-declaration", "inside-single-line-block"] }]
+  }
+}
