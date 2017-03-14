@@ -4,11 +4,11 @@
   ],
 
   "rules": {
-    "order/declaration-block-order": [
+    "order/order": [
       "custom-properties",
       "declarations"
     ],
-    "order/declaration-block-property-groups-structure": [
+    "order/properties-order": [
       [
         {
           "emptyLineBefore": "always",
