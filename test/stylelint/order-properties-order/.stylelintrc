@@ -4,7 +4,7 @@
   ],
 
   "rules": {
-    "order/declaration-block-property-groups-structure": [
+    "order/properties-order": [
       [
         {
           "emptyLineBefore": "always",

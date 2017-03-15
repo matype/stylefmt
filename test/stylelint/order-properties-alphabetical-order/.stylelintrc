@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "order/properties-order": [
+      [
+        {
+          "emptyLineBefore": "always",
+          "properties": [
+            "font-size",
+            "line-height"
+          ]
+        },
+        {
+          "emptyLineBefore": "always",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ]
+        }
+      ]
+    ]
+  }
+}

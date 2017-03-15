@@ -42,7 +42,7 @@
     "postcss-value-parser": "^3.3.0",
     "stdin": "0.0.1",
     "stylelint": "^7.5.0",
-    "stylelint-order": "^0.3.0"
+    "stylelint-order": "0.4.x"
   },
   "devDependencies": {
     "each-series": "^1.0.0",
