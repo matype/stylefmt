@@ -1,0 +1,29 @@
+a {
+  /* comment */
+  top: 5px;
+}
+
+a {
+
+  bottom: 15px;
+  top: 15px;
+}
+
+a {
+
+  bottom: 15px;
+
+  top: 15px;
+}
+
+a {
+
+  color: orange;
+  text-decoration: none;
+
+  bottom: 15px;
+  top: 15px;
+}
+
+/* this one doesn't work because we don't support block-closing-brace-newline-before */
+/* a { bottom: 15px; top: 5px; } */
