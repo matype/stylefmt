@@ -1,0 +1,19 @@
+@media (min-width: $screen-iphone5) and (max-width: ($screen-iphone6 - 1)) {
+  border-left-color: transparent;
+  border-left-width: 0;
+
+  a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.article-content {
+  border-left-color: transparent;
+  border-left-width: 0;
+
+  a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
