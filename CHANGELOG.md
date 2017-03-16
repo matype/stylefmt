@@ -1,3 +1,9 @@
+## v5.3.0
+
+- Support `declaration-empty-line-before` rule. #270
+- Support stylelint-order v0.4.x #267
+- Fixed #272
+
 ## v5.2.0
 
 - Support `stylelint-order` plugin instead of `declaration-block-properties-order`. #263
