@@ -374,7 +374,7 @@ and we can also format from the other stylelint's configration files or packages
 - disallow any spaces between `!` and `important`
 - leave 1 blank line between rules
 - leave 1 blank line between rules in atrules
-- disallow any brank lines between `@import`
+- disallow any blank lines between `@import`
 
 ### for nested selector syntax
 
