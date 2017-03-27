@@ -2,4 +2,5 @@ b {
   color: pink;
 
   @extend foo;
+  @custom bar;
 }
