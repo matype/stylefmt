@@ -1,3 +1,8 @@
+## v5.3.1
+
+- Fixed to remove spaces for custom at-rules #283
+- Support the new param of `at-rule-empty-line-before` #284
+
 ## v5.3.0
 
 - Support `declaration-empty-line-before` rule. #270
