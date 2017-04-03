@@ -1,6 +1,9 @@
 $var: 1.0 2.0px;
+$string-var: "1.0";
 
 p {
+  background: url("/v1.0/background.jpg");
+  transition: 0.40s cubic-bezier(0.23, 1, 0.32, 1);
   top: 1.0px;
   line-height: 1.0;
   letter-spacing: 1.08;
