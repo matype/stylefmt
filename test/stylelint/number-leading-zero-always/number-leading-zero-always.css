@@ -1,6 +1,8 @@
 $var: .5 .8px;
+$string-var: ".1";
 
 p {
+  background: url("https://cdn.example.com/v0.0.1/img/background.2x.png");
   transition: .4s cubic-bezier(.23, 1, .32, 1);
   opacity: 0.5;
 }
