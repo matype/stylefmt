@@ -1,3 +1,7 @@
+## v5.3.2
+
+- Update formatZeros regular expressions #286
+
 ## v5.3.1
 
 - Fixed to remove spaces for custom at-rules #283
