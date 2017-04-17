@@ -1,9 +1,9 @@
 module.exports = {
   "extends": "./extend-stylelint3.js",
   "rules": {
-    "at-rule-empty-line-before": [ "always", {
-      except: [ "blockless-group" ]
-    } ],
+    "at-rule-empty-line-before": ["always", {
+      except: ["blockless-after-blockless"]
+    }],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
@@ -17,10 +17,10 @@ module.exports = {
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-no-invalid-hex": true,
-    "comment-empty-line-before": [ "always", {
+    "comment-empty-line-before": ["always", {
       except: ["first-nested"],
       ignore: ["stylelint-commands"],
-    } ],
+    }],
     "comment-whitespace-inside": "always",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",

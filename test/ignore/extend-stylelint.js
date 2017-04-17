@@ -1,8 +1,8 @@
 module.exports = {
   "rules": {
-    "at-rule-empty-line-before": [ "always", {
-      except: [ "blockless-group" ]
-    } ],
+    "at-rule-empty-line-before": ["always", {
+      except: ["blockless-after-blockless"]
+    }],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
@@ -16,10 +16,10 @@ module.exports = {
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-no-invalid-hex": true,
-    "comment-empty-line-before": [ "always", {
+    "comment-empty-line-before": ["always", {
       except: ["first-nested"],
       ignore: ["stylelint-commands"],
-    } ],
+    }],
     "comment-whitespace-inside": "always",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
@@ -62,9 +62,9 @@ module.exports = {
     "number-no-trailing-zeros": true,
     "length-zero-no-unit": true,
     "property-case": "lower",
-    "rule-non-nested-empty-line-before": [ "always-multi-line", {
+    "rule-non-nested-empty-line-before": ["always-multi-line", {
       ignore: ["after-comment"],
-    } ],
+    }],
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
