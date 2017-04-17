@@ -1,7 +1,12 @@
 {
   "rules": {
-    "at-rule-empty-line-before": ["always", {
-      ignore: ["blockless-group"]
-    }],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+      ignore: [
+          "blockless-after-blockless"
+        ]
+      }
+    ],
   }
 }

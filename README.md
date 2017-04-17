@@ -329,7 +329,7 @@ stylefmt :heart: stylelint
 
 stylefmt supports the following stylelint rules:
 
-- [at-rule-empty-line-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/at-rule-empty-line-before) ("always"|"never" and except "blockless-group" only)
+- [at-rule-empty-line-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/at-rule-empty-line-before) ("always"|"never" and except "blockless-after-blockless" only)
 - [at-rule-semicolon-newline-after](https://github.com/stylelint/stylelint/tree/master/lib/rules/at-rule-semicolon-newline-after)
 - [block-closing-brace-newline-after](https://github.com/stylelint/stylelint/tree/master/lib/rules/block-closing-brace-newline-after)
 - [block-closing-brace-newline-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/block-closing-brace-newline-before)
