@@ -5,7 +5,14 @@
     "es6": true
   },
   "rules": {
+    "comma-spacing": [
+      "error"
+    ],
     "no-console": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
     "space-before-function-paren": [2, "always"],
     "semi": [2, "never"],
     "eqeqeq": [2, "allow-null"],
