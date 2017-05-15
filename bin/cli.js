@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+/* eslint no-console: "off" */
 var fs = require('fs')
 var path = require('path')
 var stdin = require('stdin')
@@ -109,7 +109,7 @@ if (argv.r) {
 
 function processMultipleFiles (files) {
   files = files.filter(isCss).sort()
-  if(!files.length){
+  if (!files.length){
     console.error('Files glob patterns specified did not match any css files.')
     return
   }
@@ -144,7 +144,7 @@ function processMultipleFiles (files) {
       messages = messages.filter(function (file){
         return file
       })
-      if(messages.length){
+      if (messages.length){
         messages = messages.join(', ') + '\n\n' + messages.length
       } else {
         messages = 'No'
@@ -170,7 +170,7 @@ function handleDiff (file, original, formatted) {
 
   if (chalk.supportsColor) {
     file = chalk.blue(file)
-    if(diff) {
+    if (diff) {
       diff = chalk.gray(diff)
     } else {
       var JsDiff = require('diff')

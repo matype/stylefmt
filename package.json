@@ -4,16 +4,18 @@
   "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
-    "test": "nyc tape test/*.js | faucet && npm run lint",
-    "lint": "eslint -c .eslintrc.json index.js lib bin"
+    "pretest": "eslint -c .eslintrc.json index.js lib bin",
+    "test": "nyc tape test/*.js | faucet"
   },
   "nyc": {
-    "lines": 97,
-    "statements": 97,
-    "functions": 98,
-    "branches": 96,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80,
     "include": [
-      "lib/**/*.js"
+      "index.js",
+      "lib/**/*.js",
+      "bin/**/*.js"
     ],
     "exclude": [
       "dist/**/*.spec.js"

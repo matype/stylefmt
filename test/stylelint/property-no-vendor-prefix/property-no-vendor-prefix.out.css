@@ -31,6 +31,62 @@ a {
   transition: flex 200ms, -webkit-box-flex 200ms, -webkit-flex 200ms, -moz-box-flex 200ms, -ms-flex 200ms;
 }
 
+.flex-direction:row {
+  flex-direction: row;
+}
+
+.flex-direction:row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction:column {
+  flex-direction: column;
+}
+
+.flex-direction:column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-direction:row {
+  flex-direction: row;
+}
+
+.flex-direction:row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction:column {
+  flex-direction: column;
+}
+
+.flex-direction:column-reverse {
+  flex-direction: column-reverse;
+}
+
+.box-orient:vertical {
+  flex-direction: column;
+}
+
+.box-orient:horizontal {
+  flex-direction: row;
+}
+
+.box-orient {
+  -webkit-box-orient: error;
+}
+
+.box-direction:normal {
+  flex-direction: row;
+}
+
+.box-direction:reverse {
+  flex-direction: row-reverse;
+}
+
+.box-direction {
+  -webkit-box-direction: error;
+}
+
 .inline {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

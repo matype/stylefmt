@@ -1,275 +1,434 @@
 a {
-    -js-display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-ordinal-group: 1;
-    -webkit-order: 0;
-       -moz-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 2;
-       -moz-box-flex: 0;
-        -ms-flex: 0 1 2;
-            flex: 0 1 2;
-    -webkit-transition: -webkit-box-flex 200ms, -webkit-flex 200ms;
-    transition: -webkit-box-flex 200ms, -webkit-flex 200ms;
-    transition: flex 200ms;
-    transition: flex 200ms, -webkit-box-flex 200ms, -webkit-flex 200ms, -moz-box-flex 200ms, -ms-flex 200ms;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 2;
+  -moz-box-flex: 0;
+  -ms-flex: 0 1 2;
+  flex: 0 1 2;
+  -webkit-transition: -webkit-box-flex 200ms, -webkit-flex 200ms;
+  transition: -webkit-box-flex 200ms, -webkit-flex 200ms;
+  transition: flex 200ms;
+  transition: flex 200ms, -webkit-box-flex 200ms, -webkit-flex 200ms, -moz-box-flex 200ms, -ms-flex 200ms;
 }
 
 .inline {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-            align-self: auto;
-    -webkit-align-content: stretch;
-        -ms-flex-line-pack: stretch;
-            align-content: stretch;
-    -webkit-box-flex: 1;
-    -webkit-flex: auto;
-       -moz-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -moz-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .inline-box {
-    display: -webkit-inline-box;
+  display: -webkit-inline-box;
 }
 
 .inline-flex {
-    display: -webkit-inline-flex;
+  display: -webkit-inline-flex;
 }
 
 .inline-flexbox {
-    display: -ms-inline-flexbox;
+  display: -ms-inline-flexbox;
 }
 
 .a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-       -moz-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-       -moz-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
-    -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-            align-self: flex-start;
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-       -moz-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -moz-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
 }
 
 .display_flex {
-    display: -webkit-flex;
+  display: -webkit-flex;
 }
 
 .display_box {
-    display: -moz-box;
+  display: -moz-box;
 }
 
 .display_flexbox {
-    display: -ms-flexbox;
+  display: -ms-flexbox;
 }
 
 .b {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-       -moz-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-       -moz-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-align-content: flex-end;
-        -ms-flex-line-pack: end;
-            align-content: flex-end;
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .c {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: reverse-wrap;
-        -ms-flex-wrap: reverse-wrap;
-            flex-wrap: reverse-wrap;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: reverse-wrap;
+  -ms-flex-wrap: reverse-wrap;
+  flex-wrap: reverse-wrap;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
 }
 
 .e {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-       -moz-box-orient: vertical;
-       -moz-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-    -webkit-align-items: baseline;
-       -moz-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    -webkit-align-content: space-between;
-        -ms-flex-line-pack: justify;
-            align-content: space-between;
-    -webkit-align-self: baseline;
-        -ms-flex-item-align: baseline;
-            align-self: baseline;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -moz-box-orient: vertical;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
 }
 
 .f {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-       -moz-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-align-content: space-around;
-        -ms-flex-line-pack: distribute;
-            align-content: space-around;
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
 }
 
 .g {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: -webkit-calc(1em + 1px);
-    -webkit-flex: -webkit-calc(1em + 1px) 0 0;
-       -moz-box-flex: calc(1em + 1px);
-        -ms-flex: calc(1em + 1px) 0 0px;
-            flex: calc(1em + 1px) 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: -webkit-calc(1em + 1px);
+  -webkit-flex: -webkit-calc(1em + 1px) 0 0;
+  -moz-box-flex: calc(1em + 1px);
+  -ms-flex: calc(1em + 1px) 0 0px;
+  flex: calc(1em + 1px) 0 0;
 }
 
 .h {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column wrap;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 .i {
-    -webkit-flex-flow: nowrap;
-        -ms-flex-flow: nowrap;
-            flex-flow: nowrap;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
 }
 
 .inherit {
-    -webkit-box-ordinal-group: inherit;
-    -webkit-order: inherit;
-       -moz-box-ordinal-group: inherit;
-        -ms-flex-order: inherit;
-            order: inherit;
+  -webkit-box-ordinal-group: inherit;
+  -webkit-order: inherit;
+  -moz-box-ordinal-group: inherit;
+  -ms-flex-order: inherit;
+  order: inherit;
+}
+
+a {
+  background: -webkit-linear-gradient(99.5deg, white, black), -webkit-linear-gradient(220deg, black, white), -webkit-linear-gradient(45deg, black, white);
+  background: -o-linear-gradient(99.5deg, white, black), -o-linear-gradient(220deg, black, white), -o-linear-gradient(45deg, black, white);
+  background: linear-gradient(350.5deg, white, black), linear-gradient(-130deg, black, white), linear-gradient(45deg, black, white);
+}
+
+b {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(white)), -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 1), white), -webkit-linear-gradient(white, black);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 1), white), -o-linear-gradient(white, black);
+  background-image: linear-gradient(rgba(0, 0, 0, 1), white), linear-gradient(white, black);
+}
+
+strong {
+  background: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.8) 20px, #000 30px, #000) no-repeat;
+  background: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.8) 20px, #000 30px, #000) no-repeat;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8) 20px, #000 30px, #000) no-repeat;
+}
+
+div {
+  background-image: -webkit-radial-gradient(right, white, black), -webkit-repeating-linear-gradient(top left, black, white), -webkit-repeating-radial-gradient(bottom, aqua, red);
+  background-image: -o-radial-gradient(right, white, black), -o-repeating-linear-gradient(top left, black, white), -o-repeating-radial-gradient(bottom, aqua, red);
+  background-image: radial-gradient(to left, white, black), repeating-linear-gradient(to bottom right, black, white), repeating-radial-gradient(to top, aqua, red);
+}
+
+.radial {
+  background: -webkit-radial-gradient(ellipse farthest-corner, black, white);
+  background: -o-radial-gradient(ellipse farthest-corner, black, white);
+  background: radial-gradient(ellipse farthest-corner, black, white);
+}
+
+.simple1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background: -webkit-linear-gradient(black, white);
+  background: -o-linear-gradient(black, white);
+  background: linear-gradient(black, white);
+}
+
+.simple2 {
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(50%, rgba(0, 0, 0, 0.5)), to(white));
+  background: -webkit-linear-gradient(right, black 0%, rgba(0, 0, 0, 0.5)50%, white 100%);
+  background: -o-linear-gradient(right, black 0%, rgba(0, 0, 0, 0.5)50%, white 100%);
+  background: linear-gradient(to left, black 0%, rgba(0, 0, 0, 0.5)50%, white 100%);
+}
+
+.simple3 {
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, black), to(white));
+  background: -webkit-linear-gradient(right, black 50%, white 100%);
+  background: -o-linear-gradient(right, black 50%, white 100%);
+  background: linear-gradient(to left, black 50%, white 100%);
+}
+
+.simple4 {
+  background: -webkit-gradient(linear, left bottom, right top, from(black), to(white));
+  background: -webkit-linear-gradient(left bottom, black, white);
+  background: -o-linear-gradient(left bottom, black, white);
+  background: linear-gradient(to right top, black, white);
+}
+
+.direction {
+  background: -webkit-gradient(linear, left top, right bottom, from(black), color-stop(rgba(0, 0, 0, 0.5)), to(white));
+  background: -webkit-linear-gradient(top left, black, rgba(0, 0, 0, 0.5), white);
+  background: -o-linear-gradient(top left, black, rgba(0, 0, 0, 0.5), white);
+  background: linear-gradient(top left, black, rgba(0, 0, 0, 0.5), white);
+}
+
+.silent {
+  background: -webkit-linear-gradient(top left, black, white);
+}
+
+.radial {
+  background: -webkit-radial-gradient(0 50%, farthest-side, white, black);
+  background: -o-radial-gradient(0 50%, farthest-side, white, black);
+  background: radial-gradient(farthest-side at 0 50%, white, black);
+}
+
+.second {
+  background: red -webkit-gradient(linear, left top, left bottom, from(red), to(blue));
+  background: red -webkit-linear-gradient(red, blue);
+  background: red -o-linear-gradient(red, blue);
+  background: red linear-gradient(red, blue);
+  background: url('logo.png'), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#000));
+  background: url('logo.png'), -webkit-linear-gradient(#fff, #000);
+  background: url('logo.png'), -o-linear-gradient(#fff, #000);
+  background: url('logo.png'), linear-gradient(#fff, #000);
+}
+
+.px {
+  background: -webkit-linear-gradient(black 0, white 100px);
+  background: -o-linear-gradient(black 0, white 100px);
+  background: linear-gradient(black 0, white 100px);
+}
+
+.list {
+  list-style-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  list-style-image: -webkit-linear-gradient(white, black);
+  list-style-image: linear-gradient(white, black);
+}
+
+.mask1 {
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+}
+
+.mask2 {
+  -webkit-mask: -webkit-linear-gradient(white, black);
+}
+
+.mask3 {
+  mask: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+}
+
+.newline_old {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black)), -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+}
+
+.newline {
+  background-image: -webkit-linear-gradient(white, black), -webkit-linear-gradient(black, white);
+  background-image: -o-linear-gradient(white, black), -o-linear-gradient(black, white);
+}
+
+.convert_old {
+  background: -webkit-gradient(linear, right top, left top, from(white), to(black));
+}
+
+.convert {
+  background: -webkit-linear-gradient(right, white, black);
+  background: -o-linear-gradient(right, white, black);
+}
+
+.rad {
+  background: -webkit-linear-gradient(32.704deg, white, black);
+  background: -o-linear-gradient(32.704deg, white, black);
+}
+
+.turn {
+  background: -webkit-linear-gradient(342deg, white, black);
+  background: -o-linear-gradient(342deg, white, black);
+}
+
+.norm {
+  background: -webkit-gradient(linear, right top, left top, from(white), to(black));
+  background: -webkit-linear-gradient(right, white, black);
+  background: -o-linear-gradient(right, white, black);
+}
+
+.foo {
+  --widthA: 100px;
+  --widthB: -webkit-calc(var(--widthA) / 2);
+  --widthC: -webkit-calc(var(--widthB) / 2);
+  --widthB: -moz-calc(var(--widthA) / 2);
+  --widthC: -moz-calc(var(--widthB) / 2);
+  width: var(--widthC);
+}
+
+div {
+  width: -webkit-calc(100% - 1em);
+  width: -moz-calc(100% - 1em);
 }
