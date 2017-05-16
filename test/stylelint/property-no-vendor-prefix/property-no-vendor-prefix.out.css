@@ -18,17 +18,11 @@ h1 {
 }
 
 a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   flex-flow: row;
   order: 0;
   flex: 0 1 2;
-  transition: -webkit-box-flex 200ms, -webkit-flex 200ms;
   transition: flex 200ms;
-  transition: flex 200ms, -webkit-box-flex 200ms, -webkit-flex 200ms, -moz-box-flex 200ms, -ms-flex 200ms;
 }
 
 .flex-direction:row {
@@ -40,11 +34,11 @@ a {
 }
 
 .flex-direction:column {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .flex-direction:column-reverse {
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
 }
 
 .flex-direction:row {
@@ -52,7 +46,7 @@ a {
 }
 
 .flex-direction:row-reverse {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .flex-direction:column {
@@ -60,7 +54,7 @@ a {
 }
 
 .flex-direction:column-reverse {
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .box-orient:vertical {
@@ -72,7 +66,7 @@ a {
 }
 
 .box-orient {
-  -webkit-box-orient: error;
+  flex-direction: row;
 }
 
 .box-direction:normal {
@@ -84,7 +78,7 @@ a {
 }
 
 .box-direction {
-  -webkit-box-direction: error;
+  flex-direction: row;
 }
 
 .inline {
@@ -190,21 +184,16 @@ a {
 }
 
 .a {
-  page-break-inside: auto;
   break-inside: auto;
-  page-break-before: auto;
   break-before: auto;
-  page-break-after: auto;
   break-after: auto;
 }
 
 .b {
-  page-break-inside: avoid;
   break-inside: avoid;
 }
 
 .c {
-  page-break-inside: avoid;
   break-inside: avoid-column;
 }
 
@@ -222,15 +211,11 @@ img {
 }
 
 img.other {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
 }
 
 img.already {
   display: block;
   image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
 }

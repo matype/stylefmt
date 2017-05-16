@@ -215,3 +215,28 @@ div {
 div {
   width: calc(100% - 1em);
 }
+
+input::placeholder {
+}
+
+:fullscreen a {
+}
+
+@media (min-resolution: 1dppx) {
+}
+
+@media (min--mox-device-pixel-ratio: 1) {
+}
+
+@media (max-resolution: 1dppx) {
+}
+
+@keyframes  {
+  0% {
+    top: 0;
+  }
+}
+
+@viewport {
+  orientation: landscape;
+}
