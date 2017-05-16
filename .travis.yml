@@ -4,6 +4,3 @@ node_js:
   - "stable"
   - "6"
   - "4"
-script:
-  - npm run lint
-  - npm test
