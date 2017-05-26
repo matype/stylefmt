@@ -1,0 +1,5 @@
+@for $i from 1 through length($colors)   {
+  .foo-#{$i} {
+    color: blue;
+  }
+}
