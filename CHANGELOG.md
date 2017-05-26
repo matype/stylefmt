@@ -1,3 +1,7 @@
+## v5.3.3
+
+- Add support for *.less and *.pcss files in recursive cli mode. #301
+
 ## v5.3.2
 
 - Update formatZeros regular expressions #286
