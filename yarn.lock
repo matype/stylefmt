@@ -444,8 +444,8 @@ es-to-primitive@^1.1.1:
     is-symbol "^1.0.1"
 
 es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.16"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.16.tgz#1ef1b04f3d09db6a5d630226d62202f2e425e45a"
+  version "0.10.21"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.21.tgz#19a725f9e51d0300bbc1e8e821109fd9daf55925"
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
@@ -1434,18 +1434,18 @@ postcss-selector-parser@^2.0.0, postcss-selector-parser@^2.1.1:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-sorting@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-2.0.1.tgz#3b7cbfd6cb6b0fdb81b470589952584ef32c32a5"
+postcss-sorting@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-2.1.0.tgz#32b1e9afa913bb225a6ad076d503d8f983bb4a82"
   dependencies:
     lodash "^4.17.4"
-    postcss "^5.2.10"
+    postcss "^5.2.17"
 
 postcss-value-parser@^3.1.1, postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^5.0.0, postcss@^5.0.18, postcss@^5.0.20, postcss@^5.0.21, postcss@^5.0.4, postcss@^5.0.8, postcss@^5.2.10, postcss@^5.2.13, postcss@^5.2.16, postcss@^5.2.4:
+postcss@^5.0.0, postcss@^5.0.18, postcss@^5.0.20, postcss@^5.0.21, postcss@^5.0.4, postcss@^5.0.8, postcss@^5.2.13, postcss@^5.2.16, postcss@^5.2.17, postcss@^5.2.4:
   version "5.2.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.17.tgz#cf4f597b864d65c8a492b2eabe9d706c879c388b"
   dependencies:
@@ -1638,6 +1638,10 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
+safe-buffer@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
+
 "semver@2 || 3 || 4 || 5":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
@@ -1743,10 +1747,10 @@ string_decoder@~0.10.x:
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
 string_decoder@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.0.tgz#f06f41157b664d86069f84bdbdc9b0d8ab281667"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.1.tgz#62e200f039955a6810d8df0a33ffc0f013662d98"
   dependencies:
-    buffer-shims "~1.0.0"
+    safe-buffer "^5.0.1"
 
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
