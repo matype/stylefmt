@@ -1,3 +1,9 @@
+## v6.0.0
+
+- Use postcss v6
+- Upgrade all dependencies
+- Use yarn
+
 ## v5.3.3
 
 - Add support for *.less and *.pcss files in recursive cli mode. #301
