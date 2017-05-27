@@ -37,12 +37,16 @@
     "globby": "^6.1.0",
     "minimist": "^1.2.0",
     "postcss": "^6.0.1",
+    "postcss-html": "^0.3.0",
+    "postcss-less": "^1.0.0",
+    "postcss-sass": "^0.1.0",
     "postcss-scss": "^1.0.0",
     "postcss-sorting": "^2.1.0",
     "postcss-value-parser": "^3.3.0",
     "stdin": "^0.0.1",
     "stylelint": "^7.10.1",
-    "stylelint-order": "^0.4.4"
+    "stylelint-order": "^0.4.4",
+    "sugarss": "^1.0.0"
   },
   "devDependencies": {
     "each-series": "^1.0.0",

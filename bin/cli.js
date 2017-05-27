@@ -24,7 +24,7 @@ var argv = minimist(process.argv.slice(2), {
 })
 
 var postcss = require('postcss')
-var scss = require('postcss-scss')
+var syntax = require('postcss-html')
 
 if (argv.v) {
   console.log(pkg.version)
@@ -76,7 +76,7 @@ if (argv.r) {
   postcss([stylefmt(options)])
     .process(css, {
       from: fullPath,
-      syntax: scss
+      syntax: syntax
     })
     .then(function (result) {
       var formatted = result.css
@@ -98,7 +98,7 @@ if (argv.r) {
     postcss([stylefmt(options)])
       .process(css, {
         from: options.codeFilename,
-        syntax: scss
+        syntax: syntax
       })
       .then(function (result) {
         process.stdout.write(result.css)
@@ -122,7 +122,7 @@ function processMultipleFiles (files) {
     return postcss([stylefmt(options)])
       .process(css, {
         from: fullPath,
-        syntax: scss
+        syntax: syntax
       })
       .then(function (result) {
         var formatted = result.css
@@ -156,7 +156,7 @@ function processMultipleFiles (files) {
 
 
 function isCss (filePath) {
-  return /^\.css|\.less|\.pcss|\.scss|\.wxss$/i.test(path.extname(filePath))
+  return /^\.(?:vue|html?|(?:(?:[ps]?c)|le|wx|sa?)ss)$/i.test(path.extname(filePath))
 }
 
 
