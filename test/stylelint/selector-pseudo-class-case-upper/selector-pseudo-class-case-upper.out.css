@@ -1,0 +1,8 @@
+a:B,
+:C {
+  color: pink;
+}
+
+d:E::f {
+  color: green;
+}
