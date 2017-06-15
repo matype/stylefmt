@@ -53,6 +53,12 @@ stylefmt'd code is:
 - easier to **maintain** : mechanical changes to the source don't cause unrelated changes to the file's formatting; diffs show only the real changes.
 - **uncontroversial** : never have a debate about spacing or brace position ever again!
 
+## NOTICE: Consider other tools before adopting stylefmt
+
+If you are using stylefmt with stylelint configuration to format according to its rules, you can now use stylelint's [--fix](https://github.com/stylelint/stylelint/releases/tag/7.11.0) option (from v7.11.0) to autofix.
+
+Another on the other hand, [prettier](https://github.com/prettier/prettier) supports to format not only JavaScript but also CSS, SCSS and Less code.
+
 ## Features
 
 - **Supports the latest CSS syntax:** Including custom properties, range context for media features, `calc()` and nesting.
