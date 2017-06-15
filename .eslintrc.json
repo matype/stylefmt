@@ -1,14 +1,47 @@
 {
-  "extends": "eslint:recommended",
   "env": {
-    "node": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
+  "extends": "eslint:recommended",
   "rules": {
-    "no-console": 0,
-    "space-before-function-paren": [2, "always"],
-    "semi": [2, "never"],
-    "eqeqeq": [2, "allow-null"],
-    "block-spacing": [2, "always"]
+    "block-spacing": [
+      "error",
+      "always"
+    ],
+    "comma-spacing": [
+      "error"
+    ],
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "keyword-spacing": [
+      "error"
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ],
+    "valid-jsdoc": [
+      "error"
+    ]
   }
 }

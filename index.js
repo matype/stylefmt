@@ -12,7 +12,7 @@ const stylefmt = postcss.plugin('stylefmt', function (options) {
   var paramer = params(options)
   return function (root, result) {
     return paramer(root, result).then(function (params) {
-      if(params) {
+      if (params) {
         formatComments(root, params)
         formatAtRules(root, params)
         formatRules(root, params)

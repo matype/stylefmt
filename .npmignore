@@ -4,3 +4,5 @@ test
 .eslintrc.json
 .travis.yml
 CHANGELOG.md
+.nyc_output
+coverage

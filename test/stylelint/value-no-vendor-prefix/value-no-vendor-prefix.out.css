@@ -1,0 +1,113 @@
+a {
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  -moz-box-flex: 0;
+  -ms-flex: 0 1 2;
+  transition: flex 200ms;
+}
+
+a {
+  background: linear-gradient(350.5deg, white, black), linear-gradient(-130deg, black, white), linear-gradient(45deg, black, white);
+}
+
+b {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), white), linear-gradient(white, black);
+}
+
+strong {
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8) 20px, #000 30px, #000) no-repeat;
+}
+
+div {
+  background-image: radial-gradient(to left, white, black), repeating-linear-gradient(to bottom right, black, white), repeating-radial-gradient(to top, aqua, red);
+}
+
+.radial {
+  background: radial-gradient(ellipse farthest-corner, black, white);
+}
+
+.simple1 {
+  background: linear-gradient(black, white);
+}
+
+.simple2 {
+  background: linear-gradient(to left, black 0%, rgba(0, 0, 0, 0.5)50%, white 100%);
+}
+
+.simple3 {
+  background: linear-gradient(to left, black 50%, white 100%);
+}
+
+.simple4 {
+  background: linear-gradient(to right top, black, white);
+}
+
+.direction {
+  background: linear-gradient(top left, black, rgba(0, 0, 0, 0.5), white);
+}
+
+.silent {
+  background: linear-gradient(to bottom right, black, white);
+}
+
+.radial {
+  background: radial-gradient(farthest-side at 0 50%, white, black);
+}
+
+.second {
+  background: red linear-gradient(red, blue);
+  background: url('logo.png'), linear-gradient(#fff, #000);
+}
+
+.px {
+  background: linear-gradient(black 0, white 100px);
+}
+
+.list {
+  list-style-image: linear-gradient(white, black);
+}
+
+.mask {
+  mask: linear-gradient(white, black);
+}
+
+.newline {
+  background-image: linear-gradient(white, black), linear-gradient(black, white);
+}
+
+.convert {
+  background: linear-gradient(270deg, white, black);
+}
+
+.rad {
+  background: linear-gradient(1rad, white, black);
+}
+
+.turn {
+  background: linear-gradient(0.3turn, white, black);
+}
+
+.norm {
+  background: linear-gradient(-90deg, white, black);
+}
+
+img {
+  image-rendering: crisp-edges;
+}
+
+img.other {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
+img.already {
+  -ms-interpolation-mode: nearest-neighbor;
+  display: block;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
