@@ -10,10 +10,7 @@
   "bin": {
     "stylefmt": "bin/cli.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/morishitter/stylefmt/git"
-  },
+  "repository": "morishitter/stylefmt",
   "engines": {
     "node": ">=4.2.0"
   },
