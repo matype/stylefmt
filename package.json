@@ -30,19 +30,19 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
-    "turbocolor": "^2.3.0",
     "css-color-list": "^0.0.1",
     "diff": "^3.2.0",
     "editorconfig": "^0.13.2",
+    "getopts": "^2.1.1",
     "globby": "^6.1.0",
-    "minimist": "^1.2.0",
     "postcss": "^6.0.1",
     "postcss-scss": "^1.0.0",
     "postcss-sorting": "^2.1.0",
     "postcss-value-parser": "^3.3.0",
     "stdin": "^0.0.1",
     "stylelint": "^7.10.1",
-    "stylelint-order": "^0.4.4"
+    "stylelint-order": "^0.4.4",
+    "turbocolor": "^2.3.0"
   },
   "devDependencies": {
     "each-series": "^1.0.0",

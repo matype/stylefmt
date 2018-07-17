@@ -6,8 +6,8 @@ var stdin = require('stdin')
 var pkg = require('../package.json')
 var stylefmt = require('../')
 
-var minimist = require('minimist')
-var argv = minimist(process.argv.slice(2), {
+var getopts = require('getopts')
+var argv = getopts(process.argv.slice(2), {
   boolean: [
     'help',
     'version'

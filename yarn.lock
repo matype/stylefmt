@@ -733,6 +733,10 @@ get-stdin@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
 
+getopts@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/getopts/-/getopts-2.1.1.tgz#330d29c59d0a1b4ec7e0e4e43a8d1dd42ccee565"
+
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -1957,6 +1961,10 @@ trim-newlines@^1.0.0:
 tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
+
+turbocolor@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/turbocolor/-/turbocolor-2.3.0.tgz#9b720e38c6f907add42d9315aa18cf797d79f148"
 
 type-check@~0.3.2:
   version "0.3.2"
