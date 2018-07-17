@@ -1,3 +1,7 @@
+## v6.0.2
+
+- Swap minimist for getopts #338
+
 ## v6.0.1
 
 - Swap chalk for turbocolor #336
