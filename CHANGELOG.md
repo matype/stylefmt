@@ -1,3 +1,7 @@
+## v6.0.1
+
+- Swap chalk for turbocolor #336
+
 ## v6.0.0
 
 - Use PostCSS v6
