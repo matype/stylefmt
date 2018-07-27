@@ -40,7 +40,7 @@
     "postcss-sorting": "^2.1.0",
     "postcss-value-parser": "^3.3.0",
     "stdin": "^0.0.1",
-    "stylelint": "^7.10.1",
+    "stylelint": "^9.4.0",
     "stylelint-order": "^0.4.4",
     "turbocolor": "^2.3.0"
   },
