@@ -42,7 +42,7 @@
     "stdin": "^0.0.1",
     "stylelint": "^7.10.1",
     "stylelint-order": "^0.4.4",
-    "turbocolor": "^2.3.0"
+    "colorette": "^1.0.1"
   },
   "devDependencies": {
     "each-series": "^1.0.0",
