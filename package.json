@@ -34,6 +34,7 @@
     "diff": "^3.2.0",
     "editorconfig": "^0.13.2",
     "getopts": "^2.1.1",
+    "colorette": "^1.0.5",
     "globby": "^6.1.0",
     "postcss": "^6.0.1",
     "postcss-scss": "^1.0.0",
@@ -41,8 +42,7 @@
     "postcss-value-parser": "^3.3.0",
     "stdin": "^0.0.1",
     "stylelint": "^7.10.1",
-    "stylelint-order": "^0.4.4",
-    "turbocolor": "^2.3.0"
+    "stylelint-order": "^0.4.4"
   },
   "devDependencies": {
     "each-series": "^1.0.0",
