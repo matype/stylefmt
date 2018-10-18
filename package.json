@@ -1,6 +1,6 @@
 {
   "name": "stylefmt",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "stylefmt is a tool that automatically formats CSS according to stylelint rules",
   "main": "index.js",
   "scripts": {
