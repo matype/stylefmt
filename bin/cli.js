@@ -162,28 +162,28 @@ function isCss (filePath) {
 
 function handleDiff (file, original, formatted) {
   var diff
-  var tc = require('turbocolor')
+  var color = require('colorette')
 
   if (original === formatted) {
     diff = 'There is no difference with the original file.'
   }
 
-  if (tc.enabled) {
-    file = tc.blue(file)
+  if (color.enabled) {
+    file = color.blue(file)
     if(diff) {
-      diff = tc.gray(diff)
+      diff = color.gray(diff)
     } else {
       var JsDiff = require('diff')
       diff = JsDiff.createPatch(file, original, formatted)
       diff = diff.split('\n').splice(4).map(function (line) {
         if (line[0] === '+') {
-          line = tc.green(line)
+          line = color.green(line)
         } else if (line[0] === '-') {
-          line = tc.red(line)
+          line = color.red(line)
         } else if (line.match(/^@@\s+.+?\s+@@/) || '\\ No newline at end of file' === line) {
           line = ''
         }
-        return tc.gray(line)
+        return color.gray(line)
       })
       diff = diff.join('\n').trim()
     }

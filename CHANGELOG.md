@@ -1,10 +1,14 @@
+## v6.0.3
+
+- Replace turbocolor with colorette #338
+
 ## v6.0.2
 
-- Swap minimist for getopts #338
+- Replace minimist with getopts #338
 
 ## v6.0.1
 
-- Swap chalk for turbocolor #336
+- Replace chalk with turbocolor #336
 
 ## v6.0.0
 
@@ -78,7 +82,7 @@
 - Fixed: `config` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#config)
 - Added: `configBasedir` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configbasedir)
 - Added: `configFile` option to Node.js API. same as [stylelint API](http://stylelint.io/user-guide/node-api/#configfile)
-- Added: When `stylelint` configuration file not found, it will extends from `editorconfig`: 
+- Added: When `stylelint` configuration file not found, it will extends from `editorconfig`:
   - [indentation](http://stylelint.io/user-guide/rules/indentation/)
   - [no-missing-end-of-source-newline](http://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/)
   - [no-eol-whitespace](http://stylelint.io/user-guide/rules/no-eol-whitespace/)
