@@ -308,7 +308,7 @@ $ cat input.css | stylefmt --stdin-filename input.css
 ```js
 var fs = require('fs');
 var postcss = require('postcss');
-var scss = require('postcss-scss'); // when you use scss syntax
+var syntax = require('postcss-html'); // when you use non-standard syntax
 var stylefmt = require('stylefmt');
 
 var css = fs.readFileSync('input.css', 'utf-8');
@@ -317,7 +317,7 @@ postcss([
   stylefmt
 ]).process(css, {
     from: 'input.css',
-    syntax: scss
+    syntax: syntax
   })
   .then(function (result) {
     result.css; // formatted code
