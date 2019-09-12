@@ -345,7 +345,6 @@ stylefmt supports the following stylelint rules:
 - [block-opening-brace-space-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/block-opening-brace-space-before)
 - [color-hex-case](https://github.com/stylelint/stylelint/tree/master/lib/rules/color-hex-case)
 - [color-hex-length](https://github.com/stylelint/stylelint/tree/master/lib/rules/color-hex-length)
-- [declaration-block-properties-order](https://github.com/stylelint/stylelint/tree/master/lib/rules/declaration-block-properties-order)
 - [declaration-colon-space-after](https://github.com/stylelint/stylelint/tree/master/lib/rules/declaration-colon-space-after)
 - [declaration-colon-space-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/declaration-colon-space-before)
 - [declaration-empty-line-before](https://github.com/stylelint/stylelint/tree/master/lib/rules/declaration-empty-line-before)
